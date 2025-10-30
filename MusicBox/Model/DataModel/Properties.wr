@@ -31,6 +31,6 @@
     <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
   </Relationship>
   <Entity gr:x="170" gr:y="365" id="ent1" name="Prueba" duration="persistent">
-    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
+    <Attribute id="ent1#att1" key="true" name="id" type="integer"/>
   </Entity>
 </DataModel>

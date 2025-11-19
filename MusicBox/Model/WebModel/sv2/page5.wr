@@ -1,0 +1,111 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page5" name="Welcome" gr:x="530" gr:y="75">
+  <ContentUnits>
+    <MultiMessageUnit id="sv2#page5#mssu4" name="Entrada" linkOrder="sv2#page5#mssu4#ln4 sv2#page5#mssu4#ln5" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Bienvenido a MusicBox, Registrate para darte de alta o haz login para acceder a m&#225;s caracter&#237;sticas de la aplicaci&#243;n</Message>
+      <Link id="sv2#page5#mssu4#ln4" name="Registrarse" to="sv2#page3" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv2#page5#mssu4#ln5" name="Login" to="sv2#page4#enu3" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiMessageUnit>
+    <PowerIndexUnit gr:x="0" gr:y="120" id="sv2#page5#pwu1" name="ListLatestSongs" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 ent1#att35"/>
+    <PowerIndexUnit gr:x="0" gr:y="230" id="sv2#page5#pwu2" name="ListLatestAlbums" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att33 ent6#att32 ent6#att34"/>
+    <DataUnit gr:x="200" gr:y="75" id="sv2#page5#dau1" name="Prueba Imagen" entity="ent1" displayAttributes="ent1#att2 ent1#att35" customDescriptor="false">
+      <Selector id="sv2#page5#dau1#su1" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page5#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page5#mssu4">
+          <layout:Link link="sv2#page5#mssu4#ln4"/>
+          <layout:Link link="sv2#page5#mssu4#ln5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page5#pwu1">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page5#pwu2">
+          <layout:Attribute attribute="ent6#att33"/>
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page5#dau1">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

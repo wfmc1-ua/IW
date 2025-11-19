@@ -1,0 +1,83 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page3" name="usuarios" gr:x="120" gr:y="430">
+  <ContentUnits>
+    <EntryUnit id="sv2#page3#enu2" name="Registro" linkOrder="sv2#page3#enu2#ln1" gr:x="0" gr:y="10" entity="User">
+      <Field id="sv2#page3#enu2#fld1" name="userName_field" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page3#enu2#fld1#mnd1" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page3#enu2#fld2" name="password_field" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page3#enu2#fld2#mnd2" name="Mandatory3"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page3#enu2#fld3" name="email_field" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page3#enu2#fld3#mnd3" name="Mandatory2"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page3#enu2#fld4" name="category_field" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page3#enu2#fld4#mnd4" name="Mandatory1"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv2#page3#enu2#sfld1" name="userGroup_field" type="string" role="User2DefaultGroup"/>
+      <Link id="sv2#page3#enu2#ln1" name="OK" to="sv2#miu2" type="normal" validate="true">
+        <LinkParameter id="sv2#page3#enu2#ln1#par1" name="category_field_category_param" source="sv2#page3#enu2#fld4" target="sv2#miu2.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv2#page3#enu2#ln1#par2" name="email_field_email_param" source="sv2#page3#enu2#fld3" target="sv2#miu2.mov1#opm1#icu1#icp3"/>
+        <LinkParameter id="sv2#page3#enu2#ln1#par3" name="password_field_password_param" source="sv2#page3#enu2#fld2" target="sv2#miu2.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv2#page3#enu2#ln1#par4" name="Key [id]_user_id" source="key.userOID" target="sv2#miu2.mov1#opm1#icu1#icp6"/>
+        <LinkParameter id="sv2#page3#enu2#ln1#par5" name="userGroup_field_userGroup_param" source="sv2#page3#enu2#sfld1" target="sv2#miu2.mov1#opm1#icu1#icp5"/>
+        <LinkParameter id="sv2#page3#enu2#ln1#par6" name="userName_field_userName_param" source="sv2#page3#enu2#fld1" target="sv2#miu2.mov1#opm1#icu1#icp1"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv2#page3#seu1" name="grupos" gr:x="195" gr:y="0" entity="Group">
+      <Link id="sv2#page3#seu1#ln2" name="Flow3" to="sv2#page3#enu2" type="transport" validate="true">
+        <LinkParameter id="sv2#page3#seu1#ln2#par7" name="groupName_userGroup_field [label]" source="groupNameArray" target="sv2#page3#enu2#sfld1_label"/>
+        <LinkParameter id="sv2#page3#seu1#ln2#par8" name="id_userGroup_field [output]" source="groupOIDArray" target="sv2#page3#enu2#sfld1_output"/>
+      </Link>
+    </SelectorUnit>
+    <MultiMessageUnit id="sv2#page3#mssu2" name="Error" gr:x="295" gr:y="45"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#enu2">
+          <layout:Field field="sv2#page3#enu2#fld1"/>
+          <layout:Field field="sv2#page3#enu2#fld2"/>
+          <layout:Field field="sv2#page3#enu2#fld3"/>
+          <layout:Field field="sv2#page3#enu2#fld4"/>
+          <layout:Field field="sv2#page3#enu2#sfld1"/>
+          <layout:Link link="sv2#page3#enu2#ln1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page3#mssu2"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

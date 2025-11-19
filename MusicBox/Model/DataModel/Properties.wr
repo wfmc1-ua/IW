@@ -151,5 +151,6 @@
       <db:JoinColumn attribute="ent4#att22" name="artist_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" cryptedPassword="true" password="NWF1MUNvbmUuLg==" schema="public"/>
+  <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" password="cG9zdGdyZQ==" schema="public" cryptedPassword="true">
+  </db:Database>
 </DataModel>

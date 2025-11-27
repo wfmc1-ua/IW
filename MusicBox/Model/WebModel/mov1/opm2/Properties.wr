@@ -1,0 +1,22 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="210" gr:y="160" id="mov1#opm2" name="Crear usuario">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm2#icu3" gr:x="75" gr:y="365">
+      <OKLink id="mov1#opm2#icu3#oln4" name="OKFlow4" to="mov1#opm2#cru4" automaticCoupling="false">
+        <LinkParameter id="mov1#opm2#icu3#oln4#par27" name="displayName" source="mov1#opm2#icu3#icp8" target="mov1#opm2#cru4.User#att9"/>
+        <LinkParameter id="mov1#opm2#icu3#oln4#par28" name="email" source="mov1#opm2#icu3#icp9" target="mov1#opm2#cru4.email"/>
+        <LinkParameter id="mov1#opm2#icu3#oln4#par29" name="password" source="mov1#opm2#icu3#icp10" target="mov1#opm2#cru4.password"/>
+        <LinkParameter id="mov1#opm2#icu3#oln4#par30" name="userName" source="mov1#opm2#icu3#icp11" target="mov1#opm2#cru4.userName"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm2#icu3#icp8" name="displayName"/>
+      <InputCollectorParameter id="mov1#opm2#icu3#icp9" name="email"/>
+      <InputCollectorParameter id="mov1#opm2#icu3#icp10" name="password"/>
+      <InputCollectorParameter id="mov1#opm2#icu3#icp11" name="userName"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="505" gr:y="400" id="mov1#opm2#cru4" name="Registrar usuario" entity="User">
+      <OKLink id="mov1#opm2#cru4#oln5" name="OKFlow5" to="mov1#opm2#okcu2" automaticCoupling="true"/>
+      <KOLink id="mov1#opm2#cru4#kln4" name="KOFlow4" to="mov1#opm2#kocu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="755" gr:y="360" id="mov1#opm2#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="755" gr:y="560" id="mov1#opm2#kocu2" name="KO Port2"/>
+  </OperationUnits>
+</OperationModule>

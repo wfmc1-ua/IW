@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-10" gr:y="415" id="sv3#page8" name="Pagina Manejo Entidades">
+  <ContentUnits>
+    <EntryUnit id="sv3#page8#enu4" name="A&#241;adir Cancion" gr:x="0" gr:y="0" entity="ent1">
+      <Field id="sv3#page8#enu4#fld8" name="title" type="string" modifiable="true" attribute="ent1#att2"/>
+      <Field id="sv3#page8#enu4#fld9" name="durationSec" type="integer" modifiable="true" attribute="ent1#att3"/>
+      <Field id="sv3#page8#enu4#fld10" name="track_number" type="integer" modifiable="true" attribute="ent1#att5"/>
+      <Field id="sv3#page8#enu4#fld11" name="releaseDate" type="date" modifiable="true" attribute="ent1#att12"/>
+      <Field id="sv3#page8#enu4#fld12" name="cover" type="blob" modifiable="true" contentType="image" attribute="ent1#att35"/>
+      <SelectionField id="sv3#page8#enu4#sfld2" name="SongToAlbum" type="string" role="rel4#role8"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#enu4">
+          <layout:Field field="sv3#page8#enu4#fld8"/>
+          <layout:Field field="sv3#page8#enu4#fld9"/>
+          <layout:Field field="sv3#page8#enu4#fld10"/>
+          <layout:Field field="sv3#page8#enu4#fld11"/>
+          <layout:Field field="sv3#page8#enu4#fld12"/>
+          <layout:Field field="sv3#page8#enu4#sfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

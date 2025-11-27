@@ -1,3 +1,3 @@
-<SiteView id="sv3" name="admin">
+<SiteView id="sv3" name="admin" homePage="sv3#page7">
   <OperationUnits/>
 </SiteView>

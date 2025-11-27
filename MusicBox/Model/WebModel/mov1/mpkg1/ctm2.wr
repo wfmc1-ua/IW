@@ -1,0 +1,67 @@
+<ContentModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="mov1#mpkg1#ctm2" name="Prueba modulo" gr:icon="hello_world.jpg">
+  <ContentUnits>
+    <InputCollectorUnit gr:x="480" gr:y="505" id="mov1#mpkg1#ctm2#icu1"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="mov1#mpkg1#ctm2#page2">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov1#mpkg1#ctm2#page2#dau2">
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Page gr:x="780" gr:y="545" id="mov1#mpkg1#ctm2#page2" name="Foto galleria">
+    <ContentUnits>
+      <DataUnit gr:x="0" gr:y="0" id="mov1#mpkg1#ctm2#page2#dau2" name="Foto prueba" entity="ent1" displayAttributes="ent1#att35">
+        <Selector id="mov1#mpkg1#ctm2#page2#dau2#su2" defaultPolicy="fill" booleanOperator="and">
+          <KeyCondition id="mov1#mpkg1#ctm2#page2#dau2#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+        </Selector>
+      </DataUnit>
+    </ContentUnits>
+  </Page>
+</ContentModule>

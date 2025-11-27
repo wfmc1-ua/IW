@@ -1,0 +1,131 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page7" name="Welcome" gr:x="260" gr:y="290" linkOrder="sv3#page7#ln6">
+  <ContentUnits>
+    <MultiMessageUnit id="sv3#page7#mssu5" name="Entrada" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Bienvenido a la p&#225;gina de administraci&#243;n de MusicBox</Message>
+    </MultiMessageUnit>
+    <PowerIndexUnit id="sv3#page7#pwu3" name="ListLatestSongs" gr:x="45" gr:y="115" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 ent1#att35"/>
+    <PowerIndexUnit id="sv3#page7#pwu4" name="ListLatestAlbums" gr:x="45" gr:y="225" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att33 ent6#att32 ent6#att34"/>
+    <DataUnit id="sv3#page7#dau3" name="Prueba Imagen" customDescriptor="false" gr:x="260" gr:y="115" entity="ent1" displayAttributes="ent1#att2 ent1#att35">
+      <Selector id="sv3#page7#dau3#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page7#dau3#su3#kcond3" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <HierarchicalIndexUnit id="sv3#page7#hinu2" name="Hierarchy1" gr:x="265" gr:y="235" sortable="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#pwu3">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#pwu4">
+          <layout:Attribute attribute="ent6#att33"/>
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#dau3">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#hinu2">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page7#ln6" name="Crear/Eliminar canciones" to="sv3#page8" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

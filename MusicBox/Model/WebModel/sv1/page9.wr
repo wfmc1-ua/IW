@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="205" gr:y="100" id="sv1#page9" name="Playlists del usuario">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="10" id="sv1#page9#inu1" name="Lista de playlists" entity="ent2" displayAttributes="ent2#att15 ent2#att16" linkOrder="sv1#page9#inu1#ln11">
+      <Link id="sv1#page9#inu1#ln11" name="Detalles de la playlist" to="sv1#page9#dau4" type="normal" validate="true">
+        <LinkParameter id="sv1#page9#inu1#ln11#par1" name="id_KeyCondition4 [id]" source="data[].ent2#att14" target="sv1#page9#dau4#su4#kcond4.ent2#att14"/>
+      </Link>
+    </IndexUnit>
+    <DataUnit gr:x="195" gr:y="0" id="sv1#page9#dau4" name="Detalles de la playlist" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att18" linkOrder="sv1#page9#dau4#ln22">
+      <Selector id="sv1#page9#dau4#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page9#dau4#su4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page9#dau4#ln22" name="Ver canciones" to="sv1#page11#inu3" type="normal" validate="true">
+        <LinkParameter id="sv1#page9#dau4#ln22#par34" name="id_RoleCondition2 [id]" source="data.ent2#att14" target="sv1#page11#inu3#su5#rcond2.ent2#att14"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="9" rowspan="3">
+        <layout:Unit unitId="sv1#page9#inu1">
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Link link="sv1#page9#inu1#ln11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="3" rowspan="3">
+        <layout:Unit unitId="sv1#page9#dau4">
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Link link="sv1#page9#dau4#ln22"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

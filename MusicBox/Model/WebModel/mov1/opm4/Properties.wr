@@ -1,0 +1,21 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="530" gr:y="400" id="mov1#opm4" name="A&#241;adir a playlist">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm4#icu5" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm4#icu5#icp15" name="id_cancion"/>
+      <InputCollectorParameter id="mov1#opm4#icu5#icp16" name="id_playlist"/>
+      <OKLink id="mov1#opm4#icu5#oln8" name="OKFlow8" to="mov1#opm4#mfu1">
+        <LinkParameter id="mov1#opm4#icu5#oln8#par6" name="id_playlist_KeyCondition6 [id]" source="mov1#opm4#icu5#icp16" target="mov1#opm4#mfu1#su7#kcond6.ent2#att14"/>
+        <LinkParameter id="mov1#opm4#icu5#oln8#par9" name="id_cancion_Song.id(PlaylistToSong)" source="mov1#opm4#icu5#icp15" target="mov1#opm4#mfu1.rel1#role2.ent1#att1"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="380" gr:y="50" id="mov1#opm4#mfu1" name="Update Playlist" entity="ent2">
+      <Selector id="mov1#opm4#mfu1#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm4#mfu1#su7#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm4#mfu1#oln9" name="OKFlow9" to="mov1#opm4#okcu4" automaticCoupling="true"/>
+      <KOLink id="mov1#opm4#mfu1#kln1" name="KOFlow1" to="mov1#opm4#kocu4" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="525" gr:y="40" id="mov1#opm4#okcu4" name="OK Port4"/>
+    <KOCollectorUnit gr:x="525" gr:y="145" id="mov1#opm4#kocu4" name="KO Port4"/>
+  </OperationUnits>
+</OperationModule>

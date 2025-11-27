@@ -1,0 +1,104 @@
+-- Ir a pgAdmin, ir a Query Tool, copiar y ejecutar TOOODOo eso vale bro? Espero que quede claro. -- Javix
+
+
+-- =============================================
+-- 1. LIMPIEZA TOTAL (Ordenada para evitar errores)
+-- =============================================
+TRUNCATE TABLE "user_group" CASCADE;
+
+TRUNCATE TABLE "song_playlist" CASCADE; -- Nombre probable tabla intermedia
+TRUNCATE TABLE "review" CASCADE;
+TRUNCATE TABLE "playlist" CASCADE;
+TRUNCATE TABLE "song" CASCADE;
+TRUNCATE TABLE "album" CASCADE;
+TRUNCATE TABLE "artist" CASCADE;
+TRUNCATE TABLE "genre" CASCADE;
+TRUNCATE TABLE "user" CASCADE;
+TRUNCATE TABLE "group" CASCADE;
+TRUNCATE TABLE "module" CASCADE;
+
+-- Reiniciar secuencia
+CREATE SEQUENCE IF NOT EXISTS hibernate_sequence START 1000;
+
+-- =============================================
+-- 2. SEGURIDAD (La parte crítica para tu Login)
+-- =============================================
+
+-- MÓDULOS
+-- Clave: sv3 para admin, sv1 para usuarios
+INSERT INTO "module" ("id", "moduleid", "modulename") VALUES 
+(1, 'sv3', 'ADMIN'), 
+(2, 'sv1',  'USUARIOMINGUI'); 
+
+-- GRUPOS
+-- Relación: Group_DefaultModule. La columna suele ser module_id.
+INSERT INTO "group" ("id", "groupname", "module_id") VALUES 
+(1, 'Administrators', 1),
+(2, 'Users',          2);
+
+-- USUARIOS
+INSERT INTO "user" ("id", "username", "password", "email", "displayname", "status", "createdat", "group_id") VALUES 
+(1, 'admin', 'admin', 'admin@musicbox.com', 'Super Admin', 'active', NOW(), 1),
+(2, 'cliente', 'cliente', 'user@gmail.com', 'Juan Perez', 'active', NOW(), 2);
+
+-- RELACIÓN USUARIO-GRUPO (User_Group)
+-- WebRatio suele ordenar alfabéticamente: group_id, user_id
+INSERT INTO "user_group" ("user_id", "group_id") VALUES 
+(1, 1),
+(2, 2);
+
+-- =============================================
+-- 3. CATÁLOGO MUSICAL
+-- =============================================
+
+-- GÉNEROS
+INSERT INTO "genre" ("id", "name", "description") VALUES 
+(1, 'Rock', 'Rock clásico'),
+(2, 'Pop',  'Pop internacional');
+
+-- ARTISTAS
+INSERT INTO "artist" ("id", "name", "country", "bio") VALUES 
+(1, 'Queen', 'UK', 'Leyenda del rock'),
+(2, 'Michael Jackson', 'USA', 'Rey del Pop');
+
+-- ÁLBUMES
+-- Relación: Artist_Album (1:N). Columna en Album: artist_id
+INSERT INTO "album" ("id", "title", "releasedate", "cover", "artist_id") VALUES 
+(1, 'A Night at the Opera', '1975-11-21', NULL, 1),
+(2, 'Thriller',           '1982-11-30', NULL, 2);
+
+-- CANCIONES
+-- Relaciones: 
+-- Album_Song (1:N) -> album_id
+-- Song_Genre (1:N) -> genre_id
+-- OJO: Veo Song_Artist en tu árbol. Si la canción tiene artista directo:
+INSERT INTO "song" ("id", "title", "durationsec", "track_number", "releasedate", "cover", "album_id", "genre_id") VALUES 
+(1, 'Bohemian Rhapsody', 354, 1, '1975-10-31', NULL, 1, 1),
+(2, 'Billie Jean',       294, 1, '1983-01-02', NULL, 2, 2);
+
+INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
+(1, 1),
+(2,2);
+
+-- PLAYLISTS
+INSERT INTO "playlist" ("id", "name", "description", "ispublic", "createdat") VALUES 
+(1, 'Favoritas', 'Mi lista top', true, NOW());
+
+-- RELACIÓN CANCIÓN-PLAYLIST (Song_Playlist)
+-- Tabla intermedia. Verifica si se llama "song_playlist" o "playlist_song".
+-- WebRatio suele usar el nombre de la relación "Song_Playlist" -> tabla "song_playlist"
+INSERT INTO "song_playlist" ("playlist_id", "song_id") VALUES 
+(1, 1),
+(1, 2);
+
+-- REVIEWS
+-- Relación: User_Review y Review_Song
+INSERT INTO "review" ("id", "rating", "comment", "createdat", "user_id") VALUES 
+(1, 5, 'Increíble tema', NOW(), 2);
+
+
+INSERT INTO "review_song" ("review_id", "song_id") VALUES
+(1, 1);
+
+-- Actualizar secuencia
+SELECT setval('hibernate_sequence', 2000, true);

@@ -27,25 +27,25 @@ CREATE SEQUENCE IF NOT EXISTS hibernate_sequence START 1000;
 -- MÓDULOS
 -- Clave: sv3 para admin, sv1 para usuarios
 INSERT INTO "module" ("id", "moduleid", "modulename") VALUES 
-(1, 'ADMIN_MODULE', 'sv3'), 
-(2, 'USER_MODULE',  'sv1'); 
+(1, 'sv3', 'ADMIN'), 
+(2, 'sv1',  'USUARIOMINGUI'); 
 
 -- GRUPOS
 -- Relación: Group_DefaultModule. La columna suele ser module_id.
 INSERT INTO "group" ("id", "groupname", "module_id") VALUES 
-(10, 'Administrators', 1),
-(20, 'Users',          2);
+(1, 'Administrators', 1),
+(2, 'Users',          2);
 
 -- USUARIOS
-INSERT INTO "user" ("id", "username", "password", "email", "displayname", "status", "createdat") VALUES 
-(100, 'admin', 'admin', 'admin@musicbox.com', 'Super Admin', 'active', NOW()),
-(101, 'cliente', 'cliente', 'user@gmail.com', 'Juan Perez', 'active', NOW());
+INSERT INTO "user" ("id", "username", "password", "email", "displayname", "status", "createdat", "group_id") VALUES 
+(1, 'admin', 'admin', 'admin@musicbox.com', 'Super Admin', 'active', NOW(), 1),
+(2, 'cliente', 'cliente', 'user@gmail.com', 'Juan Perez', 'active', NOW(), 2);
 
 -- RELACIÓN USUARIO-GRUPO (User_Group)
 -- WebRatio suele ordenar alfabéticamente: group_id, user_id
 INSERT INTO "user_group" ("user_id", "group_id") VALUES 
-(100, 10),
-(101, 20);
+(1, 1),
+(2, 2);
 
 -- =============================================
 -- 3. CATÁLOGO MUSICAL
@@ -73,12 +73,12 @@ INSERT INTO "album" ("id", "title", "releasedate", "cover", "artist_id") VALUES
 -- Song_Genre (1:N) -> genre_id
 -- OJO: Veo Song_Artist en tu árbol. Si la canción tiene artista directo:
 INSERT INTO "song" ("id", "title", "durationsec", "track_number", "releasedate", "cover", "album_id", "genre_id") VALUES 
-(10, 'Bohemian Rhapsody', 354, 1, '1975-10-31', NULL, 1, 1),
-(20, 'Billie Jean',       294, 1, '1983-01-02', NULL, 2, 2);
+(1, 'Bohemian Rhapsody', 354, 1, '1975-10-31', NULL, 1, 1),
+(2, 'Billie Jean',       294, 1, '1983-01-02', NULL, 2, 2);
 
 INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
-(10, 1),
-(20,2);
+(1, 1),
+(2,2);
 
 -- PLAYLISTS
 INSERT INTO "playlist" ("id", "name", "description", "ispublic", "createdat") VALUES 
@@ -88,17 +88,17 @@ INSERT INTO "playlist" ("id", "name", "description", "ispublic", "createdat") VA
 -- Tabla intermedia. Verifica si se llama "song_playlist" o "playlist_song".
 -- WebRatio suele usar el nombre de la relación "Song_Playlist" -> tabla "song_playlist"
 INSERT INTO "song_playlist" ("playlist_id", "song_id") VALUES 
-(1, 10),
-(1, 20);
+(1, 1),
+(1, 2);
 
 -- REVIEWS
 -- Relación: User_Review y Review_Song
 INSERT INTO "review" ("id", "rating", "comment", "createdat", "user_id") VALUES 
-(1, 5, 'Increíble tema', NOW(), 101);
+(1, 5, 'Increíble tema', NOW(), 2);
 
 
 INSERT INTO "review_song" ("review_id", "song_id") VALUES
-(1, 10);
+(1, 1);
 
 -- Actualizar secuencia
 SELECT setval('hibernate_sequence', 2000, true);

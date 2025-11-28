@@ -1,0 +1,92 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="Canciones del &#225;lbum" gr:x="65" gr:y="285">
+  <ContentUnits>
+    <PowerIndexUnit id="sv1#page13#pwu7" name="Lista de Canciones" gr:x="0" gr:y="130" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35" linkOrder="sv1#page13#pwu7#ln20">
+      <Selector id="sv1#page13#pwu7#su16" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page13#pwu7#su16#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.ent6#att31"/>
+      </Selector>
+      <Link id="sv1#page13#pwu7#ln20" name="Ver canci&#243;n" to="sv1#page14#dau11" type="normal" validate="true">
+        <LinkParameter id="sv1#page13#pwu7#ln20#par57" name="id_KeyCondition10 [id]" source="data[].ent1#att1" target="sv1#page14#dau11#su18#kcond10.ent1#att1"/>
+      </Link>
+    </PowerIndexUnit>
+    <DataUnit id="sv1#page13#dau9" name="Detalles del album" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att32 ent6#att33 ent6#att34">
+      <Selector id="sv1#page13#dau9#su14" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#page13#dau9#su14#kcond9" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#page13#dau9#ln14" name="Flow13" to="sv1#page13#dau10" type="transport" validate="true">
+        <LinkParameter id="sv1#page13#dau9#ln14#par5" name="AlbumToArtist.id_AttCondition1" source="data.rel3#role6_ent4#att22" target="sv1#page13#dau10#su15#acond3"/>
+      </Link>
+      <Link id="sv1#page13#dau9#ln16" name="Flow16" to="sv1#page13#pwu7" type="transport" validate="true">
+        <LinkParameter id="sv1#page13#dau9#ln16#par10" name="AlbumToArtist.id_AttCondition4" source="data.rel3#role6_ent4#att22" target="sv1#page13#pwu7#su16#acond4"/>
+      </Link>
+    </DataUnit>
+    <DataUnit id="sv1#page13#dau10" name="Artista" gr:x="180" gr:y="5" entity="ent4" displayAttributes="ent4#att23 ent4#att24">
+      <Selector id="sv1#page13#dau10#su15" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv1#page13#dau10#su15#acond3" name="AttCondition1" predicate="eq" booleanOperator="or" implied="false" attributes="rel3#role5.ent6#att31"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="10" rowspan="3">
+        <layout:Unit unitId="sv1#page13#pwu7">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att5"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att35"/>
+          <layout:Link link="sv1#page13#pwu7#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2" rowspan="2">
+        <layout:Unit unitId="sv1#page13#dau9">
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att33"/>
+          <layout:Attribute attribute="ent6#att34"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="2">
+        <layout:Unit unitId="sv1#page13#dau10">
+          <layout:Attribute attribute="ent4#att23"/>
+          <layout:Attribute attribute="ent4#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

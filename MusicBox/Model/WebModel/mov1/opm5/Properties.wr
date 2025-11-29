@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="530" gr:y="455" id="mov1#opm5" name="Eliminar de la playlist">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm5#icu6" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm5#icu6#icp17" name="id_playlist"/>
+      <InputCollectorParameter id="mov1#opm5#icu6#icp18" name="id_song"/>
+      <OKLink id="mov1#opm5#icu6#oln12" name="OKFlow12" to="mov1#opm5#dcnu1">
+        <LinkParameter id="mov1#opm5#icu6#oln12#par50" name="id_playlist_KeyCondition5 [id] [Playlist] [Source]" source="mov1#opm5#icu6#icp17" target="mov1#opm5#dcnu1#su8#kcond5.ent2#att14"/>
+        <LinkParameter id="mov1#opm5#icu6#oln12#par51" name="id_song_KeyCondition7 [id] [Song] [Target]" source="mov1#opm5#icu6#icp18" target="mov1#opm5#dcnu1#su9#kcond7.ent1#att1"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm5#kocu5" name="KO Port4" gr:x="635" gr:y="135"/>
+    <OKCollectorUnit id="mov1#opm5#okcu5" name="OK Port4" gr:x="635" gr:y="30"/>
+    <DisconnectUnit gr:x="345" gr:y="45" id="mov1#opm5#dcnu1" name="Disconnect1" relationship="rel1#role2">
+      <SourceSelector id="mov1#opm5#dcnu1#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm5#dcnu1#su8#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </SourceSelector>
+      <TargetSelector id="mov1#opm5#dcnu1#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm5#dcnu1#su9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </TargetSelector>
+      <OKLink id="mov1#opm5#dcnu1#oln11" name="OKFlow11" to="mov1#opm5#okcu5" automaticCoupling="true"/>
+      <KOLink id="mov1#opm5#dcnu1#kln8" name="KOFlow8" to="mov1#opm5#kocu5" automaticCoupling="true"/>
+    </DisconnectUnit>
+  </OperationUnits>
+</OperationModule>

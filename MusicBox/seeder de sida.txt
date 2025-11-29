@@ -1,12 +1,11 @@
--- Ir a pgAdmin, ir a Query Tool, copiar y ejecutar TOOODOo eso vale bro? Espero que quede claro. -- Javix
-
-
 -- =============================================
--- 1. LIMPIEZA TOTAL (Ordenada para evitar errores)
+-- 1. LIMPIEZA TOTAL (Ordenada para evitar errores de FK)
 -- =============================================
 TRUNCATE TABLE "user_group" CASCADE;
-
-TRUNCATE TABLE "song_playlist" CASCADE; -- Nombre probable tabla intermedia
+TRUNCATE TABLE "user_playlist" CASCADE; -- ¡IMPORTANTE! Limpiar esta tabla intermedia
+TRUNCATE TABLE "song_playlist" CASCADE;
+TRUNCATE TABLE "review_song" CASCADE;
+TRUNCATE TABLE "song_artist" CASCADE;
 TRUNCATE TABLE "review" CASCADE;
 TRUNCATE TABLE "playlist" CASCADE;
 TRUNCATE TABLE "song" CASCADE;
@@ -21,17 +20,15 @@ TRUNCATE TABLE "module" CASCADE;
 CREATE SEQUENCE IF NOT EXISTS hibernate_sequence START 1000;
 
 -- =============================================
--- 2. SEGURIDAD (La parte crítica para tu Login)
+-- 2. SEGURIDAD
 -- =============================================
 
 -- MÓDULOS
--- Clave: sv3 para admin, sv1 para usuarios
 INSERT INTO "module" ("id", "moduleid", "modulename") VALUES 
 (1, 'sv3', 'ADMIN'), 
 (2, 'sv1',  'USUARIOMINGUI'); 
 
 -- GRUPOS
--- Relación: Group_DefaultModule. La columna suele ser module_id.
 INSERT INTO "group" ("id", "groupname", "module_id") VALUES 
 (1, 'Administrators', 1),
 (2, 'Users',          2);
@@ -39,13 +36,16 @@ INSERT INTO "group" ("id", "groupname", "module_id") VALUES
 -- USUARIOS
 INSERT INTO "user" ("id", "username", "password", "email", "displayname", "status", "createdat", "group_id") VALUES 
 (1, 'admin', 'admin', 'admin@musicbox.com', 'Super Admin', 'active', NOW(), 1),
-(2, 'cliente', 'cliente', 'user@gmail.com', 'Juan Perez', 'active', NOW(), 2);
+(2, 'cliente', 'cliente', 'user@gmail.com', 'Juan Perez', 'active', NOW(), 2),
+(3, 'laura', 'laura123', 'laura@test.com', 'Laura García', 'active', NOW(), 2),
+(4, 'carlos', 'carlos123', 'carlos@test.com', 'Carlos Rocker', 'active', NOW(), 2);
 
--- RELACIÓN USUARIO-GRUPO (User_Group)
--- WebRatio suele ordenar alfabéticamente: group_id, user_id
+-- RELACIÓN USUARIO-GRUPO
 INSERT INTO "user_group" ("user_id", "group_id") VALUES 
 (1, 1),
-(2, 2);
+(2, 2),
+(3, 2),
+(4, 2);
 
 -- =============================================
 -- 3. CATÁLOGO MUSICAL
@@ -53,52 +53,107 @@ INSERT INTO "user_group" ("user_id", "group_id") VALUES
 
 -- GÉNEROS
 INSERT INTO "genre" ("id", "name", "description") VALUES 
-(1, 'Rock', 'Rock clásico'),
-(2, 'Pop',  'Pop internacional');
+(1, 'Rock', 'Rock clásico y moderno'),
+(2, 'Pop',  'Pop internacional'),
+(3, 'Indie', 'Indie Rock y Alternativo'),
+(4, 'Electronica', 'House, Dance y Techno'),
+(5, 'Urbano', 'Fusión flamenco y urbano');
 
 -- ARTISTAS
 INSERT INTO "artist" ("id", "name", "country", "bio") VALUES 
 (1, 'Queen', 'UK', 'Leyenda del rock'),
-(2, 'Michael Jackson', 'USA', 'Rey del Pop');
+(2, 'Michael Jackson', 'USA', 'Rey del Pop'),
+(3, 'The Strokes', 'USA', 'Banda neoyorquina de indie rock'),
+(4, 'Daft Punk', 'Francia', 'Dúo legendario de música electrónica'),
+(5, 'Rosalía', 'España', 'Motomami internacional'),
+(6, 'Arctic Monkeys', 'UK', 'Rock alternativo de Sheffield');
 
 -- ÁLBUMES
--- Relación: Artist_Album (1:N). Columna en Album: artist_id
 INSERT INTO "album" ("id", "title", "releasedate", "cover", "artist_id") VALUES 
 (1, 'A Night at the Opera', '1975-11-21', NULL, 1),
-(2, 'Thriller',           '1982-11-30', NULL, 2);
+(2, 'Thriller',            '1982-11-30', NULL, 2),
+(3, 'The New Abnormal',    '2020-04-10', NULL, 3),
+(4, 'Discovery',           '2001-03-12', NULL, 4),
+(5, 'El Mal Querer',       '2018-11-02', NULL, 5),
+(6, 'AM',                  '2013-09-09', NULL, 6);
 
 -- CANCIONES
--- Relaciones: 
--- Album_Song (1:N) -> album_id
--- Song_Genre (1:N) -> genre_id
--- OJO: Veo Song_Artist en tu árbol. Si la canción tiene artista directo:
 INSERT INTO "song" ("id", "title", "durationsec", "track_number", "releasedate", "cover", "album_id", "genre_id") VALUES 
+-- Queen
 (1, 'Bohemian Rhapsody', 354, 1, '1975-10-31', NULL, 1, 1),
-(2, 'Billie Jean',       294, 1, '1983-01-02', NULL, 2, 2);
+(2, 'Love of My Life',   219, 9, '1975-11-21', NULL, 1, 1),
+-- MJ
+(3, 'Billie Jean',       294, 1, '1983-01-02', NULL, 2, 2),
+(4, 'Beat It',           258, 5, '1983-02-14', NULL, 2, 2),
+-- The Strokes
+(5, 'The Adults Are Talking', 309, 1, '2020-04-10', NULL, 3, 3),
+(6, 'Selfless',               222, 2, '2020-04-10', NULL, 3, 3),
+(7, 'Brooklyn Bridge to Chorus', 235, 3, '2020-04-10', NULL, 3, 3),
+-- Daft Punk
+(8, 'One More Time',     320, 1, '2000-11-13', NULL, 4, 4),
+(9, 'Harder, Better, Faster', 224, 4, '2001-10-13', NULL, 4, 4),
+-- Rosalía
+(10, 'Malamente',        150, 1, '2018-05-30', NULL, 5, 5),
+(11, 'Pienso en tu mirá', 193, 3, '2018-07-24', NULL, 5, 5),
+-- Arctic Monkeys
+(12, 'Do I Wanna Know?', 272, 1, '2013-06-19', NULL, 6, 3),
+(13, 'R U Mine?',        201, 2, '2012-02-27', NULL, 6, 3);
 
+-- RELACIÓN CANCIÓN-ARTISTA
 INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
-(1, 1),
-(2,2);
+(1, 1), (2, 1),        -- Queen
+(3, 2), (4, 2),        -- MJ
+(5, 3), (6, 3), (7, 3),-- Strokes
+(8, 4), (9, 4),        -- Daft Punk
+(10, 5), (11, 5),      -- Rosalía
+(12, 6), (13, 6);      -- Arctic Monkeys
 
--- PLAYLISTS
+-- =============================================
+-- 4. SOCIAL (Playlists y Reviews) - CORREGIDO
+-- =============================================
+
+-- PLAYLISTS (Sin user_id aquí, porque no existe la columna)
 INSERT INTO "playlist" ("id", "name", "description", "ispublic", "createdat") VALUES 
-(1, 'Favoritas', 'Mi lista top', true, NOW());
+(1, 'Clásicos de siempre', 'Mi lista top antigua', true, NOW()),
+(2, 'Indie Vibes', 'Para trabajar relajado', true, NOW()),
+(3, 'Fiesta Fin de Finde', 'Música para animarse', false, NOW()),
+(4, 'Gym Motivation', 'A tope de power', true, NOW());
 
--- RELACIÓN CANCIÓN-PLAYLIST (Song_Playlist)
--- Tabla intermedia. Verifica si se llama "song_playlist" o "playlist_song".
--- WebRatio suele usar el nombre de la relación "Song_Playlist" -> tabla "song_playlist"
+-- ASIGNACIÓN DE PLAYLISTS A USUARIOS (Tabla intermedia user_playlist)
+-- Según tu captura, las columnas son user_id y playlist_id
+INSERT INTO "user_playlist" ("user_id", "playlist_id") VALUES 
+(2, 1), -- Juan tiene la lista 1 (Clásicos)
+(4, 2), -- Carlos tiene la lista 2 (Indie)
+(3, 3), -- Laura tiene la lista 3 (Fiesta)
+(3, 4); -- Laura tiene la lista 4 (Gym)
+
+-- CONTENIDO DE PLAYLISTS
 INSERT INTO "song_playlist" ("playlist_id", "song_id") VALUES 
-(1, 1),
-(1, 2);
+-- Clásicos
+(1, 1), (1, 2), (1, 3), (1, 4),
+-- Indie
+(2, 5), (2, 6), (2, 12), (2, 13),
+-- Fiesta
+(3, 8), (3, 9), (3, 10), (3, 3),
+-- Gym
+(4, 9), (4, 7), (4, 13);
 
 -- REVIEWS
--- Relación: User_Review y Review_Song
 INSERT INTO "review" ("id", "rating", "comment", "createdat", "user_id") VALUES 
-(1, 5, 'Increíble tema', NOW(), 2);
+(1, 5, 'Increíble tema, nunca muere', NOW(), 2),
+(2, 4, 'Me gusta mucho el nuevo estilo', NOW(), 3),
+(3, 5, 'Obra maestra absoluta', NOW(), 4),
+(4, 2, 'No es lo mejor que han sacado', NOW(), 2);
 
-
+-- RELACIÓN REVIEW-SONG
 INSERT INTO "review_song" ("review_id", "song_id") VALUES
-(1, 1);
+(1, 1),
+(2, 5),
+(3, 8),
+(4, 11);
 
--- Actualizar secuencia
+-- =============================================
+-- 5. CIERRE
+-- =============================================
+
 SELECT setval('hibernate_sequence', 2000, true);

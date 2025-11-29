@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="publico" homePage="sv2#page5">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="publico" homePage="sv2#page5" landmarks="sv2#page4 sv2#page3">
   <OperationUnits>
     <ModuleInstanceUnit id="sv2#miu1" gr:x="1195" gr:y="560" action="true" moduleId="mov1#opm3">
       <KOLink id="sv2#miu1#kln7" name="KOFlow4" to="sv2#page4#mssu3">

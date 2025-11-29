@@ -34,7 +34,7 @@
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att12"/>
-          <layout:Attribute attribute="ent1#att35" layout:style="Excel" layout:attributeLayout="MetroStyle/ProgressBar"/>
+          <layout:Attribute attribute="ent1#att35" layout:style="Excel"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

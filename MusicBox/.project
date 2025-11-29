@@ -3,6 +3,7 @@
 	<name>MusicBox</name>
 	<comment></comment>
 	<projects>
+		<project>FotoUrl</project>
 		<project>MetroStyle</project>
 	</projects>
 	<buildSpec>

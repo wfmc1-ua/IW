@@ -6,7 +6,7 @@
         <LinkParameter id="mov1#opm3#icu4#oln6#par32" name="Username" source="mov1#opm3#icu4#icp13" target="mov1#opm3#lgu1.username"/>
       </OKLink>
       <InputCollectorParameter id="mov1#opm3#icu4#icp12" name="Password"/>
-      <InputCollectorParameter id="mov1#opm3#icu4#icp13" name="Username"/>
+      <InputCollectorParameter id="mov1#opm3#icu4#icp13" name="User email"/>
     </InputCollectorUnit>
     <LoginUnit gr:x="505" gr:y="355" id="mov1#opm3#lgu1" name="Login usuario">
       <OKLink id="mov1#opm3#lgu1#oln7" name="OKFlow7" to="mov1#opm3#okcu3" automaticCoupling="true"/>

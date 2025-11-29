@@ -55,7 +55,7 @@
     <Attribute id="ent1#att3" name="durationSec" type="integer" key="false" db:column="durationsec"/>
     <Attribute id="ent1#att2" name="title" type="string" key="false" db:column="title"/>
     <Attribute id="ent1#att12" name="releaseDate" type="date" key="false" db:column="releasedate"/>
-    <Attribute id="ent1#att35" name="cover" type="blob" contentType="image" db:column="cover"/>
+    <Attribute id="ent1#att35" name="cover" type="string" db:column="cover" key="false"/>
   </Entity>
   <Entity gr:x="405" gr:y="200" id="ent2" name="Playlist" duration="persistent" attributeOrder="ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18" db:database="db1" db:table="playlist">
     <Attribute id="ent2#att14" key="true" name="id" type="integer" db:column="id"/>

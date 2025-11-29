@@ -11,5 +11,6 @@
       </KOLink>
       <OKLink id="sv2#miu2#oln1" name="OKFlow3" to="sv2#page4" automaticCoupling="true"/>
     </ModuleInstanceUnit>
+    <SelectorUnit gr:x="310" gr:y="320" id="sv2#seu2" name="Selector2"/>
   </OperationUnits>
 </SiteView>

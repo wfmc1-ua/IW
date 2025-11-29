@@ -5,12 +5,12 @@
     </MultiMessageUnit>
     <PowerIndexUnit id="sv3#page7#pwu3" name="ListLatestSongs" gr:x="45" gr:y="115" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 ent1#att35"/>
     <PowerIndexUnit id="sv3#page7#pwu4" name="ListLatestAlbums" gr:x="45" gr:y="225" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att33 ent6#att32 ent6#att34"/>
-    <DataUnit id="sv3#page7#dau3" name="Prueba Imagen" customDescriptor="false" gr:x="260" gr:y="115" entity="ent1" displayAttributes="ent1#att2 ent1#att35">
+    <DataUnit id="sv3#page7#dau3" name="Prueba Imagen" customDescriptor="false" gr:x="250" gr:y="75" entity="ent1" displayAttributes="ent1#att2 ent1#att35">
       <Selector id="sv3#page7#dau3#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page7#dau3#su3#kcond3" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <HierarchicalIndexUnit id="sv3#page7#hinu2" name="Hierarchy1" gr:x="265" gr:y="235" sortable="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35"/>
+    <HierarchicalIndexUnit id="sv3#page7#hinu2" name="Hierarchy1" gr:x="255" gr:y="185" sortable="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

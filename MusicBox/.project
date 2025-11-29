@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <projectDescription> 
-  <name>MusicBox</name>  
+  <name>MusicBoxDEVEL</name>  
   <comment/>  
-  <projects/>  
+  <projects> 
+    <project>FotoUrl</project>  
+    <project>MetroStyle</project> 
+  </projects>  
   <buildSpec> 
     <buildCommand> 
       <name>com.webratio.ide.core.wrcorebuilder</name>  
-      <arguments/> 
+      <arguments></arguments> 
     </buildCommand> 
   </buildSpec>  
   <natures> 

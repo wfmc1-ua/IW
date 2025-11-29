@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="455" gr:y="295" id="sv1#page14" name="A&#241;adir a playlist">
   <ContentUnits>
-    <GetUnit gr:x="415" gr:y="10" id="sv1#page14#gtu1" name="Get1" contextParameters="UserCtxParam">
+    <GetUnit gr:x="360" gr:y="10" id="sv1#page14#gtu1" name="Get1" contextParameters="UserCtxParam">
       <Link id="sv1#page14#gtu1#ln26" name="Flow26" to="sv1#page14#pwu8" type="transport" validate="true">
         <LinkParameter id="sv1#page14#gtu1#ln26#par56" name="UserCtxParam.id_AttCondition7" source="sv1#page14#gtu1.UserCtxParam" target="sv1#page14#pwu8#su19#acond7"/>
       </Link>
@@ -18,7 +18,7 @@
         <LinkParameter id="sv1#page14#dau11#ln30#par65" name="id_RoleCondition6 [id]" source="data.ent1#att1" target="sv1#page14#pwu8#su19#rcond6.ent1#att1"/>
       </Link>
     </DataUnit>
-    <PowerIndexUnit gr:x="210" gr:y="0" id="sv1#page14#pwu8" name="Mis playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" linkOrder="sv1#page14#pwu8#ln28" displayAttributes="ent2#att15">
+    <PowerIndexUnit gr:x="175" gr:y="0" id="sv1#page14#pwu8" name="Mis playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" linkOrder="sv1#page14#pwu8#ln28" displayAttributes="ent2#att15">
       <Selector id="sv1#page14#pwu8#su19" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page14#pwu8#su19#acond7" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="rel7#role14.userOID"/>
         <RelationshipRoleCondition id="sv1#page14#pwu8#su19#rcond6" name="RoleCondition6" predicate="notIn" implied="false" role="rel1#role1"/>

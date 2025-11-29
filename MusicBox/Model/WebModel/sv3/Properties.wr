@@ -2,5 +2,6 @@
   <OperationUnits>
     <ModuleInstanceUnit gr:x="30" gr:y="180" id="sv3#miu4" action="true" moduleId="mov1#opm1"/>
     <CreateUnit gr:x="5" gr:y="625" id="sv3#cru5" name="Crear cancion" entity="ent1"/>
+    <ModuleInstanceUnit id="sv3#miu6" gr:x="345" gr:y="50" action="true" moduleId="mov1#opm5"/>
   </OperationUnits>
 </SiteView>

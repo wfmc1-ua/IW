@@ -55,4 +55,18 @@ Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Page gr:x="0" gr:y="15" id="sv1#page6#page10" name="&#193;lbumes">
+    <ContentUnits>
+      <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page6#page10#pwu5" name="Lista de &#193;lbumes" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att34" linkOrder="sv1#page6#page10#pwu5#ln15">
+        <Link id="sv1#page6#page10#pwu5#ln15" name="Detalles del album" to="sv1#page13#dau9" automaticCoupling="true" type="normal" validate="true"/>
+      </PowerIndexUnit>
+    </ContentUnits>
+  </Page>
+  <layout:CustomLocation name="User">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
 </Page>

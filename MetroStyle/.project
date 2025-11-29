@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>MusicBox</name>
+	<name>MetroStyle</name>
 	<comment></comment>
 	<projects>
-		<project>MetroStyle</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>com.webratio.ide.core.wrcorebuilder</name>
+			<name>com.webratio.ide.styles.stylebuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>com.webratio.ide.wrprojectnature</nature>
+		<nature>com.webratio.ide.styles.wrstylenature</nature>
+		<nature>org.eclipse.pde.PluginNature</nature>
 	</natures>
 </projectDescription>

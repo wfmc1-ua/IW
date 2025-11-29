@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="215" id="sv3#page11" name="Catalogo" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#page11#pwu6" name="ListLatestAlbums" gr:x="10" gr:y="120" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att33 ent6#att32 ent6#att34"/>
+    <PowerIndexUnit id="sv3#page11#pwu9" name="ListLatestSongs" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 ent1#att35"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page11#pwu6">
+          <layout:Attribute attribute="ent6#att33"/>
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att34"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv3#page11#pwu9">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att35"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page11#ln22" name="Crear/Eliminar canciones" to="sv3#page8" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

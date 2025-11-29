@@ -14,7 +14,7 @@
     <layout:Grid containerType="cell">
       <layout:Row>
         <layout:Cell>
-          <layout:Attribute unitId="sv1#mpage1#dau5" mode="full" attribute="User#att9"/>
+          <layout:Attribute unitId="sv1#mpage1#dau5" mode="value" attribute="User#att9"/>
           <layout:Link unitId="sv1#mpage1#dau5" link="sv1#mpage1#dau5#ln13"/>
         </layout:Cell>
       </layout:Row>

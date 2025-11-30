@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page23" name="Ver canciones playlist" gr:x="945" gr:y="-80" linkOrder="sv1#page23#ln50">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page23" name="Ver canciones playlist" gr:x="1050" gr:y="-100" linkOrder="sv1#page23#ln50">
   <ContentUnits>
     <PowerIndexUnit id="sv1#page23#pwu16" name="Canciones playlist" linkOrder="sv1#page23#pwu16#ln45" gr:x="0" gr:y="180" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12">
       <Selector id="sv1#page23#pwu16#su22" defaultPolicy="fill" booleanOperator="and">

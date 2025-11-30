@@ -1,6 +1,165 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="270" gr:y="185" id="sv3#page15" name="Usuarios y seguridad" landmark="true">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="150" gr:y="155" id="sv3#page15" name="Usuarios" landmark="true">
+  <ContentUnits>
+    <EntryUnit id="sv3#page15#enu5" name="Crear modulo" gr:x="25" gr:y="105" entity="Module" linkOrder="sv3#page15#enu5#ln27">
+      <Field id="sv3#page15#enu5#fld14" name="Id" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page15#enu5#fld14#mnd6" name="Mandatory3"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page15#enu5#fld15" name="Nombre" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page15#enu5#fld15#mnd7" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Link id="sv3#page15#enu5#ln27" name="Crear" to="sv3#miu15" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#enu5#ln27#par73" name="ModuleID_idModule_param" source="sv3#page15#enu5#fld14" target="sv3#miu15.mov1#opm12#icu12#icp25"/>
+        <LinkParameter id="sv3#page15#enu5#ln27#par75" name="ModuleName_moduleName_param" source="sv3#page15#enu5#fld15" target="sv3#miu15.mov1#opm12#icu12#icp26"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit id="sv3#page15#inu2" name="Lista de modulos" gr:x="25" gr:y="10" entity="Module" displayAttributes="moduleOID moduleID moduleName" linkOrder="sv3#page15#inu2#ln25">
+      <Link id="sv3#page15#inu2#ln25" name="Borrar" to="sv3#miu14" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#inu2#ln25#par70" name="id_idModulo_param" source="data[].moduleOID" target="sv3#miu14.mov1#opm11#icu11#icp24"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv3#page15#enu6" name="Crear grupo" gr:x="125" gr:y="315" entity="Group" linkOrder="sv3#page15#enu6#ln31">
+      <Field id="sv3#page15#enu6#fld16" name="Nombre" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page15#enu6#fld16#mnd8" name="Mandatory5"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#page15#enu6#sfld3" name="Id" type="string">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page15#enu6#sfld3#mnd9" name="Mandatory6"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#page15#enu6#ln31" name="Crear" to="sv3#miu16" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#enu6#ln31#par82" name="groupName_groupName_param" source="sv3#page15#enu6#fld16" target="sv3#miu16.mov1#opm10#icu10#icp22"/>
+        <LinkParameter id="sv3#page15#enu6#ln31#par83" name="Key [id]_moduleID_param" source="sv3#page15#enu6#sfld3" target="sv3#miu16.mov1#opm10#icu10#icp23"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit id="sv3#page15#inu3" name="Lista de grupos" gr:x="100" gr:y="205" entity="Group" displayAttributes="groupOID groupName Group2DefaultModule.moduleName" linkOrder="sv3#page15#inu3#ln29">
+      <Link id="sv3#page15#inu3#ln29" name="Borrar" to="sv3#miu17" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#inu3#ln29#par81" name="id_IdGrupo_param" source="data[].groupOID" target="sv3#miu17.mov1#opm13#icu13#icp27"/>
+      </Link>
+    </IndexUnit>
+    <SelectorUnit id="sv3#page15#seu3" name="modulos" gr:x="0" gr:y="305" entity="Module">
+      <Link id="sv3#page15#seu3#ln12" name="Flow15" to="sv3#page15#enu6" type="transport" validate="true">
+        <LinkParameter id="sv3#page15#seu3#ln12#par59" name="moduleName_moduleID [label]" source="moduleNameArray" target="sv3#page15#enu6#sfld3_label"/>
+        <LinkParameter id="sv3#page15#seu3#ln12#par60" name="moduleID_moduleID [output]" source="moduleOIDArray" target="sv3#page15#enu6#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="8" rowspan="2">
+        <layout:Unit unitId="sv3#page15#inu2">
+          <layout:Attribute attribute="moduleOID"/>
+          <layout:Attribute attribute="moduleID"/>
+          <layout:Attribute attribute="moduleName"/>
+          <layout:Link link="sv3#page15#inu2#ln25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4" rowspan="2">
+        <layout:Unit unitId="sv3#page15#enu5">
+          <layout:Field field="sv3#page15#enu5#fld14"/>
+          <layout:Field field="sv3#page15#enu5#fld15"/>
+          <layout:Link link="sv3#page15#enu5#ln27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="8" rowspan="2">
+        <layout:Unit unitId="sv3#page15#inu3">
+          <layout:Attribute attribute="groupOID"/>
+          <layout:Attribute attribute="groupName"/>
+          <layout:Attribute attribute="Group2DefaultModule.moduleName"/>
+          <layout:Link link="sv3#page15#inu3#ln29"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="4" rowspan="2">
+        <layout:Unit unitId="sv3#page15#enu6">
+          <layout:Field field="sv3#page15#enu6#fld16"/>
+          <layout:Field field="sv3#page15#enu6#sfld3"/>
+          <layout:Link link="sv3#page15#enu6#ln31"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>

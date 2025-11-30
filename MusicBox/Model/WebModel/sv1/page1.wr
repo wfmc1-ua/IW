@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1050" gr:y="-305" id="sv1#page1" name="Editar playlist">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv1#page1#enu5" name="Modificar playlist" entity="ent2" linkOrder="sv1#page1#enu5#ln10">
+      <Field id="sv1#page1#enu5#fld4" name="name" type="string" modifiable="true" attribute="ent2#att15" preloaded="true"/>
+      <Field id="sv1#page1#enu5#fld18" name="description" type="text" modifiable="true" attribute="ent2#att16" preloaded="true"/>
+      <Field id="sv1#page1#enu5#fld19" name="isPublic" type="boolean" modifiable="true" attribute="ent2#att17" preloaded="true"/>
+      <Link id="sv1#page1#enu5#ln10" name="Subir cambios" to="sv1#miu8" type="normal" validate="true">
+        <LinkParameter id="sv1#page1#enu5#ln10#par54" name="description_descripcion_playlist" source="sv1#page1#enu5#fld18" target="sv1#miu8.mov1#opm9#icu10#icp29"/>
+        <LinkParameter id="sv1#page1#enu5#ln10#par55" name="Key [id]_id_playlist" source="key.ent2#att14" target="sv1#miu8.mov1#opm9#icu10#icp26"/>
+        <LinkParameter id="sv1#page1#enu5#ln10#par58" name="isPublic_isPublic" source="sv1#page1#enu5#fld19" target="sv1#miu8.mov1#opm9#icu10#icp28"/>
+        <LinkParameter id="sv1#page1#enu5#ln10#par59" name="name_nombre_playlist" source="sv1#page1#enu5#fld4" target="sv1#miu8.mov1#opm9#icu10#icp27"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page1#enu5">
+          <layout:Field field="sv1#page1#enu5#fld4"/>
+          <layout:Field field="sv1#page1#enu5#fld18"/>
+          <layout:Field field="sv1#page1#enu5#fld19"/>
+          <layout:Link link="sv1#page1#enu5#ln10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

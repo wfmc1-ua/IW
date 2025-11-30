@@ -95,10 +95,10 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel2" name="Song_Genre" sourceEntity="ent1" targetEntity="ent3" db:database="db1" db:table="song">
-    <RelationshipRole1 id="rel2#role3" name="SongToGenre" maxCard="1" cascadeDelete="true">
+    <RelationshipRole1 id="rel2#role3" name="SongToGenre" maxCard="1" cascadeDelete="false">
       <db:JoinColumn attribute="ent1#att1" name="id"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel2#role4" name="GenreToSong" maxCard="N">
+    <RelationshipRole2 id="rel2#role4" name="GenreToSong" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="ent3#att19" name="genre_id"/>
     </RelationshipRole2>
   </Relationship>

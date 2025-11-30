@@ -15,8 +15,8 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page4#enu3">
           <layout:Link link="sv2#page4#enu3#ln3"/>
-          <layout:Field field="sv2#page4#enu3#fld5"/>
-          <layout:Field field="sv2#page4#enu3#fld6"/>
+          <layout:Field field="sv2#page4#enu3#fld5" label="Correo electr&#243;nico"/>
+          <layout:Field field="sv2#page4#enu3#fld6" label="Contrase&#241;a"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

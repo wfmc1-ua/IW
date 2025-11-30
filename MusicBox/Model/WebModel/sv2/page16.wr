@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page16" name="Canciones del &#225;lbum" gr:x="955" gr:y="150">
   <ContentUnits>
-    <PowerIndexUnit id="sv2#page16#pwu12" name="Lista de Canciones" gr:x="0" gr:y="155" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12">
+    <PowerIndexUnit id="sv2#page16#pwu12" name="Lista de Canciones" gr:x="0" gr:y="155" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12" gr:showAllParts="false">
       <Selector id="sv2#page16#pwu12#su17" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#page16#pwu12#su17#acond6" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.ent6#att31"/>
       </Selector>
@@ -26,10 +26,10 @@
     <layout:Row>
       <layout:Cell rowspan="5" colspan="7">
         <layout:Unit unitId="sv2#page16#pwu12">
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att3"/>
-          <layout:Attribute attribute="ent1#att5"/>
-          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att2" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent1#att3" label="Duraci&#243;n"/>
+          <layout:Attribute attribute="ent1#att5" label="N&#250;mero de pista"/>
+          <layout:Attribute attribute="ent1#att12" label="Fecha de lanzamiento"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -42,7 +42,7 @@
         <layout:Grid containerType="grid">
           <layout:Row>
             <layout:Cell colspan="12">
-              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att32" mode="value"/>
+              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att32" mode="value" label="T&#237;tulo"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -58,7 +58,7 @@
           </layout:Row>
           <layout:Row>
             <layout:Cell colspan="12">
-              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att33" mode="value"/>
+              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att33" mode="value" label="Fecha de lanzamiento"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -74,7 +74,7 @@
           </layout:Row>
           <layout:Row>
             <layout:Cell rowspan="2" colspan="12">
-              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att34" mode="value"/>
+              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att34" mode="value" label="Portada"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -147,8 +147,8 @@
       <layout:Cell/>
       <layout:Cell rowspan="2" colspan="5">
         <layout:Unit unitId="sv2#page16#dau7">
-          <layout:Attribute attribute="ent4#att23"/>
-          <layout:Attribute attribute="ent4#att24"/>
+          <layout:Attribute attribute="ent4#att23" label="Nombre"/>
+          <layout:Attribute attribute="ent4#att24" label="Pais"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

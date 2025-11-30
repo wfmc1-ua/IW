@@ -10,9 +10,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page12#pwu1">
-          <layout:Attribute attribute="ent2#att15"/>
-          <layout:Attribute attribute="ent2#att16"/>
-          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att15" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent2#att16" label="Descripci&#243;n"/>
+          <layout:Attribute attribute="ent2#att18" label="Fecha de creaci&#243;n"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1440" gr:y="145" id="sv2#page9" name="Canciones" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit id="sv2#page9#pwu10" name="Canciones" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 rel8#role15.ent4#att23" linkOrder="sv2#page9#pwu10#ln42">
+    <PowerIndexUnit id="sv2#page9#pwu10" name="Canciones" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 rel8#role15.ent4#att23" linkOrder="sv2#page9#pwu10#ln42" gr:showAllParts="false">
       <Link id="sv2#page9#pwu10#ln42" name="Detalles de la canci&#243;n" to="sv2#page19#dau8" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
   </ContentUnits>
@@ -8,10 +8,10 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page9#pwu10">
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att3"/>
-          <layout:Attribute attribute="ent1#att12"/>
-          <layout:Attribute attribute="rel8#role15.ent4#att23"/>
+          <layout:Attribute attribute="ent1#att2" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent1#att3" label="Duraci&#243;n"/>
+          <layout:Attribute attribute="ent1#att12" label="Fecha de lanzamiento"/>
+          <layout:Attribute attribute="rel8#role15.ent4#att23" label="Artista"/>
           <layout:Link link="sv2#page9#pwu10#ln42"/>
         </layout:Unit>
       </layout:Cell>

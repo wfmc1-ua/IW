@@ -38,9 +38,7 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="mov1#mpkg1#ctm2#page2#dau2">
-          <layout:Attribute attribute="ent1#att35"/>
-        </layout:Unit>
+        <layout:Unit unitId="mov1#mpkg1#ctm2#page2#dau2"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -57,7 +55,7 @@
   </layout:Grid>
   <Page gr:x="780" gr:y="545" id="mov1#mpkg1#ctm2#page2" name="Foto galleria">
     <ContentUnits>
-      <DataUnit gr:x="0" gr:y="0" id="mov1#mpkg1#ctm2#page2#dau2" name="Foto prueba" entity="ent1" displayAttributes="ent1#att35">
+      <DataUnit gr:x="0" gr:y="0" id="mov1#mpkg1#ctm2#page2#dau2" name="Foto prueba" entity="ent1">
         <Selector id="mov1#mpkg1#ctm2#page2#dau2#su2" defaultPolicy="fill" booleanOperator="and">
           <KeyCondition id="mov1#mpkg1#ctm2#page2#dau2#su2#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
         </Selector>

@@ -8,9 +8,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page1#pwu4">
-          <layout:Attribute attribute="ent6#att33"/>
-          <layout:Attribute attribute="ent6#att32"/>
-          <layout:Attribute attribute="ent6#att34"/>
+          <layout:Attribute attribute="ent6#att33" label="Fecha de lanzamiento"/>
+          <layout:Attribute attribute="ent6#att32" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent6#att34" label="Portada"/>
           <layout:Link link="sv2#page1#pwu4#ln41"/>
         </layout:Unit>
       </layout:Cell>

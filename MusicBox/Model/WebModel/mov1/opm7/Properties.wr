@@ -1,0 +1,25 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="460" id="mov1#opm7" name="Crear playlist">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm7#icu8" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm7#icu8#icp19" name="nombre_playlist"/>
+      <InputCollectorParameter id="mov1#opm7#icu8#icp20" name="id_playlist"/>
+      <InputCollectorParameter id="mov1#opm7#icu8#icp21" name="is_public"/>
+      <InputCollectorParameter id="mov1#opm7#icu8#icp22" name="timestamp"/>
+      <InputCollectorParameter id="mov1#opm7#icu8#icp23" name="descripcion_playlist"/>
+      <OKLink id="mov1#opm7#icu8#oln13" name="OKFlow13" to="mov1#opm7#cru1">
+        <LinkParameter id="mov1#opm7#icu8#oln13#par11" name="timestamp_createdAt" source="mov1#opm7#icu8#icp22" target="mov1#opm7#cru1.ent2#att18"/>
+        <LinkParameter id="mov1#opm7#icu8#oln13#par34" name="descripcion_playlist_description" source="mov1#opm7#icu8#icp23" target="mov1#opm7#cru1.ent2#att16"/>
+        <LinkParameter id="mov1#opm7#icu8#oln13#par35" name="is_public_isPublic" source="mov1#opm7#icu8#icp21" target="mov1#opm7#cru1.ent2#att17"/>
+        <LinkParameter id="mov1#opm7#icu8#oln13#par36" name="nombre_playlist_name" source="mov1#opm7#icu8#icp19" target="mov1#opm7#cru1.ent2#att15"/>
+        <LinkParameter id="mov1#opm7#icu8#oln13#par50" name="id_user_User.id(PlaylistToUser)" source="mov1#opm7#icu8#icp24" target="mov1#opm7#cru1.rel7#role14.userOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm7#icu8#icp24" name="id_user"/>
+    </InputCollectorUnit>
+    <CreateUnit gr:x="365" gr:y="90" id="mov1#opm7#cru1" name="Crear playlist" entity="ent2">
+      <OKLink id="mov1#opm7#cru1#oln14" name="OKFlow14" to="mov1#opm7#okcu6" automaticCoupling="true"/>
+      <KOLink id="mov1#opm7#cru1#kln8" name="KOFlow8" to="mov1#opm7#kocu6" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="510" gr:y="55" id="mov1#opm7#okcu6" name="OK Port6"/>
+    <KOCollectorUnit gr:x="510" gr:y="165" id="mov1#opm7#kocu6" name="KO Port6"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,8 +1,20 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1030" gr:y="240" id="sv2#page12" name="Playlists p&#250;blicas" landmark="true">
-  <ContentUnits/>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1790" gr:y="180" id="sv2#page12" name="Playlists p&#250;blicas" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#page12#pwu1" name="Playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att18">
+      <Selector id="sv2#page12#pwu1#su8" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page12#pwu1#su8#acond1" name="IsPublic" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att17" value="True"/>
+      </Selector>
+    </PowerIndexUnit>
+  </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page12#pwu1">
+          <layout:Attribute attribute="ent2#att15" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent2#att16" label="Descripci&#243;n"/>
+          <layout:Attribute attribute="ent2#att18" label="Fecha de creaci&#243;n"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

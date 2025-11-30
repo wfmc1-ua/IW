@@ -5,7 +5,7 @@
         <LinkParameter id="sv2#miu1#kln7#par41" name="error_param_Shown Messages" source="mov1#opm2#kocu2#ocp2" target="sv2#page4#mssu3.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit id="sv2#miu2" gr:x="575" gr:y="465" action="true" moduleId="mov1#opm2">
+    <ModuleInstanceUnit id="sv2#miu2" gr:x="585" gr:y="550" action="true" moduleId="mov1#opm2">
       <KOLink id="sv2#miu2#kln2" name="KOFlow2" to="sv2#page3#mssu2">
         <LinkParameter id="sv2#miu2#kln2#par12" name="error_param_Shown Messages" source="mov1#opm1#kocu1#ocp1" target="sv2#page3#mssu2.shownMessages"/>
       </KOLink>

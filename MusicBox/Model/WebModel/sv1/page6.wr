@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="20" id="sv1#page6" name="Menu inicio">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="-35" id="sv1#page6" name="Menu inicio">
   <ContentUnits>
     <MultiMessageUnit id="sv1#page6#mssu6" name="Mensaje de bienvenida" gr:x="0" gr:y="0">
       <Message xml:space="preserve">$$htmlCode$$
@@ -55,7 +55,7 @@ Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Page gr:x="0" gr:y="15" id="sv1#page6#page10" name="&#193;lbumes">
+  <Page gr:x="0" gr:y="70" id="sv1#page6#page10" name="&#193;lbumes">
     <ContentUnits>
       <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page6#page10#pwu5" name="Lista de &#193;lbumes" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att34" linkOrder="sv1#page6#page10#pwu5#ln15">
         <Link id="sv1#page6#page10#pwu5#ln15" name="Detalles del album" to="sv1#page13#dau9" automaticCoupling="true" type="normal" validate="true"/>

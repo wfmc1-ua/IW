@@ -1,0 +1,29 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="800" gr:y="350" id="mov1#opm9" name="Modificar playlist">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm9#icu10" gr:x="30" gr:y="60">
+      <OKLink id="mov1#opm9#icu10#oln17" name="OKFlow17" to="mov1#opm9#mfu2">
+        <LinkParameter id="mov1#opm9#icu10#oln17#par51" name="descripcion_playlist_description" source="mov1#opm9#icu10#icp29" target="mov1#opm9#mfu2.ent2#att16"/>
+        <LinkParameter id="mov1#opm9#icu10#oln17#par52" name="isPublic_isPublic" source="mov1#opm9#icu10#icp28" target="mov1#opm9#mfu2.ent2#att17"/>
+        <LinkParameter id="mov1#opm9#icu10#oln17#par53" name="nombre_playlist_name" source="mov1#opm9#icu10#icp27" target="mov1#opm9#mfu2.ent2#att15"/>
+        <LinkParameter id="mov1#opm9#icu10#oln17#par87" name="id_playlist_KeyCondition3 [id]" source="mov1#opm9#icu10#icp26" target="mov1#opm9#mfu2#su3#kcond3.ent2#att14"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp26" name="id_playlist"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp27" name="nombre_playlist"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp28" name="isPublic"/>
+      <InputCollectorParameter id="mov1#opm9#icu10#icp29" name="descripcion_playlist"/>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="435" gr:y="65" id="mov1#opm9#mfu2" name="Update playlist" entity="ent2">
+      <Selector id="mov1#opm9#mfu2#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm9#mfu2#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm9#mfu2#oln18" name="OKFlow18" to="mov1#opm9#okcu8" automaticCoupling="true"/>
+      <KOLink id="mov1#opm9#mfu2#kln10" name="KOFlow10" to="mov1#opm9#kocu8" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="635" gr:y="55" id="mov1#opm9#okcu8" name="OK Port8">
+      <OutputCollectorParameter id="mov1#opm9#okcu8#ocp3" name="ok_output" value="Playlist modificada"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="635" gr:y="170" id="mov1#opm9#kocu8" name="KO Port8">
+      <OutputCollectorParameter id="mov1#opm9#kocu8#ocp2" name="error_output" value="Error al modificar la playlist"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

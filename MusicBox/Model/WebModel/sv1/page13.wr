@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="Canciones del &#225;lbum" gr:x="65" gr:y="285">
   <ContentUnits>
-    <PowerIndexUnit id="sv1#page13#pwu7" name="Lista de Canciones" gr:x="0" gr:y="130" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35" linkOrder="sv1#page13#pwu7#ln20">
+    <PowerIndexUnit id="sv1#page13#pwu7" name="Lista de Canciones" gr:x="0" gr:y="155" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35" linkOrder="sv1#page13#pwu7#ln20">
       <Selector id="sv1#page13#pwu7#su16" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page13#pwu7#su16#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.ent6#att31"/>
       </Selector>

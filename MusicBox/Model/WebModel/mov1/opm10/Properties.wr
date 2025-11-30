@@ -1,38 +1,18 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="crear/modificar grupo" gr:x="1130" gr:y="155">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="crear grupo" gr:x="1130" gr:y="155">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="-15" gr:y="220" linkOrder="mov1#opm10#icu10#ln22 mov1#opm10#icu10#ln32">
-      <OKLink id="mov1#opm10#icu10#oln15" name="OKFlow18" to="mov1#opm10#inn2">
-        <LinkParameter id="mov1#opm10#icu10#oln15#par89" name="id_param_Input" source="mov1#opm10#icu10#icp31" target="mov1#opm10#inn2.isnotnull"/>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="130" gr:y="225">
+      <OKLink id="mov1#opm10#icu10#oln15" name="OKFlow18" to="mov1#opm10#cru1">
+        <LinkParameter id="mov1#opm10#icu10#oln15#par34" name="groupName_param_groupName" source="mov1#opm10#icu10#icp22" target="mov1#opm10#cru1.groupName"/>
+        <LinkParameter id="mov1#opm10#icu10#oln15#par35" name="moduleID_param_Module.id(defaultModule)" source="mov1#opm10#icu10#icp23" target="mov1#opm10#cru1.Group2DefaultModule.moduleOID"/>
       </OKLink>
       <InputCollectorParameter id="mov1#opm10#icu10#icp22" name="groupName_param"/>
       <InputCollectorParameter id="mov1#opm10#icu10#icp23" name="moduleID_param"/>
-      <InputCollectorParameter id="mov1#opm10#icu10#icp31" name="id_param"/>
-      <Link id="mov1#opm10#icu10#ln22" name="Flow22" to="mov1#opm10#mfu4" type="transport" validate="true" gr:bendpoints="189,-69,-196,1">
-        <LinkParameter id="mov1#opm10#icu10#ln22#par92" name="groupName_param_groupName" source="mov1#opm10#icu10#icp22" target="mov1#opm10#mfu4.groupName"/>
-        <LinkParameter id="mov1#opm10#icu10#ln22#par93" name="id_param_KeyCondition11 [id]" source="mov1#opm10#icu10#icp31" target="mov1#opm10#mfu4#su9#kcond11.groupOID"/>
-        <LinkParameter id="mov1#opm10#icu10#ln22#par94" name="moduleID_param_Module.id(defaultModule)" source="mov1#opm10#icu10#icp23" target="mov1#opm10#mfu4.Group2DefaultModule.moduleOID"/>
-      </Link>
-      <Link id="mov1#opm10#icu10#ln32" name="Flow32" to="mov1#opm10#cru1" type="transport" validate="true" gr:bendpoints="206,60,-189,0">
-        <LinkParameter id="mov1#opm10#icu10#ln32#par90" name="groupName_param_groupName" source="mov1#opm10#icu10#icp22" target="mov1#opm10#cru1.groupName"/>
-        <LinkParameter id="mov1#opm10#icu10#ln32#par91" name="moduleID_param_Module.id(defaultModule)" source="mov1#opm10#icu10#icp23" target="mov1#opm10#cru1.Group2DefaultModule.moduleOID"/>
-      </Link>
     </InputCollectorUnit>
-    <CreateUnit id="mov1#opm10#cru1" name="crear grupo" gr:x="455" gr:y="295" entity="Group">
+    <CreateUnit id="mov1#opm10#cru1" name="crear" gr:x="445" gr:y="225" entity="Group">
       <OKLink id="mov1#opm10#cru1#oln16" name="OKFlow19" to="mov1#opm10#okcu7" automaticCoupling="true"/>
       <KOLink id="mov1#opm10#cru1#kln9" name="KOFlow11" to="mov1#opm10#kocu7" automaticCoupling="true"/>
     </CreateUnit>
     <OKCollectorUnit id="mov1#opm10#okcu7" name="OK Port8" gr:x="605" gr:y="175"/>
     <KOCollectorUnit id="mov1#opm10#kocu7" name="KO Port8" gr:x="605" gr:y="290"/>
-    <IsNotNullUnit gr:x="270" gr:y="240" id="mov1#opm10#inn2" name="existe grupo">
-      <KOLink id="mov1#opm10#inn2#kln16" name="KOFlow16" to="mov1#opm10#cru1" automaticCoupling="true"/>
-      <OKLink id="mov1#opm10#inn2#oln25" name="OKFlow25" to="mov1#opm10#mfu4" automaticCoupling="true"/>
-    </IsNotNullUnit>
-    <ModifyUnit gr:x="440" gr:y="155" id="mov1#opm10#mfu4" name="editar grupo" entity="Group">
-      <Selector id="mov1#opm10#mfu4#su9" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm10#mfu4#su9#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="mov1#opm10#mfu4#oln26" name="OKFlow26" to="mov1#opm10#okcu7" automaticCoupling="true"/>
-      <KOLink id="mov1#opm10#mfu4#kln17" name="KOFlow17" to="mov1#opm10#kocu7" automaticCoupling="true"/>
-    </ModifyUnit>
   </OperationUnits>
 </OperationModule>

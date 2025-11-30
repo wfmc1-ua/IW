@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1255" gr:y="360" id="mov1#opm1" name="Crear cancion">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="110" id="mov1#opm1" name="Crear cancion">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm1#icu2" gr:x="30" gr:y="290">
       <OKLink id="mov1#opm1#icu2#oln2" name="OKFlow2" to="mov1#opm1#cru3" automaticCoupling="false">

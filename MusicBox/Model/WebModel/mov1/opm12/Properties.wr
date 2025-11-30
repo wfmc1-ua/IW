@@ -1,38 +1,18 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm12" name="crear/modificar modulo" gr:x="865" gr:y="160">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm12" name="crear modulo" gr:x="865" gr:y="160">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm12#icu12" gr:x="-25" gr:y="225">
-      <OKLink id="mov1#opm12#icu12#oln19" name="OKFlow14" to="mov1#opm12#inn1">
-        <LinkParameter id="mov1#opm12#icu12#oln19#par1" name="idModule_param_Input" source="mov1#opm12#icu12#icp30" target="mov1#opm12#inn1.isnotnull"/>
+    <InputCollectorUnit id="mov1#opm12#icu12" gr:x="180" gr:y="230">
+      <OKLink id="mov1#opm12#icu12#oln19" name="OKFlow14" to="mov1#opm12#cru2">
+        <LinkParameter id="mov1#opm12#icu12#oln19#par50" name="idModule_param_moduleID" source="mov1#opm12#icu12#icp25" target="mov1#opm12#cru2.moduleID"/>
+        <LinkParameter id="mov1#opm12#icu12#oln19#par51" name="moduleName_param_moduleName" source="mov1#opm12#icu12#icp26" target="mov1#opm12#cru2.moduleName"/>
       </OKLink>
       <InputCollectorParameter id="mov1#opm12#icu12#icp25" name="idModule_param"/>
       <InputCollectorParameter id="mov1#opm12#icu12#icp26" name="moduleName_param"/>
-      <Link id="mov1#opm12#icu12#ln6" name="Flow6" to="mov1#opm12#cru2" type="transport" validate="true" gr:bendpoints="221,81,-204,1">
-        <LinkParameter id="mov1#opm12#icu12#ln6#par4" name="idModule_param_moduleID" source="mov1#opm12#icu12#icp25" target="mov1#opm12#cru2.moduleID"/>
-        <LinkParameter id="mov1#opm12#icu12#ln6#par20" name="moduleName_param_moduleName" source="mov1#opm12#icu12#icp26" target="mov1#opm12#cru2.moduleName"/>
-      </Link>
-      <Link id="mov1#opm12#icu12#ln7" name="Flow7" to="mov1#opm12#mfu3" type="transport" validate="true" gr:bendpoints="205,-59,-225,1">
-        <LinkParameter id="mov1#opm12#icu12#ln7#par21" name="idModule_param_moduleID" source="mov1#opm12#icu12#icp25" target="mov1#opm12#mfu3.moduleID"/>
-        <LinkParameter id="mov1#opm12#icu12#ln7#par22" name="moduleName_param_moduleName" source="mov1#opm12#icu12#icp26" target="mov1#opm12#mfu3.moduleName"/>
-        <LinkParameter id="mov1#opm12#icu12#ln7#par48" name="id_param_KeyCondition8 [id]" source="mov1#opm12#icu12#icp30" target="mov1#opm12#mfu3#su8#kcond8.moduleOID"/>
-      </Link>
-      <InputCollectorParameter id="mov1#opm12#icu12#icp30" name="id_param"/>
     </InputCollectorUnit>
-    <CreateUnit id="mov1#opm12#cru2" name="crear modulo" gr:x="475" gr:y="305" entity="Module">
+    <CreateUnit id="mov1#opm12#cru2" name="crear" gr:x="490" gr:y="230" entity="Module">
       <OKLink id="mov1#opm12#cru2#oln20" name="OKFlow15" to="mov1#opm12#okcu9" automaticCoupling="true"/>
       <KOLink id="mov1#opm12#cru2#kln11" name="KOFlow9" to="mov1#opm12#kocu9" automaticCoupling="true"/>
     </CreateUnit>
     <OKCollectorUnit id="mov1#opm12#okcu9" name="OK Port6" gr:x="655" gr:y="160"/>
     <KOCollectorUnit id="mov1#opm12#kocu9" name="KO Port6" gr:x="655" gr:y="300"/>
-    <IsNotNullUnit gr:x="300" gr:y="250" id="mov1#opm12#inn1" name="existe modulo">
-      <OKLink id="mov1#opm12#inn1#oln23" name="OKFlow23" to="mov1#opm12#mfu3" automaticCoupling="true"/>
-      <KOLink id="mov1#opm12#inn1#kln14" name="KOFlow14" to="mov1#opm12#cru2" automaticCoupling="true"/>
-    </IsNotNullUnit>
-    <ModifyUnit gr:x="465" gr:y="155" id="mov1#opm12#mfu3" name="modificar modulo" entity="Module">
-      <Selector id="mov1#opm12#mfu3#su8" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov1#opm12#mfu3#su8#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
-      </Selector>
-      <OKLink id="mov1#opm12#mfu3#oln24" name="OKFlow24" to="mov1#opm12#okcu9" automaticCoupling="true"/>
-      <KOLink id="mov1#opm12#mfu3#kln15" name="KOFlow15" to="mov1#opm12#kocu9" automaticCoupling="true"/>
-    </ModifyUnit>
   </OperationUnits>
 </OperationModule>

@@ -1,18 +1,74 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="15" gr:y="20" id="sv1#page6" name="Menu inicio">
-  <ContentUnits>
-    <MultiMessageUnit id="sv1#page6#mssu6" name="Mensaje de bienvenida" gr:x="0" gr:y="0">
-      <Message xml:space="preserve">$$htmlCode$$
-
-Bienvenido a MusicBox.
-
-Aqu&#237;, podr&#225;s gestionar tu propia biblioteca de m&#250;sica online. Consulta tus &#225;lbumes preferidos y a&#241;adelos a tus playlists.
-Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz para el usuario. </Message>
-    </MultiMessageUnit>
-  </ContentUnits>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="55" gr:y="25" id="sv1#page6" name="Menu inicio">
+  <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#page6#mssu6"/>
+        <layout:SubPage pageId="sv1#page6#page10">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv1#page6#page10#pwu5">
+                  <layout:Attribute attribute="ent6#att32"/>
+                  <layout:Attribute attribute="ent6#att34"/>
+                  <layout:Link link="sv1#page6#page10#pwu5#ln15"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -62,11 +118,4 @@ Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz
       </PowerIndexUnit>
     </ContentUnits>
   </Page>
-  <layout:CustomLocation name="User">
-    <layout:Grid containerType="cell">
-      <layout:Row>
-        <layout:Cell/>
-      </layout:Row>
-    </layout:Grid>
-  </layout:CustomLocation>
 </Page>

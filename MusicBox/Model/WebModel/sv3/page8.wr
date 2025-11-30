@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-10" gr:y="415" id="sv3#page8" name="Pagina Manejo Entidades">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="845" gr:y="280" id="sv3#page8" name="Pagina Manejo Entidades">
   <ContentUnits>
     <EntryUnit id="sv3#page8#enu4" name="A&#241;adir Cancion" gr:x="0" gr:y="0" entity="ent1" linkOrder="sv3#page8#enu4#ln8">
       <Field id="sv3#page8#enu4#fld8" name="title" type="string" modifiable="true" attribute="ent1#att2"/>

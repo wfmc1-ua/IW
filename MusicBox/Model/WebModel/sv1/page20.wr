@@ -1,45 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page7" name="Welcome" gr:x="10" gr:y="170">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page20" name="&#193;lbumes" gr:x="195" gr:y="90">
   <ContentUnits>
-    <MultiMessageUnit id="sv3#page7#mssu5" name="Entrada" gr:x="5" gr:y="0">
-      <Message xml:space="preserve">Bienvenido a la p&#225;gina de administraci&#243;n de MusicBox
-
-Canciones: {songs}</Message>
-      <Placeholder id="sv3#page7#mssu5#ph2" name="songs"/>
-    </MultiMessageUnit>
+    <PowerIndexUnit id="sv1#page20#pwu13" name="Lista de &#193;lbumes" linkOrder="sv1#page20#pwu13#ln36" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att34">
+      <Link id="sv1#page20#pwu13#ln36" name="Detalles del album" to="sv1#page13#dau9" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page7#mssu5"/>
+        <layout:Unit unitId="sv1#page20#pwu13">
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att34"/>
+          <layout:Link link="sv1#page20#pwu13#ln36"/>
+        </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

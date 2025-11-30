@@ -1,0 +1,74 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="985" gr:y="-110" id="sv3#page17" name="Generos">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#page17#pwu17" name="Generos" linkOrder="sv3#page17#pwu17#ln58 sv3#page17#pwu17#ln59" gr:x="5" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att20 ent3#att21">
+      <Link id="sv3#page17#pwu17#ln58" name="Borrar" to="sv3#miu10" type="normal" validate="true">
+        <LinkParameter id="sv3#page17#pwu17#ln58#par146" name="id_id_param" source="data[].ent3#att19" target="sv3#miu10.mov1#opm19#icu19#icp35"/>
+      </Link>
+      <Link id="sv3#page17#pwu17#ln59" name="Editar" to="sv3#page17#enu12" type="normal" validate="true">
+        <LinkParameter id="sv3#page17#pwu17#ln59#par147" name="description_Descripcion" source="data[].ent3#att21" target="sv3#page17#enu12#fld33_slot"/>
+        <LinkParameter id="sv3#page17#pwu17#ln59#par148" name="id_Key Condition [id]" source="data[].ent3#att19" target="sv3#page17#enu12.ent3#att19"/>
+        <LinkParameter id="sv3#page17#pwu17#ln59#par149" name="name_Nombre" source="data[].ent3#att20" target="sv3#page17#enu12#fld32_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#page17#enu12" name="Crear genero" linkOrder="sv3#page17#enu12#ln60" gr:x="0" gr:y="140" entity="ent3">
+      <Field id="sv3#page17#enu12#fld32" name="Nombre" type="string" modifiable="true" attribute="ent3#att20" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page17#enu12#fld32#mnd29" name="Mandatory5"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page17#enu12#fld33" name="Descripcion" type="text" modifiable="true" attribute="ent3#att21" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page17#enu12#fld33#mnd30" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Link id="sv3#page17#enu12#ln60" name="OK" to="sv3#miu18" type="normal" validate="true">
+        <LinkParameter id="sv3#page17#enu12#ln60#par150" name="Descripcion_description_param" source="sv3#page17#enu12#fld33" target="sv3#miu18.mov1#opm16#icu16#icp37"/>
+        <LinkParameter id="sv3#page17#enu12#ln60#par151" name="Key [id]_id_param" source="key.ent3#att19" target="sv3#miu18.mov1#opm16#icu16#icp36"/>
+        <LinkParameter id="sv3#page17#enu12#ln60#par152" name="Nombre_name_param" source="sv3#page17#enu12#fld32" target="sv3#miu18.mov1#opm16#icu16#icp38"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page17#enu12">
+          <layout:Field field="sv3#page17#enu12#fld32"/>
+          <layout:Field field="sv3#page17#enu12#fld33"/>
+          <layout:Link link="sv3#page17#enu12#ln60"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page17#pwu17">
+          <layout:Attribute attribute="ent3#att20" label="Nombre"/>
+          <layout:Attribute attribute="ent3#att21" label="Descripcion"/>
+          <layout:Link link="sv3#page17#pwu17#ln58"/>
+          <layout:Link link="sv3#page17#pwu17#ln59"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

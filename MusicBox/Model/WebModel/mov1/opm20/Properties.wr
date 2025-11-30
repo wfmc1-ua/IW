@@ -1,0 +1,44 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="1100" gr:y="365" id="mov1#opm20" name="crear/editar album">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm20#icu20" gr:x="60" gr:y="180" linkOrder="mov1#opm20#icu20#ln66 mov1#opm20#icu20#ln67">
+      <InputCollectorParameter id="mov1#opm20#icu20#icp43" name="id_param"/>
+      <InputCollectorParameter id="mov1#opm20#icu20#icp44" name="title_param"/>
+      <InputCollectorParameter id="mov1#opm20#icu20#icp45" name="releaseDate_param"/>
+      <InputCollectorParameter id="mov1#opm20#icu20#icp46" name="cover_param"/>
+      <InputCollectorParameter id="mov1#opm20#icu20#icp47" name="artist_param"/>
+      <OKLink id="mov1#opm20#icu20#oln44" name="OKFlow44" to="mov1#opm20#inn5">
+        <LinkParameter id="mov1#opm20#icu20#oln44#par155" name="id_param_Input" source="mov1#opm20#icu20#icp43" target="mov1#opm20#inn5.isnotnull"/>
+      </OKLink>
+      <Link id="mov1#opm20#icu20#ln66" name="Flow66" to="mov1#opm20#mfu7" type="transport" validate="true" gr:bendpoints="220,-68,-225,-3">
+        <LinkParameter id="mov1#opm20#icu20#ln66#par156" name="artist_param_Artist.id(AlbumToArtist)" source="mov1#opm20#icu20#icp47" target="mov1#opm20#mfu7.rel3#role6.ent4#att22"/>
+        <LinkParameter id="mov1#opm20#icu20#ln66#par157" name="cover_param_cover" source="mov1#opm20#icu20#icp46" target="mov1#opm20#mfu7.ent6#att34"/>
+        <LinkParameter id="mov1#opm20#icu20#ln66#par158" name="id_param_KeyCondition21 [id]" source="mov1#opm20#icu20#icp43" target="mov1#opm20#mfu7#su26#kcond21.ent6#att31"/>
+        <LinkParameter id="mov1#opm20#icu20#ln66#par159" name="releaseDate_param_releaseDate" source="mov1#opm20#icu20#icp45" target="mov1#opm20#mfu7.ent6#att33"/>
+        <LinkParameter id="mov1#opm20#icu20#ln66#par160" name="title_param_title" source="mov1#opm20#icu20#icp44" target="mov1#opm20#mfu7.ent6#att32"/>
+      </Link>
+      <Link id="mov1#opm20#icu20#ln67" name="Flow67" to="mov1#opm20#cru7" type="transport" validate="true" gr:bendpoints="235,74,-210,4">
+        <LinkParameter id="mov1#opm20#icu20#ln67#par161" name="artist_param_Artist.id(AlbumToArtist)" source="mov1#opm20#icu20#icp47" target="mov1#opm20#cru7.rel3#role6.ent4#att22"/>
+        <LinkParameter id="mov1#opm20#icu20#ln67#par162" name="cover_param_cover" source="mov1#opm20#icu20#icp46" target="mov1#opm20#cru7.ent6#att34"/>
+        <LinkParameter id="mov1#opm20#icu20#ln67#par163" name="releaseDate_param_releaseDate" source="mov1#opm20#icu20#icp45" target="mov1#opm20#cru7.ent6#att33"/>
+        <LinkParameter id="mov1#opm20#icu20#ln67#par164" name="title_param_title" source="mov1#opm20#icu20#icp44" target="mov1#opm20#cru7.ent6#att32"/>
+      </Link>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="390" gr:y="220" id="mov1#opm20#inn5" name="existe album">
+      <OKLink id="mov1#opm20#inn5#oln45" name="OKFlow45" to="mov1#opm20#mfu7" automaticCoupling="true"/>
+      <KOLink id="mov1#opm20#inn5#kln28" name="KOFlow28" to="mov1#opm20#cru7" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="575" gr:y="135" id="mov1#opm20#mfu7" name="editar album" entity="ent6">
+      <Selector id="mov1#opm20#mfu7#su26" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm20#mfu7#su26#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm20#mfu7#oln46" name="OKFlow46" to="mov1#opm20#okcu17" automaticCoupling="true"/>
+      <KOLink id="mov1#opm20#mfu7#kln29" name="KOFlow29" to="mov1#opm20#kocu17" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="575" gr:y="280" id="mov1#opm20#cru7" name="crear album" entity="ent6">
+      <OKLink id="mov1#opm20#cru7#oln47" name="OKFlow47" to="mov1#opm20#okcu17" automaticCoupling="true"/>
+      <KOLink id="mov1#opm20#cru7#kln30" name="KOFlow30" to="mov1#opm20#kocu17" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="755" gr:y="130" id="mov1#opm20#okcu17" name="OK Port17"/>
+    <KOCollectorUnit gr:x="755" gr:y="295" id="mov1#opm20#kocu17" name="KO Port17"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="800" gr:y="410" id="mov1#opm8" name="Eliminar playlist">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="520" id="mov1#opm8" name="Eliminar playlist">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm8#icu9" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm8#icu9#icp25" name="id_playlist"/>

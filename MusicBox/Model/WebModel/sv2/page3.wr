@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page3" name="usuarios" gr:x="120" gr:y="430">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page3" name="usuarios" gr:x="155" gr:y="425">
   <ContentUnits>
-    <EntryUnit id="sv2#page3#enu2" name="Registro" linkOrder="sv2#page3#enu2#ln1" gr:x="0" gr:y="10" entity="User">
+    <EntryUnit id="sv2#page3#enu2" name="Registro" linkOrder="sv2#page3#enu2#ln1" gr:x="0" gr:y="0" entity="User">
       <Field id="sv2#page3#enu2#fld1" name="userName_field" type="string" modifiable="true" attribute="userName">
         <VRules>
           <MandatoryValidationRule id="sv2#page3#enu2#fld1#mnd1" name="Mandatory4"/>
@@ -26,13 +26,13 @@
       </Link>
       <Field id="sv2#page3#enu2#fld13" name="displayName" type="string" modifiable="true" attribute="User#att9"/>
     </EntryUnit>
-    <SelectorUnit id="sv2#page3#seu1" name="grupos" gr:x="195" gr:y="0" entity="Group">
+    <SelectorUnit id="sv2#page3#seu1" name="grupos" gr:x="95" gr:y="125" entity="Group">
       <Link id="sv2#page3#seu1#ln2" name="Flow3" to="sv2#page3#enu2" type="transport" validate="true">
         <LinkParameter id="sv2#page3#seu1#ln2#par7" name="groupName_userGroup_field [label]" source="groupNameArray" target="sv2#page3#enu2#sfld1_label"/>
         <LinkParameter id="sv2#page3#seu1#ln2#par8" name="id_userGroup_field [output]" source="groupOIDArray" target="sv2#page3#enu2#sfld1_output"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit id="sv2#page3#mssu2" name="Error" gr:x="295" gr:y="45"/>
+    <MultiMessageUnit id="sv2#page3#mssu2" name="Error" gr:x="285" gr:y="100"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

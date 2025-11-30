@@ -1,0 +1,149 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="980" gr:y="725" id="sv3#page19" name="Canciones" layout:layoutManager="grid">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#page19#pwu19" name="Canciones" linkOrder="sv3#page19#pwu19#ln63 sv3#page19#pwu19#ln71" gr:x="130" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12 rel2#role3.ent3#att20 countDistinct(rel8#role15.ent4#att23) rel4#role8.ent6#att32">
+      <Link id="sv3#page19#pwu19#ln63" name="Borrar" to="sv3#miu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page19#pwu19#ln63#par154" name="id_id_param" source="data[].ent1#att1" target="sv3#miu4.mov1#opm14#icu14#icp32"/>
+      </Link>
+      <Link id="sv3#page19#pwu19#ln71" name="Editar" to="sv3#page19#enu14" type="normal" validate="true">
+        <LinkParameter id="sv3#page19#pwu19#ln71#par184" name="SongToAlbum.id_Album - Preselection" source="data[].rel4#role8_ent6#att31" target="sv3#page19#enu14#sfld7_presel"/>
+        <LinkParameter id="sv3#page19#pwu19#ln71#par185" name="durationSec_Duracion (segundos)" source="data[].ent1#att3" target="sv3#page19#enu14#fld38_slot"/>
+        <LinkParameter id="sv3#page19#pwu19#ln71#par186" name="releaseDate_Fecha lanzamiento" source="data[].ent1#att12" target="sv3#page19#enu14#fld40_slot"/>
+        <LinkParameter id="sv3#page19#pwu19#ln71#par187" name="SongToGenre.id_Genero - Preselection" source="data[].rel2#role3_ent3#att19" target="sv3#page19#enu14#sfld8_presel"/>
+        <LinkParameter id="sv3#page19#pwu19#ln71#par188" name="id_Key Condition [id]" source="data[].ent1#att1" target="sv3#page19#enu14.ent1#att1"/>
+        <LinkParameter id="sv3#page19#pwu19#ln71#par189" name="track_number_Numero en album" source="data[].ent1#att5" target="sv3#page19#enu14#fld39_slot"/>
+        <LinkParameter id="sv3#page19#pwu19#ln71#par190" name="title_Titulo" source="data[].ent1#att2" target="sv3#page19#enu14#fld37_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#page19#enu14" name="Crear cancion" gr:x="120" gr:y="125" entity="ent1" linkOrder="sv3#page19#enu14#ln78">
+      <Field id="sv3#page19#enu14#fld37" name="Titulo" type="string" modifiable="true" attribute="ent1#att2" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#fld37#mnd35" name="Mandatory16"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page19#enu14#fld38" name="Duracion (segundos)" type="integer" modifiable="true" attribute="ent1#att3" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#fld38#mnd36" name="Mandatory12"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page19#enu14#fld39" name="Numero en album" type="integer" modifiable="true" attribute="ent1#att5" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#fld39#mnd37" name="Mandatory15"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page19#enu14#fld40" name="Fecha lanzamiento" type="date" modifiable="true" attribute="ent1#att12" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#fld40#mnd38" name="Mandatory13"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#page19#enu14#sfld7" name="Album" type="string" role="rel4#role8">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#sfld7#mnd39" name="Mandatory10"/>
+        </VRules>
+      </SelectionField>
+      <MultiSelectionField id="sv3#page19#enu14#msfld2" name="Artista" type="string" role="rel8#role15">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#msfld2#mnd40" name="Mandatory11"/>
+        </VRules>
+      </MultiSelectionField>
+      <SelectionField id="sv3#page19#enu14#sfld8" name="Genero" type="string" role="rel2#role3">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page19#enu14#sfld8#mnd41" name="Mandatory14"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#page19#enu14#ln78" name="OK" to="sv3#miu21" type="normal" validate="true">
+        <LinkParameter id="sv3#page19#enu14#ln78#par207" name="Album_albumId_param" source="sv3#page19#enu14#sfld7" target="sv3#miu21.mov1#opm21#icu21#icp55"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par208" name="Artista_artists_param" source="sv3#page19#enu14#msfld2" target="sv3#miu21.mov1#opm21#icu21#icp56"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par209" name="Duracion (segundos)_durationSec_param" source="sv3#page19#enu14#fld38" target="sv3#miu21.mov1#opm21#icu21#icp50"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par210" name="Genero_genreId_param" source="sv3#page19#enu14#sfld8" target="sv3#miu21.mov1#opm21#icu21#icp54"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par211" name="Key [id]_id_param" source="key.ent1#att1" target="sv3#miu21.mov1#opm21#icu21#icp48"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par212" name="Fecha lanzamiento_releaseDate_param" source="sv3#page19#enu14#fld40" target="sv3#miu21.mov1#opm21#icu21#icp51"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par213" name="Titulo_title_param" source="sv3#page19#enu14#fld37" target="sv3#miu21.mov1#opm21#icu21#icp49"/>
+        <LinkParameter id="sv3#page19#enu14#ln78#par214" name="Numero en album_trackNum_param" source="sv3#page19#enu14#fld39" target="sv3#miu21.mov1#opm21#icu21#icp53"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv3#page19#seu4" name="Albumes" entity="ent6">
+      <Link id="sv3#page19#seu4#ln73" name="Flow73" to="sv3#page19#enu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page19#seu4#ln73#par178" name="title_Album [label]" source="ent6#att32Array" target="sv3#page19#enu14#sfld7_label"/>
+        <LinkParameter id="sv3#page19#seu4#ln73#par179" name="id_Album [output]" source="ent6#att31Array" target="sv3#page19#enu14#sfld7_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page19#seu5" name="Artistas" gr:x="0" gr:y="100" entity="ent4">
+      <Link id="sv3#page19#seu5#ln74" name="Flow74" to="sv3#page19#enu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page19#seu5#ln74#par180" name="name_Artista [label]" source="ent4#att23Array" target="sv3#page19#enu14#msfld2_label"/>
+        <LinkParameter id="sv3#page19#seu5#ln74#par181" name="id_Artista [output]" source="ent4#att22Array" target="sv3#page19#enu14#msfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="0" gr:y="195" id="sv3#page19#seu6" name="Generos" entity="ent3">
+      <Link id="sv3#page19#seu6#ln75" name="Flow75" to="sv3#page19#enu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page19#seu6#ln75#par182" name="name_Genero [label]" source="ent3#att20Array" target="sv3#page19#enu14#sfld8_label"/>
+        <LinkParameter id="sv3#page19#seu6#ln75#par183" name="id_Genero [output]" source="ent3#att19Array" target="sv3#page19#enu14#sfld8_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page19#enu14">
+          <layout:Field field="sv3#page19#enu14#fld37"/>
+          <layout:Field field="sv3#page19#enu14#fld38"/>
+          <layout:Field field="sv3#page19#enu14#fld39"/>
+          <layout:Field field="sv3#page19#enu14#fld40"/>
+          <layout:Field field="sv3#page19#enu14#sfld7"/>
+          <layout:Field field="sv3#page19#enu14#msfld2"/>
+          <layout:Field field="sv3#page19#enu14#sfld8"/>
+          <layout:Link link="sv3#page19#enu14#ln78"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page19#pwu19">
+          <layout:Link link="sv3#page19#pwu19#ln63"/>
+          <layout:Link link="sv3#page19#pwu19#ln71"/>
+          <layout:Attribute attribute="ent1#att2" label="Titulo"/>
+          <layout:Attribute attribute="ent1#att3" label="Duracion (segundos)"/>
+          <layout:Attribute attribute="ent1#att12" label="Fecha lanzamiento"/>
+          <layout:Attribute attribute="rel2#role3.ent3#att20" label="Genero"/>
+          <layout:Attribute attribute="countDistinct(rel8#role15.ent4#att23)" label="Artistas"/>
+          <layout:Attribute attribute="rel4#role8.ent6#att32" label="Album"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

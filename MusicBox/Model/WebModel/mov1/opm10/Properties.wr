@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="crear grupo" gr:x="1130" gr:y="155">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="crear/editar grupo" gr:x="1130" gr:y="155">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm10#icu10" gr:x="130" gr:y="225">
       <OKLink id="mov1#opm10#icu10#oln15" name="OKFlow18" to="mov1#opm10#cru1">

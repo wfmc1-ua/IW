@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="785" gr:y="360" id="mov1#opm16" name="crear/editar genero">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm16#icu16" gr:x="45" gr:y="215" linkOrder="mov1#opm16#icu16#ln38 mov1#opm16#icu16#ln39">
+      <InputCollectorParameter id="mov1#opm16#icu16#icp36" name="id_param"/>
+      <InputCollectorParameter id="mov1#opm16#icu16#icp37" name="description_param"/>
+      <InputCollectorParameter id="mov1#opm16#icu16#icp38" name="name_param"/>
+      <OKLink id="mov1#opm16#icu16#oln35" name="OKFlow35" to="mov1#opm16#inn3">
+        <LinkParameter id="mov1#opm16#icu16#oln35#par97" name="id_param_Input" source="mov1#opm16#icu16#icp36" target="mov1#opm16#inn3.isnotnull"/>
+      </OKLink>
+      <Link id="mov1#opm16#icu16#ln38" name="Flow38" to="mov1#opm16#mfu5" type="transport" validate="true" gr:bendpoints="193,-60,-187,0">
+        <LinkParameter id="mov1#opm16#icu16#ln38#par98" name="description_param_description" source="mov1#opm16#icu16#icp37" target="mov1#opm16#mfu5.ent3#att21"/>
+        <LinkParameter id="mov1#opm16#icu16#ln38#par104" name="id_param_KeyCondition19 [id]" source="mov1#opm16#icu16#icp36" target="mov1#opm16#mfu5#su17#kcond19.ent3#att19"/>
+        <LinkParameter id="mov1#opm16#icu16#ln38#par105" name="name_param_name" source="mov1#opm16#icu16#icp38" target="mov1#opm16#mfu5.ent3#att20"/>
+      </Link>
+      <Link id="mov1#opm16#icu16#ln39" name="Flow39" to="mov1#opm16#cru5" type="transport" validate="true" gr:bendpoints="185,79,-185,-1">
+        <LinkParameter id="mov1#opm16#icu16#ln39#par106" name="description_param_description" source="mov1#opm16#icu16#icp37" target="mov1#opm16#cru5.ent3#att21"/>
+        <LinkParameter id="mov1#opm16#icu16#ln39#par107" name="name_param_name" source="mov1#opm16#icu16#icp38" target="mov1#opm16#cru5.ent3#att20"/>
+      </Link>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="325" gr:y="240" id="mov1#opm16#inn3" name="existe genero">
+      <OKLink id="mov1#opm16#inn3#oln36" name="OKFlow36" to="mov1#opm16#mfu5" automaticCoupling="true"/>
+      <KOLink id="mov1#opm16#inn3#kln22" name="KOFlow22" to="mov1#opm16#cru5" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="475" gr:y="160" id="mov1#opm16#mfu5" name="editar genero" entity="ent3">
+      <Selector id="mov1#opm16#mfu5#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm16#mfu5#su17#kcond19" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm16#mfu5#oln37" name="OKFlow37" to="mov1#opm16#okcu15" automaticCoupling="true"/>
+      <KOLink id="mov1#opm16#mfu5#kln23" name="KOFlow23" to="mov1#opm16#kocu15" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="480" gr:y="310" id="mov1#opm16#cru5" name="crear genero" entity="ent3">
+      <OKLink id="mov1#opm16#cru5#oln38" name="OKFlow38" to="mov1#opm16#okcu15" automaticCoupling="true"/>
+      <KOLink id="mov1#opm16#cru5#kln24" name="KOFlow24" to="mov1#opm16#kocu15" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="650" gr:y="150" id="mov1#opm16#okcu15" name="OK Port15"/>
+    <KOCollectorUnit gr:x="650" gr:y="300" id="mov1#opm16#kocu15" name="KO Port15"/>
+  </OperationUnits>
+</OperationModule>

@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="660" gr:y="235" id="sv3#page11" name="Catalogo" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="755" gr:y="180" id="sv3#page11" name="Catalogo" landmark="true">
   <ContentUnits>
     <PowerIndexUnit id="sv3#page11#pwu6" name="Albumes" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att34 ent6#att33 ent6#att32"/>
     <PowerIndexUnit id="sv3#page11#pwu9" name="Canciones" gr:x="0" gr:y="105" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12"/>

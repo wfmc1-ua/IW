@@ -6,9 +6,10 @@
       </Selector>
       <Link id="sv2#page19#dau8#ln6" name="Flow6" to="sv2#page19#pwu14" type="transport" validate="true">
         <LinkParameter id="sv2#page19#dau8#ln6#par1" name="SongToArtist.id_current id" source="data.rel8#role15$ent4#att22" target="sv2#page19#pwu14.current.ent4#att22"/>
-        <LinkParameter id="sv2#page19#dau8#ln6#par4" name="_Max Results" blank="true" target="sv2#page19#pwu14.maxResults"/>
       </Link>
-      <Link id="sv2#page19#dau8#ln7" name="Flow7" to="sv2#page19#dau1" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv2#page19#dau8#ln7" name="Flow7" to="sv2#page19#dau1" type="transport" validate="true">
+        <LinkParameter id="sv2#page19#dau8#ln7#par13" name="SongToAlbum.id_KeyCondition8 [id]" source="data.rel4#role8_ent6#att31" target="sv2#page19#dau1#su9#kcond8.ent6#att31"/>
+      </Link>
     </DataUnit>
     <PowerIndexUnit gr:x="315" gr:y="0" id="sv2#page19#pwu14" name="Artistas" sortable="false" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att23" gr:showAllParts="false">
       <Selector id="sv2#page19#pwu14#su28" defaultPolicy="fill" booleanOperator="and">

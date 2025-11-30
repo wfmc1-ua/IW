@@ -42,8 +42,8 @@
           <layout:Field field="sv2#page3#enu2#fld1"/>
           <layout:Field field="sv2#page3#enu2#fld2"/>
           <layout:Field field="sv2#page3#enu2#fld3"/>
-          <layout:Field field="sv2#page3#enu2#sfld1"/>
           <layout:Field field="sv2#page3#enu2#fld13"/>
+          <layout:Field field="sv2#page3#enu2#sfld1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

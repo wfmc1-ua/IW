@@ -5,5 +5,9 @@
     <ModuleInstanceUnit id="sv3#miu15" gr:x="475" gr:y="295" action="true" moduleId="mov1#opm12"/>
     <ModuleInstanceUnit id="sv3#miu16" gr:x="495" gr:y="520" action="true" moduleId="mov1#opm10"/>
     <ModuleInstanceUnit id="sv3#miu17" gr:x="495" gr:y="415" action="true" moduleId="mov1#opm13"/>
+    <ModuleInstanceUnit gr:x="990" gr:y="550" id="sv3#miu4" action="true" moduleId="mov1#opm14"/>
+    <ModuleInstanceUnit gr:x="980" gr:y="180" id="sv3#miu5" action="true" moduleId="mov1#opm18"/>
+    <ModuleInstanceUnit gr:x="975" gr:y="-25" id="sv3#miu10" action="true" moduleId="mov1#opm19"/>
+    <ModuleInstanceUnit gr:x="995" gr:y="365" id="sv3#miu13" action="true" moduleId="mov1#opm15"/>
   </OperationUnits>
 </SiteView>

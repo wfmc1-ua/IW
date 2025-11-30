@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#page13" name="Canciones del &#225;lbum" gr:x="65" gr:y="285">
   <ContentUnits>
-    <PowerIndexUnit id="sv1#page13#pwu7" name="Lista de Canciones" gr:x="0" gr:y="155" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12 ent1#att35" linkOrder="sv1#page13#pwu7#ln20">
+    <PowerIndexUnit id="sv1#page13#pwu7" name="Lista de Canciones" gr:x="0" gr:y="155" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12" linkOrder="sv1#page13#pwu7#ln20">
       <Selector id="sv1#page13#pwu7#su16" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page13#pwu7#su16#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.ent6#att31"/>
       </Selector>
@@ -27,14 +27,13 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="10" rowspan="3">
+      <layout:Cell colspan="7" rowspan="5">
         <layout:Unit unitId="sv1#page13#pwu7">
+          <layout:Link link="sv1#page13#pwu7#ln20"/>
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att3"/>
           <layout:Attribute attribute="ent1#att5"/>
           <layout:Attribute attribute="ent1#att12"/>
-          <layout:Attribute attribute="ent1#att35"/>
-          <layout:Link link="sv1#page13#pwu7#ln20"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -43,16 +42,75 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="2" rowspan="2">
-        <layout:Unit unitId="sv1#page13#dau9">
-          <layout:Attribute attribute="ent6#att32"/>
-          <layout:Attribute attribute="ent6#att33"/>
-          <layout:Attribute attribute="ent6#att34"/>
-        </layout:Unit>
+      <layout:Cell colspan="5" rowspan="3">
+        <layout:Grid containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att32"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att33"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12" rowspan="2">
+              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att34"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
@@ -80,12 +138,40 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell colspan="2">
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="5" rowspan="2">
         <layout:Unit unitId="sv1#page13#dau10">
           <layout:Attribute attribute="ent4#att23"/>
           <layout:Attribute attribute="ent4#att24"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>

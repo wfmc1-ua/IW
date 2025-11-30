@@ -1,28 +1,35 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="150" gr:y="155" id="sv3#page15" name="Usuarios" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="135" gr:y="170" id="sv3#page15" name="Usuarios" landmark="true">
   <ContentUnits>
-    <EntryUnit id="sv3#page15#enu5" name="Crear modulo" gr:x="25" gr:y="105" entity="Module" linkOrder="sv3#page15#enu5#ln27">
-      <Field id="sv3#page15#enu5#fld14" name="Id" type="string" modifiable="true">
+    <EntryUnit id="sv3#page15#enu5" name="Crear o editar modulo" gr:x="40" gr:y="115" entity="Module" linkOrder="sv3#page15#enu5#ln27">
+      <Field id="sv3#page15#enu5#fld14" name="Id" type="string" modifiable="true" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="sv3#page15#enu5#fld14#mnd6" name="Mandatory3"/>
         </VRules>
       </Field>
-      <Field id="sv3#page15#enu5#fld15" name="Nombre" type="string" modifiable="true">
+      <Field id="sv3#page15#enu5#fld15" name="Nombre" type="string" modifiable="true" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="sv3#page15#enu5#fld15#mnd7" name="Mandatory4"/>
         </VRules>
       </Field>
-      <Link id="sv3#page15#enu5#ln27" name="Crear" to="sv3#miu15" type="normal" validate="true">
+      <Link id="sv3#page15#enu5#ln27" name="OK" to="sv3#miu15" type="normal" validate="true">
         <LinkParameter id="sv3#page15#enu5#ln27#par73" name="ModuleID_idModule_param" source="sv3#page15#enu5#fld14" target="sv3#miu15.mov1#opm12#icu12#icp25"/>
         <LinkParameter id="sv3#page15#enu5#ln27#par75" name="ModuleName_moduleName_param" source="sv3#page15#enu5#fld15" target="sv3#miu15.mov1#opm12#icu12#icp26"/>
+        <LinkParameter id="sv3#page15#enu5#ln27#par49" name="id_param_id_param" source="key.moduleOID" target="sv3#miu15.mov1#opm12#icu12#icp30"/>
       </Link>
     </EntryUnit>
-    <IndexUnit id="sv3#page15#inu2" name="Lista de modulos" gr:x="25" gr:y="10" entity="Module" displayAttributes="moduleOID moduleID moduleName" linkOrder="sv3#page15#inu2#ln25">
+    <IndexUnit id="sv3#page15#inu2" name="Lista de modulos" gr:x="40" gr:y="0" entity="Module" displayAttributes="moduleOID moduleID moduleName" linkOrder="sv3#page15#inu2#ln25 sv3#page15#inu2#ln11">
       <Link id="sv3#page15#inu2#ln25" name="Borrar" to="sv3#miu14" type="normal" validate="true">
         <LinkParameter id="sv3#page15#inu2#ln25#par70" name="id_idModulo_param" source="data[].moduleOID" target="sv3#miu14.mov1#opm11#icu11#icp24"/>
       </Link>
+      <Link id="sv3#page15#inu2#ln11" name="Editar" to="sv3#page15#enu5" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#inu2#ln11#par44" name="moduleID_Id" source="data[].moduleID" target="sv3#page15#enu5#fld14_slot"/>
+        <LinkParameter id="sv3#page15#inu2#ln11#par45" name="id_id_param" source="data[].moduleOID" target="sv3#page15#enu5#fld8_slot"/>
+        <LinkParameter id="sv3#page15#inu2#ln11#par46" name="id_Key Condition [id]" source="data[].moduleOID" target="sv3#page15#enu5.moduleOID"/>
+        <LinkParameter id="sv3#page15#inu2#ln11#par47" name="moduleName_Nombre" source="data[].moduleName" target="sv3#page15#enu5#fld15_slot"/>
+      </Link>
     </IndexUnit>
-    <EntryUnit id="sv3#page15#enu6" name="Crear grupo" gr:x="125" gr:y="315" entity="Group" linkOrder="sv3#page15#enu6#ln31">
-      <Field id="sv3#page15#enu6#fld16" name="Nombre" type="string" modifiable="true">
+    <EntryUnit id="sv3#page15#enu6" name="Crear o editar grupo" gr:x="130" gr:y="360" entity="Group" linkOrder="sv3#page15#enu6#ln31">
+      <Field id="sv3#page15#enu6#fld16" name="Nombre" type="string" modifiable="true" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="sv3#page15#enu6#fld16#mnd8" name="Mandatory5"/>
         </VRules>
@@ -32,17 +39,23 @@
           <MandatoryValidationRule id="sv3#page15#enu6#sfld3#mnd9" name="Mandatory6"/>
         </VRules>
       </SelectionField>
-      <Link id="sv3#page15#enu6#ln31" name="Crear" to="sv3#miu16" type="normal" validate="true">
+      <Link id="sv3#page15#enu6#ln31" name="OK" to="sv3#miu16" type="normal" validate="true">
         <LinkParameter id="sv3#page15#enu6#ln31#par82" name="groupName_groupName_param" source="sv3#page15#enu6#fld16" target="sv3#miu16.mov1#opm10#icu10#icp22"/>
         <LinkParameter id="sv3#page15#enu6#ln31#par83" name="Key [id]_moduleID_param" source="sv3#page15#enu6#sfld3" target="sv3#miu16.mov1#opm10#icu10#icp23"/>
+        <LinkParameter id="sv3#page15#enu6#ln31#par88" name="Key [id]_id_param" source="key.groupOID" target="sv3#miu16.mov1#opm10#icu10#icp31"/>
       </Link>
     </EntryUnit>
-    <IndexUnit id="sv3#page15#inu3" name="Lista de grupos" gr:x="100" gr:y="205" entity="Group" displayAttributes="groupOID groupName Group2DefaultModule.moduleName" linkOrder="sv3#page15#inu3#ln29">
+    <IndexUnit id="sv3#page15#inu3" name="Lista de grupos" gr:x="65" gr:y="205" entity="Group" displayAttributes="groupOID groupName Group2DefaultModule.moduleName" linkOrder="sv3#page15#inu3#ln29 sv3#page15#inu3#ln8">
       <Link id="sv3#page15#inu3#ln29" name="Borrar" to="sv3#miu17" type="normal" validate="true">
         <LinkParameter id="sv3#page15#inu3#ln29#par81" name="id_IdGrupo_param" source="data[].groupOID" target="sv3#miu17.mov1#opm13#icu13#icp27"/>
       </Link>
+      <Link id="sv3#page15#inu3#ln8" name="Editar" to="sv3#page15#enu6" type="normal" validate="true">
+        <LinkParameter id="sv3#page15#inu3#ln8#par24" name="id_Key Condition [id]" source="data[].groupOID" target="sv3#page15#enu6.groupOID"/>
+        <LinkParameter id="sv3#page15#inu3#ln8#par25" name="defaultModule.id_Id - Preselection" source="data[].Group2DefaultModule_moduleOID" target="sv3#page15#enu6#sfld3_presel"/>
+        <LinkParameter id="sv3#page15#inu3#ln8#par26" name="groupName_Nombre" source="data[].groupName" target="sv3#page15#enu6#fld16_slot"/>
+      </Link>
     </IndexUnit>
-    <SelectorUnit id="sv3#page15#seu3" name="modulos" gr:x="0" gr:y="305" entity="Module">
+    <SelectorUnit id="sv3#page15#seu3" name="modulos" gr:x="0" gr:y="345" entity="Module">
       <Link id="sv3#page15#seu3#ln12" name="Flow15" to="sv3#page15#enu6" type="transport" validate="true">
         <LinkParameter id="sv3#page15#seu3#ln12#par59" name="moduleName_moduleID [label]" source="moduleNameArray" target="sv3#page15#enu6#sfld3_label"/>
         <LinkParameter id="sv3#page15#seu3#ln12#par60" name="moduleID_moduleID [output]" source="moduleOIDArray" target="sv3#page15#enu6#sfld3_output"/>
@@ -57,6 +70,7 @@
           <layout:Attribute attribute="moduleID"/>
           <layout:Attribute attribute="moduleName"/>
           <layout:Link link="sv3#page15#inu2#ln25"/>
+          <layout:Link link="sv3#page15#inu2#ln11"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -68,9 +82,9 @@
       <layout:Cell/>
       <layout:Cell colspan="4" rowspan="2">
         <layout:Unit unitId="sv3#page15#enu5">
+          <layout:Link link="sv3#page15#enu5#ln27"/>
           <layout:Field field="sv3#page15#enu5#fld14"/>
           <layout:Field field="sv3#page15#enu5#fld15"/>
-          <layout:Link link="sv3#page15#enu5#ln27"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -98,6 +112,7 @@
           <layout:Attribute attribute="groupName"/>
           <layout:Attribute attribute="Group2DefaultModule.moduleName"/>
           <layout:Link link="sv3#page15#inu3#ln29"/>
+          <layout:Link link="sv3#page15#inu3#ln8"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

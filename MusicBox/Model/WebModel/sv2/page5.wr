@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page5" name="Welcome" gr:x="530" gr:y="75">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page5" name="Welcome" gr:x="120" gr:y="30">
   <ContentUnits>
     <MultiMessageUnit id="sv2#page5#mssu4" name="Entrada" linkOrder="sv2#page5#mssu4#ln4 sv2#page5#mssu4#ln5" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Bienvenido a MusicBox, Registrate para darte de alta o haz login para acceder a m&#225;s caracter&#237;sticas de la aplicaci&#243;n</Message>

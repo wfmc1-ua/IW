@@ -1,7 +1,13 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" homePage="sv3#page7" protected="true">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" homePage="sv3#page7" protected="true" landmarks="sv3#page11 sv3#page15">
   <OperationUnits>
-    <ModuleInstanceUnit gr:x="30" gr:y="180" id="sv3#miu4" action="true" moduleId="mov1#opm1"/>
-    <CreateUnit gr:x="5" gr:y="625" id="sv3#cru5" name="Crear cancion" entity="ent1"/>
+    <ModuleInstanceUnit gr:x="845" gr:y="85" id="sv3#miu4" action="true" moduleId="mov1#opm1"/>
+    <CreateUnit gr:x="900" gr:y="510" id="sv3#cru5" name="Crear cancion" entity="ent1"/>
     <ModuleInstanceUnit id="sv3#miu6" gr:x="345" gr:y="50" action="true" moduleId="mov1#opm5"/>
+    <SelectorUnit gr:x="15" gr:y="370" id="sv3#seu4" name="Todas las canciones" entity="ent1" linkOrder="sv3#seu4#ln6">
+      <Link id="sv3#seu4#ln6" name="Flow6" to="sv3#page7#mssu5" type="transport" validate="true">
+        <LinkParameter id="sv3#seu4#ln6#par1" name="Data Size_PASSING" source="dataSize" passing="true"/>
+        <LinkParameter id="sv3#seu4#ln6#par4" name="Data Size_songs" source="dataSize" target="sv3#page7#mssu5.sv3#page7#mssu5#ph2"/>
+      </Link>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>

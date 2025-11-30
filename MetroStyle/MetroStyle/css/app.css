@@ -7328,13 +7328,26 @@ fieldset[disabled] .navbar .user-location .ui-widget-content a:focus {
 }
 .page-header .logo {
   display: block;
+  
+  /* Centrado y márgenes */
   margin-left: auto;
   margin-right: auto;
-  width: 240px;
-  height: 60px;
   margin-top: 20px;
   margin-bottom: 20px;
-  background: url(../img/logo.png) transparent center center no-repeat;
+  
+  /* Tamaño de la caja donde vive el logo */
+  width: 240px;  
+  height: 60px;
+  
+  /* Configuración del fondo */
+  background-image: url(../img/logo_nuevo.png);
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+  /* LA CLAVE: Esto obliga a la imagen a encajar dentro de la caja sin cortarse */
+  background-size: contain; 
+
 }
 @media (min-width: 768px) {
   .page-header .logo {
@@ -7413,3 +7426,13 @@ fieldset[disabled] .navbar .user-location .ui-widget-content a:focus {
   margin-top: -6px;
   margin-bottom: -10px;
 }
+
+/* Arreglo específico para el logo del Footer */
+.footer-logo {
+    /* Forzamos el tamaño de la miniatura */
+    width: 120px; 
+    height: auto;
+    /* Aseguramos que la imagen no tenga un borde extraño ni se salga */
+    display: block; 
+}
+

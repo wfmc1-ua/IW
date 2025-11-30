@@ -6,7 +6,7 @@
       </Link>
     </GetUnit>
     <ModuleInstanceUnit gr:x="75" gr:y="145" id="sv1#page14#miu7" action="true" moduleId="mov1#opm4"/>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#page14#dau11" name="Detalles canciones" entity="ent1" displayAttributes="ent1#att2 ent1#att35">
+    <DataUnit gr:x="0" gr:y="0" id="sv1#page14#dau11" name="Detalles canciones" entity="ent1" displayAttributes="ent1#att2">
       <Selector id="sv1#page14#dau11#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page14#dau11#su18#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
@@ -34,7 +34,6 @@
       <layout:Cell colspan="6" rowspan="3">
         <layout:Unit unitId="sv1#page14#dau11">
           <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att35"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

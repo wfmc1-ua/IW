@@ -12,7 +12,7 @@
       <Selector id="sv1#page22#pwu15#su21" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page22#pwu15#su21#acond10" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="rel7#role14.userOID"/>
       </Selector>
-      <Link id="sv1#page22#pwu15#ln44" name="Ver canciones" to="sv1#page23#dau13" type="normal" validate="true" gr:bendpoints="94,-191,-421,-41;332,-89,-328,-299;345,-190,-170,-40">
+      <Link id="sv1#page22#pwu15#ln44" name="Ver playlist" to="sv1#page23#dau13" type="normal" validate="true" gr:bendpoints="129,272,-526,42;310,269,-345,39;407,269,-248,39">
         <LinkParameter id="sv1#page22#pwu15#ln44#par72" name="id_KeyCondition8 [id]" source="data[].ent2#att14" target="sv1#page23#dau13#su23#kcond12.ent2#att14"/>
       </Link>
       <Link id="sv1#page22#pwu15#ln27" name="Borrar playlist" to="sv1#miu11" type="normal" validate="true">
@@ -25,18 +25,20 @@
       <Field id="sv1#page22#enu1#fld15" name="description" type="text" modifiable="true" attribute="ent2#att16" preloaded="true"/>
       <Field id="sv1#page22#enu1#fld16" name="isPublic" type="boolean" modifiable="true" attribute="ent2#att17" preloaded="true"/>
       <Field id="sv1#page22#enu1#fld17" name="createdAt" type="timestamp" modifiable="false" attribute="ent2#att18" preloaded="true" hidden="true"/>
-      <Link id="sv1#page22#enu1#ln25" name="Flow10" to="sv1#miu9" type="normal" validate="true">
+      <Link id="sv1#page22#enu1#ln25" name="Crear playlist" to="sv1#miu9" type="normal" validate="true">
         <LinkParameter id="sv1#page22#enu1#ln25#par69" name="description_descripcion_playlist" source="sv1#page22#enu1#fld15" target="sv1#miu9.mov1#opm7#icu8#icp23"/>
         <LinkParameter id="sv1#page22#enu1#ln25#par70" name="isPublic_is_public" source="sv1#page22#enu1#fld16" target="sv1#miu9.mov1#opm7#icu8#icp21"/>
         <LinkParameter id="sv1#page22#enu1#ln25#par73" name="name_nombre_playlist" source="sv1#page22#enu1#fld14" target="sv1#miu9.mov1#opm7#icu8#icp19"/>
         <LinkParameter id="sv1#page22#enu1#ln25#par81" name="playlistid_field_id_playlist" source="sv1#page22#enu1#fld7" target="sv1#miu9.mov1#opm7#icu8#icp20"/>
       </Link>
+      <VRules/>
     </EntryUnit>
     <TimeUnit gr:x="135" gr:y="115" id="sv1#page22#tmu1" name="Time1">
       <Link id="sv1#page22#tmu1#ln18" name="Flow11" to="sv1#miu9" type="transport" validate="true">
         <LinkParameter id="sv1#page22#tmu1#ln18#par67" name="Current/Input Timestamp_timestamp" source="currentTimestamp" target="sv1#miu9.mov1#opm7#icu8#icp22"/>
       </Link>
     </TimeUnit>
+    <MultiMessageUnit gr:x="505" gr:y="20" id="sv1#page22#mssu1" name="Message1"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -61,7 +63,23 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell rowspan="4" colspan="12">
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#page22#mssu1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12" rowspan="5">
         <layout:Unit unitId="sv1#page22#pwu15">
           <layout:Attribute attribute="ent2#att15"/>
           <layout:Attribute attribute="ent2#att16"/>
@@ -70,6 +88,20 @@
           <layout:Link link="sv1#page22#pwu15#ln27"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

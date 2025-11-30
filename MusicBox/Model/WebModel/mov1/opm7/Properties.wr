@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="460" id="mov1#opm7" name="Crear playlist">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm7#icu8" gr:x="30" gr:y="60">
+    <InputCollectorUnit id="mov1#opm7#icu8" gr:x="30" gr:y="70">
       <InputCollectorParameter id="mov1#opm7#icu8#icp19" name="nombre_playlist"/>
       <InputCollectorParameter id="mov1#opm7#icu8#icp20" name="id_playlist"/>
       <InputCollectorParameter id="mov1#opm7#icu8#icp21" name="is_public"/>
@@ -15,11 +15,15 @@
       </OKLink>
       <InputCollectorParameter id="mov1#opm7#icu8#icp24" name="id_user"/>
     </InputCollectorUnit>
-    <CreateUnit gr:x="365" gr:y="90" id="mov1#opm7#cru1" name="Crear playlist" entity="ent2">
+    <CreateUnit gr:x="355" gr:y="100" id="mov1#opm7#cru1" name="Crear playlist" entity="ent2">
       <OKLink id="mov1#opm7#cru1#oln14" name="OKFlow14" to="mov1#opm7#okcu6" automaticCoupling="true"/>
       <KOLink id="mov1#opm7#cru1#kln8" name="KOFlow8" to="mov1#opm7#kocu6" automaticCoupling="true"/>
     </CreateUnit>
-    <OKCollectorUnit gr:x="510" gr:y="55" id="mov1#opm7#okcu6" name="OK Port6"/>
-    <KOCollectorUnit gr:x="510" gr:y="165" id="mov1#opm7#kocu6" name="KO Port6"/>
+    <OKCollectorUnit gr:x="510" gr:y="55" id="mov1#opm7#okcu6" name="OK Port6">
+      <OutputCollectorParameter id="mov1#opm7#okcu6#ocp4" name="ok_output" value="Playlist creada correctamente"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="510" gr:y="165" id="mov1#opm7#kocu6" name="KO Port6">
+      <OutputCollectorParameter id="mov1#opm7#kocu6#ocp5" name="error_output" value="Error al crear playlist"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

@@ -1,8 +1,30 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="registrado" protected="true" homePage="sv1#page6" landmarks="sv1#page22 sv1#page20">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="1860" gr:y="-85" id="sv1#miu3" action="true" moduleId="mov1#opm5"/>
-    <ModuleInstanceUnit id="sv1#miu9" gr:x="645" gr:y="-115" action="true" moduleId="mov1#opm7"/>
-    <ModuleInstanceUnit id="sv1#miu11" gr:x="60" gr:y="-250" action="true" moduleId="mov1#opm8"/>
+    <ModuleInstanceUnit id="sv1#miu9" gr:x="645" gr:y="-115" action="true" moduleId="mov1#opm7">
+      <OKLink id="sv1#miu9#oln20" name="OKFlow20" to="sv1#page22#mssu1">
+        <LinkParameter id="sv1#miu9#oln20#par76" name="ok_output_Shown Messages" source="mov1#opm7#okcu6#ocp4" target="sv1#page22#mssu1.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#miu9#kln12" name="KOFlow12" to="sv1#page22#mssu1" gr:bendpoints="27,-74,2,71">
+        <LinkParameter id="sv1#miu9#kln12#par79" name="error_output_Shown Messages" source="mov1#opm7#kocu6#ocp5" target="sv1#page22#mssu1.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1#miu11" gr:x="375" gr:y="-445" action="true" moduleId="mov1#opm8">
+      <OKLink id="sv1#miu11#oln21" name="OKFlow21" to="sv1#page22#mssu1">
+        <LinkParameter id="sv1#miu11#oln21#par80" name="ok_output_Shown Messages" source="mov1#opm8#okcu7#ocp6" target="sv1#page22#mssu1.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#miu11#kln13" name="KOFlow13" to="sv1#page22#mssu1" gr:bendpoints="205,47,-80,-138">
+        <LinkParameter id="sv1#miu11#kln13#par86" name="error_output_Shown Messages" source="mov1#opm8#kocu7#ocp7" target="sv1#page22#mssu1.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
     <ModuleInstanceUnit id="sv1#miu12" gr:x="1215" gr:y="35" action="true" moduleId="mov1#opm6"/>
+    <ModuleInstanceUnit gr:x="945" gr:y="-440" id="sv1#miu8" action="true" moduleId="mov1#opm9">
+      <OKLink id="sv1#miu8#oln19" name="OKFlow19" to="sv1#page22#mssu1" gr:bendpoints="-122,70,93,-25">
+        <LinkParameter id="sv1#miu8#oln19#par75" name="ok_output_Shown Messages" source="mov1#opm9#okcu8#ocp3" target="sv1#page22#mssu1.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#miu8#kln11" name="KOFlow11" to="sv1#page22#mssu1">
+        <LinkParameter id="sv1#miu8#kln11#par60" name="error_output_Shown Messages" source="mov1#opm9#kocu8#ocp2" target="sv1#page22#mssu1.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

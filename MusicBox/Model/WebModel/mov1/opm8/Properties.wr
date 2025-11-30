@@ -13,7 +13,11 @@
       <OKLink id="mov1#opm8#dlu1#oln16" name="OKFlow16" to="mov1#opm8#okcu7" automaticCoupling="true"/>
       <KOLink id="mov1#opm8#dlu1#kln9" name="KOFlow9" to="mov1#opm8#kocu7" automaticCoupling="true"/>
     </DeleteUnit>
-    <OKCollectorUnit gr:x="550" gr:y="55" id="mov1#opm8#okcu7" name="OK Port7"/>
-    <KOCollectorUnit gr:x="550" gr:y="155" id="mov1#opm8#kocu7" name="KO Port7"/>
+    <OKCollectorUnit gr:x="550" gr:y="55" id="mov1#opm8#okcu7" name="OK Port7">
+      <OutputCollectorParameter id="mov1#opm8#okcu7#ocp6" name="ok_output" value="Playlist eliminada"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit gr:x="550" gr:y="155" id="mov1#opm8#kocu7" name="KO Port7">
+      <OutputCollectorParameter id="mov1#opm8#kocu7#ocp7" name="error_output" value="Error al borrar playlist"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

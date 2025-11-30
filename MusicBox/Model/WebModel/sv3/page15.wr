@@ -23,7 +23,6 @@
       </Link>
       <Link id="sv3#page15#inu2#ln11" name="Editar" to="sv3#page15#enu5" type="normal" validate="true">
         <LinkParameter id="sv3#page15#inu2#ln11#par44" name="moduleID_Id" source="data[].moduleID" target="sv3#page15#enu5#fld14_slot"/>
-        <LinkParameter id="sv3#page15#inu2#ln11#par45" name="id_id_param" source="data[].moduleOID" target="sv3#page15#enu5#fld8_slot"/>
         <LinkParameter id="sv3#page15#inu2#ln11#par46" name="id_Key Condition [id]" source="data[].moduleOID" target="sv3#page15#enu5.moduleOID"/>
         <LinkParameter id="sv3#page15#inu2#ln11#par47" name="moduleName_Nombre" source="data[].moduleName" target="sv3#page15#enu5#fld15_slot"/>
       </Link>
@@ -64,12 +63,12 @@
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="8" rowspan="2">
+      <layout:Cell colspan="7" rowspan="2">
         <layout:Unit unitId="sv3#page15#inu2">
           <layout:Link link="sv3#page15#inu2#ln25"/>
           <layout:Link link="sv3#page15#inu2#ln11"/>
-          <layout:Attribute attribute="moduleID"/>
-          <layout:Attribute attribute="moduleName"/>
+          <layout:Attribute attribute="moduleID" label="Id"/>
+          <layout:Attribute attribute="moduleName" label="Nombre"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -78,8 +77,7 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4" rowspan="2">
+      <layout:Cell colspan="5" rowspan="2">
         <layout:Unit unitId="sv3#page15#enu5">
           <layout:Link link="sv3#page15#enu5#ln27"/>
           <layout:Field field="sv3#page15#enu5#fld14"/>
@@ -89,28 +87,29 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="8" rowspan="2">
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="7" rowspan="2">
         <layout:Unit unitId="sv3#page15#inu3">
           <layout:Link link="sv3#page15#inu3#ln29"/>
           <layout:Link link="sv3#page15#inu3#ln8"/>
-          <layout:Attribute attribute="groupName"/>
-          <layout:Attribute attribute="Group2DefaultModule.moduleName"/>
+          <layout:Attribute attribute="groupName" label="Nombre"/>
+          <layout:Attribute attribute="Group2DefaultModule.moduleName" label="Modulo"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -119,14 +118,14 @@
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell colspan="4" rowspan="2">
+      <layout:Cell colspan="5" rowspan="2">
         <layout:Unit unitId="sv3#page15#enu6">
           <layout:Field field="sv3#page15#enu6#fld16"/>
           <layout:Field field="sv3#page15#enu6#sfld3"/>
           <layout:Link link="sv3#page15#enu6#ln31"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

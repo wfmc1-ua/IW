@@ -1,8 +1,8 @@
 -- =============================================
--- 1. LIMPIEZA TOTAL (Ordenada para evitar errores de FK)
+-- 1. LIMPIEZA TOTAL
 -- =============================================
 TRUNCATE TABLE "user_group" CASCADE;
-TRUNCATE TABLE "user_playlist" CASCADE; -- ¡IMPORTANTE! Limpiar esta tabla intermedia
+TRUNCATE TABLE "user_playlist" CASCADE;
 TRUNCATE TABLE "song_playlist" CASCADE;
 TRUNCATE TABLE "review_song" CASCADE;
 TRUNCATE TABLE "song_artist" CASCADE;
@@ -26,7 +26,7 @@ CREATE SEQUENCE IF NOT EXISTS hibernate_sequence START 1000;
 -- MÓDULOS
 INSERT INTO "module" ("id", "moduleid", "modulename") VALUES 
 (1, 'sv3', 'ADMIN'), 
-(2, 'sv1',  'USUARIOMINGUI'); 
+(2, 'sv1',  'USUARIOMINGUI');
 
 -- GRUPOS
 INSERT INTO "group" ("id", "groupname", "module_id") VALUES 
@@ -68,36 +68,36 @@ INSERT INTO "artist" ("id", "name", "country", "bio") VALUES
 (5, 'Rosalía', 'España', 'Motomami internacional'),
 (6, 'Arctic Monkeys', 'UK', 'Rock alternativo de Sheffield');
 
--- ÁLBUMES
+-- ÁLBUMES (Rutas de imagen actualizadas)
 INSERT INTO "album" ("id", "title", "releasedate", "cover", "artist_id") VALUES 
-(1, 'A Night at the Opera', '1975-11-21', NULL, 1),
-(2, 'Thriller',            '1982-11-30', NULL, 2),
-(3, 'The New Abnormal',    '2020-04-10', NULL, 3),
-(4, 'Discovery',           '2001-03-12', NULL, 4),
-(5, 'El Mal Querer',       '2018-11-02', NULL, 5),
-(6, 'AM',                  '2013-09-09', NULL, 6);
+(1, 'A Night at the Opera', '1975-11-21', 'WebContent/img/anightattheopera.jpg', 1),
+(2, 'Thriller',            '1982-11-30', 'WebContent/img/thriller.jpg', 2),
+(3, 'The New Abnormal',    '2020-04-10', 'WebContent/img/thenewabnormal.jpg', 3),
+(4, 'Discovery',           '2001-03-12', 'WebContent/img/discovery.jpg', 4),
+(5, 'El Mal Querer',       '2018-11-02', 'WebContent/img/elmalquerer.jpg', 5),
+(6, 'AM',                  '2013-09-09', 'WebContent/img/am.jpg', 6);
 
--- CANCIONES
-INSERT INTO "song" ("id", "title", "durationsec", "track_number", "releasedate", "cover", "album_id", "genre_id") VALUES 
+-- CANCIONES (Eliminada columna cover)
+INSERT INTO "song" ("id", "title", "durationsec", "track_number", "releasedate", "album_id", "genre_id") VALUES 
 -- Queen
-(1, 'Bohemian Rhapsody', 354, 1, '1975-10-31', NULL, 1, 1),
-(2, 'Love of My Life',   219, 9, '1975-11-21', NULL, 1, 1),
+(1, 'Bohemian Rhapsody', 354, 1, '1975-10-31', 1, 1),
+(2, 'Love of My Life',   219, 9, '1975-11-21', 1, 1),
 -- MJ
-(3, 'Billie Jean',       294, 1, '1983-01-02', NULL, 2, 2),
-(4, 'Beat It',           258, 5, '1983-02-14', NULL, 2, 2),
+(3, 'Billie Jean',       294, 1, '1983-01-02', 2, 2),
+(4, 'Beat It',           258, 5, '1983-02-14', 2, 2),
 -- The Strokes
-(5, 'The Adults Are Talking', 309, 1, '2020-04-10', NULL, 3, 3),
-(6, 'Selfless',               222, 2, '2020-04-10', NULL, 3, 3),
-(7, 'Brooklyn Bridge to Chorus', 235, 3, '2020-04-10', NULL, 3, 3),
+(5, 'The Adults Are Talking', 309, 1, '2020-04-10', 3, 3),
+(6, 'Selfless',               222, 2, '2020-04-10', 3, 3),
+(7, 'Brooklyn Bridge to Chorus', 235, 3, '2020-04-10', 3, 3),
 -- Daft Punk
-(8, 'One More Time',     320, 1, '2000-11-13', NULL, 4, 4),
-(9, 'Harder, Better, Faster', 224, 4, '2001-10-13', NULL, 4, 4),
+(8, 'One More Time',     320, 1, '2000-11-13', 4, 4),
+(9, 'Harder, Better, Faster', 224, 4, '2001-10-13', 4, 4),
 -- Rosalía
-(10, 'Malamente',        150, 1, '2018-05-30', NULL, 5, 5),
-(11, 'Pienso en tu mirá', 193, 3, '2018-07-24', NULL, 5, 5),
+(10, 'Malamente',        150, 1, '2018-05-30', 5, 5),
+(11, 'Pienso en tu mirá', 193, 3, '2018-07-24', 5, 5),
 -- Arctic Monkeys
-(12, 'Do I Wanna Know?', 272, 1, '2013-06-19', NULL, 6, 3),
-(13, 'R U Mine?',        201, 2, '2012-02-27', NULL, 6, 3);
+(12, 'Do I Wanna Know?', 272, 1, '2013-06-19', 6, 3),
+(13, 'R U Mine?',        201, 2, '2012-02-27', 6, 3);
 
 -- RELACIÓN CANCIÓN-ARTISTA
 INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
@@ -109,18 +109,17 @@ INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
 (12, 6), (13, 6);      -- Arctic Monkeys
 
 -- =============================================
--- 4. SOCIAL (Playlists y Reviews) - CORREGIDO
+-- 4. SOCIAL (Playlists y Reviews)
 -- =============================================
 
--- PLAYLISTS (Sin user_id aquí, porque no existe la columna)
+-- PLAYLISTS
 INSERT INTO "playlist" ("id", "name", "description", "ispublic", "createdat") VALUES 
 (1, 'Clásicos de siempre', 'Mi lista top antigua', true, NOW()),
 (2, 'Indie Vibes', 'Para trabajar relajado', true, NOW()),
 (3, 'Fiesta Fin de Finde', 'Música para animarse', false, NOW()),
 (4, 'Gym Motivation', 'A tope de power', true, NOW());
 
--- ASIGNACIÓN DE PLAYLISTS A USUARIOS (Tabla intermedia user_playlist)
--- Según tu captura, las columnas son user_id y playlist_id
+-- ASIGNACIÓN DE PLAYLISTS A USUARIOS
 INSERT INTO "user_playlist" ("user_id", "playlist_id") VALUES 
 (2, 1), -- Juan tiene la lista 1 (Clásicos)
 (4, 2), -- Carlos tiene la lista 2 (Indie)

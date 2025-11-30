@@ -1,5 +1,8 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="registrado" protected="true" homePage="sv1#page6" landmarks="sv1#page22">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="registrado" protected="true" homePage="sv1#page6" landmarks="sv1#page22 sv1#page20">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="1860" gr:y="-85" id="sv1#miu3" action="true" moduleId="mov1#opm5"/>
+    <ModuleInstanceUnit id="sv1#miu9" gr:x="645" gr:y="-115" action="true" moduleId="mov1#opm7"/>
+    <ModuleInstanceUnit id="sv1#miu11" gr:x="60" gr:y="-250" action="true" moduleId="mov1#opm8"/>
+    <ModuleInstanceUnit id="sv1#miu12" gr:x="1215" gr:y="35" action="true" moduleId="mov1#opm6"/>
   </OperationUnits>
 </SiteView>

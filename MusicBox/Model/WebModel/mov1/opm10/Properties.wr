@@ -1,0 +1,18 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="crear grupo" gr:x="1130" gr:y="155">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu10" gr:x="130" gr:y="225">
+      <OKLink id="mov1#opm10#icu10#oln15" name="OKFlow18" to="mov1#opm10#cru1">
+        <LinkParameter id="mov1#opm10#icu10#oln15#par34" name="groupName_param_groupName" source="mov1#opm10#icu10#icp22" target="mov1#opm10#cru1.groupName"/>
+        <LinkParameter id="mov1#opm10#icu10#oln15#par35" name="moduleID_param_Module.id(defaultModule)" source="mov1#opm10#icu10#icp23" target="mov1#opm10#cru1.Group2DefaultModule.moduleOID"/>
+      </OKLink>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp22" name="groupName_param"/>
+      <InputCollectorParameter id="mov1#opm10#icu10#icp23" name="moduleID_param"/>
+    </InputCollectorUnit>
+    <CreateUnit id="mov1#opm10#cru1" name="crear" gr:x="445" gr:y="225" entity="Group">
+      <OKLink id="mov1#opm10#cru1#oln16" name="OKFlow19" to="mov1#opm10#okcu7" automaticCoupling="true"/>
+      <KOLink id="mov1#opm10#cru1#kln9" name="KOFlow11" to="mov1#opm10#kocu7" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit id="mov1#opm10#okcu7" name="OK Port8" gr:x="605" gr:y="175"/>
+    <KOCollectorUnit id="mov1#opm10#kocu7" name="KO Port8" gr:x="605" gr:y="290"/>
+  </OperationUnits>
+</OperationModule>

@@ -15,7 +15,7 @@
         <LinkParameter id="sv3#page8#pwu1#ln41#par124" name="UserToArtist.id_UserToArtist - Preselection" source="data[].rel9#role17_ent4#att22" target="sv3#page8#enu4#sfld5_presel"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit gr:x="110" gr:y="135" id="sv3#page8#enu4" name="Crear usuario" entity="User" fieldOrder="sv3#page8#enu4#fld8 sv3#page8#enu4#fld9 sv3#page8#enu4#fld10 sv3#page8#enu4#fld11 sv3#page8#enu4#fld20 sv3#page8#enu4#sfld4 sv3#page8#enu4#sfld5" linkOrder="sv3#page8#enu4#ln46">
+    <EntryUnit gr:x="110" gr:y="135" id="sv3#page8#enu4" name="Crear usuario" entity="User" fieldOrder="sv3#page8#enu4#fld8 sv3#page8#enu4#fld9 sv3#page8#enu4#fld11 sv3#page8#enu4#sfld5 sv3#page8#enu4#fld10 sv3#page8#enu4#fld20 sv3#page8#enu4#sfld4" linkOrder="sv3#page8#enu4#ln46">
       <Field id="sv3#page8#enu4#fld8" name="userName" type="string" modifiable="true" attribute="userName" preloaded="true"/>
       <Field id="sv3#page8#enu4#fld9" name="password" type="password" modifiable="true" attribute="password" preloaded="true"/>
       <Field id="sv3#page8#enu4#fld10" name="email" type="string" modifiable="true" attribute="email" preloaded="true"/>
@@ -58,14 +58,14 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page8#enu4">
+          <layout:Link link="sv3#page8#enu4#ln46"/>
           <layout:Field field="sv3#page8#enu4#fld8" label="Nombre"/>
           <layout:Field field="sv3#page8#enu4#fld9" label="Contrase&#241;a"/>
-          <layout:Field field="sv3#page8#enu4#fld10" label="Email"/>
           <layout:Field field="sv3#page8#enu4#fld11" label="Nombre mostrado"/>
+          <layout:Field field="sv3#page8#enu4#sfld5" label="Nombre artistico"/>
+          <layout:Field field="sv3#page8#enu4#fld10" label="Email"/>
           <layout:Field field="sv3#page8#enu4#fld20" label="Estado"/>
           <layout:Field field="sv3#page8#enu4#sfld4" label="Grupo"/>
-          <layout:Field field="sv3#page8#enu4#sfld5" label="Nombre artistico"/>
-          <layout:Link link="sv3#page8#enu4#ln46"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

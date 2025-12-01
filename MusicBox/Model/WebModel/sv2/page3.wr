@@ -39,11 +39,11 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page3#enu2">
           <layout:Link link="sv2#page3#enu2#ln1"/>
-          <layout:Field field="sv2#page3#enu2#fld1"/>
-          <layout:Field field="sv2#page3#enu2#fld2"/>
-          <layout:Field field="sv2#page3#enu2#fld3"/>
-          <layout:Field field="sv2#page3#enu2#sfld1"/>
-          <layout:Field field="sv2#page3#enu2#fld13"/>
+          <layout:Field field="sv2#page3#enu2#fld1" label="Nombre de usuario"/>
+          <layout:Field field="sv2#page3#enu2#fld2" label="Contrase&#241;a"/>
+          <layout:Field field="sv2#page3#enu2#fld3" label="Correo electr&#243;nico"/>
+          <layout:Field field="sv2#page3#enu2#fld13" label="Nombre mostrado"/>
+          <layout:Field field="sv2#page3#enu2#sfld1" label="Grupo"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

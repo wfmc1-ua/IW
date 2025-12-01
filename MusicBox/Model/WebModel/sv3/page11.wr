@@ -1,39 +1,14 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="755" gr:y="180" id="sv3#page11" name="Catalogo" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="740" gr:y="270" id="sv3#page11" name="Catalogo" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#page11#pwu6" name="Albumes" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att34 ent6#att33 ent6#att32"/>
-    <PowerIndexUnit id="sv3#page11#pwu9" name="Canciones" gr:x="0" gr:y="105" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12"/>
-  </ContentUnits>
-  <layout:Grid containerType="grid">
-    <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Grid containerType="cell">
-          <layout:Row>
-            <layout:Cell>
-              <layout:Unit unitId="sv3#page11#pwu6">
-                <layout:Attribute attribute="ent6#att34"/>
-                <layout:Attribute attribute="ent6#att33"/>
-                <layout:Attribute attribute="ent6#att32"/>
-              </layout:Unit>
-              <layout:Unit unitId="sv3#page11#pwu9">
-                <layout:Attribute attribute="ent1#att2"/>
-                <layout:Attribute attribute="ent1#att3"/>
-                <layout:Attribute attribute="ent1#att12"/>
-              </layout:Unit>
-            </layout:Cell>
-          </layout:Row>
-        </layout:Grid>
-      </layout:Cell>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-  </layout:Grid>
-</Page>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#page11#mssu7" name="Generos" linkOrder="sv3#page11#mssu7#ln61">
+      <Message xml:space="preserve">Borrar, crear o editar generos</Message>
+      <Link id="sv3#page11#mssu7#ln61" name="Lista de generos" to="sv3#page17" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <MultiMessageUnit gr:x="5" gr:y="80" id="sv3#page11#mssu8" name="Artistas" linkOrder="sv3#page11#mssu8#ln57">
+      <Message xml:space="preserve">Borrar, crear o editar artistas
+</Message>      <Link id="sv3#page11#mssu8#ln57" name="Lista de artistas" to="sv3#page16" automaticCoupling="true" type="normal" validate="true"/>    </MultiMessageUnit>    <MultiMessageUnit gr:x="5" gr:y="155" id="sv3#page11#mssu9" name="Albumes" linkOrder="sv3#page11#mssu9#ln64">      <Message xml:space="preserve">Borrar, crear o editar albumes</Message>
+      <Link id="sv3#page11#mssu9#ln64" name="Lista de albumes" to="sv3#page18" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+    <MultiMessageUnit gr:x="5" gr:y="230" id="sv3#page11#mssu10" name="Canciones" linkOrder="sv3#page11#mssu10#ln65">
+      <Message xml:space="preserve">Borrar, crear o editar canciones
+</Message>      <Link id="sv3#page11#mssu10#ln65" name="Lista de canciones" to="sv3#page19" automaticCoupling="true" type="normal" validate="true"/>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="6">        <layout:Unit unitId="sv3#page11#mssu7">          <layout:Link link="sv3#page11#mssu7#ln61"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="6">        <layout:Unit unitId="sv3#page11#mssu9">          <layout:Link link="sv3#page11#mssu9#ln64"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="6">        <layout:Unit unitId="sv3#page11#mssu8">          <layout:Link link="sv3#page11#mssu8#ln57"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell colspan="6">        <layout:Unit unitId="sv3#page11#mssu10">          <layout:Link link="sv3#page11#mssu10#ln65"/>        </layout:Unit>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>    <layout:Row>      <layout:Cell colspan="12"/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>

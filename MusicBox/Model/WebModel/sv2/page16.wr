@@ -1,0 +1,174 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page16" name="Canciones del &#225;lbum" gr:x="955" gr:y="150">
+  <ContentUnits>
+    <PowerIndexUnit id="sv2#page16#pwu12" name="Lista de Canciones" gr:x="0" gr:y="155" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12" gr:showAllParts="false">
+      <Selector id="sv2#page16#pwu12#su17" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page16#pwu12#su17#acond6" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.ent6#att31"/>
+      </Selector>
+    </PowerIndexUnit>
+    <DataUnit id="sv2#page16#dau4" name="Detalles del album" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att32 ent6#att33 ent6#att34">
+      <Selector id="sv2#page16#dau4#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page16#dau4#su20#kcond11" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page16#dau4#ln32" name="Flow13" to="sv2#page16#dau7" type="transport" validate="true">
+        <LinkParameter id="sv2#page16#dau4#ln32#par20" name="AlbumToArtist.id_AttCondition1" source="data.rel3#role6_ent4#att22" target="sv2#page16#dau7#su26#acond8"/>
+      </Link>
+      <Link id="sv2#page16#dau4#ln38" name="Flow16" to="sv2#page16#pwu12" type="transport" validate="true">
+        <LinkParameter id="sv2#page16#dau4#ln38#par21" name="AlbumToArtist.id_AttCondition4" source="data.rel3#role6_ent4#att22" target="sv2#page16#pwu12#su17#acond6"/>
+      </Link>
+    </DataUnit>
+    <DataUnit id="sv2#page16#dau7" name="Artista" gr:x="180" gr:y="5" entity="ent4" displayAttributes="ent4#att23 ent4#att24">
+      <Selector id="sv2#page16#dau7#su26" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page16#dau7#su26#acond8" name="AttCondition1" predicate="eq" booleanOperator="or" implied="false" attributes="rel3#role5.ent6#att31"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell rowspan="5" colspan="7">
+        <layout:Unit unitId="sv2#page16#pwu12">
+          <layout:Attribute attribute="ent1#att2" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent1#att3" label="Duraci&#243;n"/>
+          <layout:Attribute attribute="ent1#att5" label="N&#250;mero de pista"/>
+          <layout:Attribute attribute="ent1#att12" label="Fecha de lanzamiento"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell rowspan="3" colspan="5">
+        <layout:Grid containerType="grid">
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att32" mode="value" label="T&#237;tulo"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell colspan="12">
+              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att33" mode="value" label="Fecha de lanzamiento"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell rowspan="2" colspan="12">
+              <layout:Attribute unitId="sv2#page16#dau4" attribute="ent6#att34" mode="value" label="Portada"/>
+            </layout:Cell>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+          <layout:Row>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+            <layout:Cell/>
+          </layout:Row>
+        </layout:Grid>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell rowspan="2" colspan="5">
+        <layout:Unit unitId="sv2#page16#dau7">
+          <layout:Attribute attribute="ent4#att23" label="Nombre"/>
+          <layout:Attribute attribute="ent4#att24" label="Pais"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

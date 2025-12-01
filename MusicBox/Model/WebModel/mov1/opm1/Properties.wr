@@ -1,28 +1,56 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="570" gr:y="110" id="mov1#opm1" name="Crear cancion">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="195" gr:y="90" id="mov1#opm1" name="Crear/editar usuario">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm1#icu2" gr:x="30" gr:y="290">
-      <OKLink id="mov1#opm1#icu2#oln2" name="OKFlow2" to="mov1#opm1#cru3" automaticCoupling="false">
-        <LinkParameter id="mov1#opm1#icu2#oln2#par13" name="Album.id(SongToAlbum)" source="mov1#opm1#icu2#icp1" target="mov1#opm1#cru3.rel4#role8.ent6#att31"/>
-        <LinkParameter id="mov1#opm1#icu2#oln2#par14" name="Artist.id(SongToArtist)" source="mov1#opm1#icu2#icp2" target="mov1#opm1#cru3.rel8#role15.ent4#att22"/>
-        <LinkParameter id="mov1#opm1#icu2#oln2#par15" name="cover" source="mov1#opm1#icu2#icp3" target="mov1#opm1#cru3.ent1#att35"/>
-        <LinkParameter id="mov1#opm1#icu2#oln2#par16" name="durationSec" source="mov1#opm1#icu2#icp4" target="mov1#opm1#cru3.ent1#att3"/>
-        <LinkParameter id="mov1#opm1#icu2#oln2#par17" name="releaseDate" source="mov1#opm1#icu2#icp5" target="mov1#opm1#cru3.ent1#att12"/>
-        <LinkParameter id="mov1#opm1#icu2#oln2#par18" name="title" source="mov1#opm1#icu2#icp6" target="mov1#opm1#cru3.ent1#att2"/>
-        <LinkParameter id="mov1#opm1#icu2#oln2#par19" name="track_number" source="mov1#opm1#icu2#icp7" target="mov1#opm1#cru3.ent1#att5"/>
+    <InputCollectorUnit id="mov1#opm1#icu2" gr:x="145" gr:y="255" linkOrder="mov1#opm1#icu2#ln48 mov1#opm1#icu2#ln49">
+      <InputCollectorParameter id="mov1#opm1#icu2#icp1" name="id_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp2" name="username_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp3" name="password_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp4" name="email_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp5" name="status_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp6" name="displayname_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp7" name="groupId_param"/>
+      <OKLink id="mov1#opm1#icu2#oln3" name="OKFlow3" to="mov1#opm1#inn8">
+        <LinkParameter id="mov1#opm1#icu2#oln3#par13" name="id_param_Input" source="mov1#opm1#icu2#icp1" target="mov1#opm1#inn8.isnotnull"/>
       </OKLink>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp1" name="Album.id(SongToAlbum)"/>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp2" name="Artist.id(SongToArtist)"/>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp3" name="cover"/>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp4" name="durationSec"/>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp5" name="releaseDate"/>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp6" name="title"/>
-      <InputCollectorParameter id="mov1#opm1#icu2#icp7" name="track_number"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp58" name="artist_param"/>
+      <InputCollectorParameter id="mov1#opm1#icu2#icp59" name="createdAt_param"/>
+      <Link id="mov1#opm1#icu2#ln48" name="Flow48" to="mov1#opm1#mfu10" type="transport" validate="true" gr:bendpoints="215,-57,-250,3">
+        <LinkParameter id="mov1#opm1#icu2#ln48#par134" name="artist_param_Artist.id(UserToArtist)" source="mov1#opm1#icu2#icp58" target="mov1#opm1#mfu10.rel9#role17.ent4#att22"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par135" name="createdAt_param_createdAt" source="mov1#opm1#icu2#icp59" target="mov1#opm1#mfu10.User#att10"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par136" name="displayname_param_displayName" source="mov1#opm1#icu2#icp6" target="mov1#opm1#mfu10.User#att9"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par176" name="email_param_email" source="mov1#opm1#icu2#icp4" target="mov1#opm1#mfu10.email"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par177" name="groupId_param_Group.id(defaultGroup)" source="mov1#opm1#icu2#icp7" target="mov1#opm1#mfu10.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par215" name="id_param_KeyCondition24 [id]" source="mov1#opm1#icu2#icp1" target="mov1#opm1#mfu10#su29#kcond24.userOID"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par216" name="password_param_password" source="mov1#opm1#icu2#icp3" target="mov1#opm1#mfu10.password"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par217" name="status_param_status" source="mov1#opm1#icu2#icp5" target="mov1#opm1#mfu10.User#att11"/>
+        <LinkParameter id="mov1#opm1#icu2#ln48#par218" name="username_param_userName" source="mov1#opm1#icu2#icp2" target="mov1#opm1#mfu10.userName"/>
+      </Link>
+      <Link id="mov1#opm1#icu2#ln49" name="Flow49" to="mov1#opm1#cru3" type="transport" validate="true" gr:bendpoints="233,62,-237,-3">
+        <LinkParameter id="mov1#opm1#icu2#ln49#par219" name="artist_param_Artist.id(UserToArtist)" source="mov1#opm1#icu2#icp58" target="mov1#opm1#cru3.rel9#role17.ent4#att22"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par220" name="createdAt_param_createdAt" source="mov1#opm1#icu2#icp59" target="mov1#opm1#cru3.User#att10"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par221" name="displayname_param_displayName" source="mov1#opm1#icu2#icp6" target="mov1#opm1#cru3.User#att9"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par222" name="email_param_email" source="mov1#opm1#icu2#icp4" target="mov1#opm1#cru3.email"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par223" name="groupId_param_Group.id(defaultGroup)" source="mov1#opm1#icu2#icp7" target="mov1#opm1#cru3.User2DefaultGroup.groupOID"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par224" name="password_param_password" source="mov1#opm1#icu2#icp3" target="mov1#opm1#cru3.password"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par225" name="status_param_status" source="mov1#opm1#icu2#icp5" target="mov1#opm1#cru3.User#att11"/>
+        <LinkParameter id="mov1#opm1#icu2#ln49#par226" name="username_param_userName" source="mov1#opm1#icu2#icp2" target="mov1#opm1#cru3.userName"/>
+      </Link>
     </InputCollectorUnit>
-    <CreateUnit gr:x="445" gr:y="300" id="mov1#opm1#cru3" name="Crear cancion" entity="ent1">
-      <OKLink id="mov1#opm1#cru3#oln3" name="OKFlow3" to="mov1#opm1#okcu1" automaticCoupling="true"/>
-      <KOLink id="mov1#opm1#cru3#kln3" name="KOFlow3" to="mov1#opm1#kocu1" automaticCoupling="true"/>
+    <IsNotNullUnit gr:x="490" gr:y="325" id="mov1#opm1#inn8" name="existe usuario">
+      <OKLink id="mov1#opm1#inn8#oln2" name="OKFlow2" to="mov1#opm1#mfu10" automaticCoupling="true"/>
+      <KOLink id="mov1#opm1#inn8#kln3" name="KOFlow3" to="mov1#opm1#cru3" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="675" gr:y="245" id="mov1#opm1#mfu10" name="editar usuario" entity="User">
+      <Selector id="mov1#opm1#mfu10#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm1#mfu10#su29#kcond24" name="KeyCondition24" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm1#mfu10#oln53" name="OKFlow53" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov1#opm1#mfu10#kln35" name="KOFlow35" to="mov1#opm1#kocu1" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="685" gr:y="380" id="mov1#opm1#cru3" name="crear usuario" entity="User">
+      <OKLink id="mov1#opm1#cru3#oln54" name="OKFlow54" to="mov1#opm1#okcu1" automaticCoupling="true"/>
+      <KOLink id="mov1#opm1#cru3#kln36" name="KOFlow36" to="mov1#opm1#kocu1" automaticCoupling="true"/>
     </CreateUnit>
-    <OKCollectorUnit gr:x="615" gr:y="225" id="mov1#opm1#okcu1" name="OK Port1"/>
-    <KOCollectorUnit gr:x="615" gr:y="430" id="mov1#opm1#kocu1" name="KO Port1"/>
+    <OKCollectorUnit gr:x="855" gr:y="235" id="mov1#opm1#okcu1" name="OK Port1"/>
+    <KOCollectorUnit gr:x="855" gr:y="395" id="mov1#opm1#kocu1" name="KO Port1"/>
   </OperationUnits>
 </OperationModule>

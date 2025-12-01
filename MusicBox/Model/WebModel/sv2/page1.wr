@@ -1,14 +1,17 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="990" gr:y="80" id="sv2#page1" name="Albums" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="810" gr:y="0" id="sv2#page1" name="&#193;lbumes" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit id="sv2#page1#pwu4" name="&#193;lbums" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att33 ent6#att32 ent6#att34"/>
+    <PowerIndexUnit id="sv2#page1#pwu4" name="&#193;lbums" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att33 ent6#att32 ent6#att34" linkOrder="sv2#page1#pwu4#ln41">
+      <Link id="sv2#page1#pwu4#ln41" name="Detalles del album" to="sv2#page16#dau4" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page1#pwu4">
-          <layout:Attribute attribute="ent6#att33"/>
-          <layout:Attribute attribute="ent6#att32"/>
-          <layout:Attribute attribute="ent6#att34"/>
+          <layout:Attribute attribute="ent6#att33" label="Fecha de lanzamiento"/>
+          <layout:Attribute attribute="ent6#att32" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent6#att34" label="Portada"/>
+          <layout:Link link="sv2#page1#pwu4#ln41"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

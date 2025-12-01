@@ -1,0 +1,44 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="785" gr:y="510" id="mov1#opm17" name="crear/editar artista">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm17#icu17" gr:x="50" gr:y="185">
+      <InputCollectorParameter id="mov1#opm17#icu17#icp39" name="id_param"/>
+      <InputCollectorParameter id="mov1#opm17#icu17#icp40" name="name_param"/>
+      <InputCollectorParameter id="mov1#opm17#icu17#icp41" name="country_param"/>
+      <InputCollectorParameter id="mov1#opm17#icu17#icp42" name="bio_param"/>
+      <OKLink id="mov1#opm17#icu17#oln39" name="OKFlow39" to="mov1#opm17#inn4">
+        <LinkParameter id="mov1#opm17#icu17#oln39#par114" name="id_param_Input" source="mov1#opm17#icu17#icp39" target="mov1#opm17#inn4.isnotnull"/>
+      </OKLink>
+      <Link id="mov1#opm17#icu17#ln42" name="Flow42" to="mov1#opm17#mfu6" type="transport" validate="true" gr:bendpoints="203,-65,-222,0">
+        <LinkParameter id="mov1#opm17#icu17#ln42#par115" name="bio_param_bio" source="mov1#opm17#icu17#icp42" target="mov1#opm17#mfu6.ent4#att25"/>
+        <LinkParameter id="mov1#opm17#icu17#ln42#par116" name="country_param_country" source="mov1#opm17#icu17#icp41" target="mov1#opm17#mfu6.ent4#att24"/>
+        <LinkParameter id="mov1#opm17#icu17#ln42#par117" name="id_param_KeyCondition20 [id]" source="mov1#opm17#icu17#icp39" target="mov1#opm17#mfu6#su20#kcond20.ent4#att22"/>
+        <LinkParameter id="mov1#opm17#icu17#ln42#par118" name="name_param_name" source="mov1#opm17#icu17#icp40" target="mov1#opm17#mfu6.ent4#att23"/>
+        <LinkParameter id="mov1#opm17#icu17#ln42#par17" name="user_param_User.id(ArtistToUser)" source="mov1#opm17#icu17#icp57" target="mov1#opm17#mfu6.rel9#role18.userOID"/>
+      </Link>
+      <Link id="mov1#opm17#icu17#ln45" name="Flow45" to="mov1#opm17#cru6" type="transport" validate="true" gr:bendpoints="214,66,-216,1">
+        <LinkParameter id="mov1#opm17#icu17#ln45#par119" name="bio_param_bio" source="mov1#opm17#icu17#icp42" target="mov1#opm17#cru6.ent4#att25"/>
+        <LinkParameter id="mov1#opm17#icu17#ln45#par120" name="country_param_country" source="mov1#opm17#icu17#icp41" target="mov1#opm17#cru6.ent4#att24"/>
+        <LinkParameter id="mov1#opm17#icu17#ln45#par121" name="name_param_name" source="mov1#opm17#icu17#icp40" target="mov1#opm17#cru6.ent4#att23"/>
+        <LinkParameter id="mov1#opm17#icu17#ln45#par16" name="user_param_User.id(ArtistToUser)" source="mov1#opm17#icu17#icp57" target="mov1#opm17#cru6.rel9#role18.userOID"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm17#icu17#icp57" name="user_param"/>
+    </InputCollectorUnit>
+    <IsNotNullUnit gr:x="355" gr:y="210" id="mov1#opm17#inn4" name="existe artista">
+      <OKLink id="mov1#opm17#inn4#oln40" name="OKFlow40" to="mov1#opm17#mfu6" automaticCoupling="true"/>
+      <KOLink id="mov1#opm17#inn4#kln25" name="KOFlow25" to="mov1#opm17#cru6" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="540" gr:y="125" id="mov1#opm17#mfu6" name="editar artista" entity="ent4">
+      <Selector id="mov1#opm17#mfu6#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm17#mfu6#su20#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm17#mfu6#oln41" name="OKFlow41" to="mov1#opm17#okcu16" automaticCoupling="true"/>
+      <KOLink id="mov1#opm17#mfu6#kln26" name="KOFlow26" to="mov1#opm17#kocu16" automaticCoupling="true"/>
+    </ModifyUnit>
+    <CreateUnit gr:x="550" gr:y="265" id="mov1#opm17#cru6" name="crear artista" entity="ent4">
+      <OKLink id="mov1#opm17#cru6#oln42" name="OKFlow42" to="mov1#opm17#okcu16" automaticCoupling="true"/>
+      <KOLink id="mov1#opm17#cru6#kln27" name="KOFlow27" to="mov1#opm17#kocu16" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit gr:x="715" gr:y="130" id="mov1#opm17#okcu16" name="OK Port16"/>
+    <KOCollectorUnit gr:x="715" gr:y="290" id="mov1#opm17#kocu16" name="KO Port16"/>
+  </OperationUnits>
+</OperationModule>

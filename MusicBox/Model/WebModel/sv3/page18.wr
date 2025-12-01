@@ -1,0 +1,110 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="990" gr:y="445" id="sv3#page18" name="Albumes" layout:layoutManager="grid">
+  <ContentUnits>
+    <PowerIndexUnit id="sv3#page18#pwu18" name="Albumes" linkOrder="sv3#page18#pwu18#ln62 sv3#page18#pwu18#ln69" gr:x="115" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att34 ent6#att33 ent6#att32">
+      <Link id="sv3#page18#pwu18#ln62" name="Borrar" to="sv3#miu13" type="normal" validate="true">
+        <LinkParameter id="sv3#page18#pwu18#ln62#par153" name="id_id_param" source="data[].ent6#att31" target="sv3#miu13.mov1#opm15#icu15#icp33"/>
+      </Link>
+      <Link id="sv3#page18#pwu18#ln69" name="Editar" to="sv3#page18#enu13" type="normal" validate="true">
+        <LinkParameter id="sv3#page18#pwu18#ln69#par167" name="cover_Cover" source="data[].ent6#att34" target="sv3#page18#enu13#fld36_slot"/>
+        <LinkParameter id="sv3#page18#pwu18#ln69#par168" name="releaseDate_Fecha lanzamiento" source="data[].ent6#att33" target="sv3#page18#enu13#fld35_slot"/>
+        <LinkParameter id="sv3#page18#pwu18#ln69#par169" name="id_Key Condition [id]" source="data[].ent6#att31" target="sv3#page18#enu13.ent6#att31"/>
+        <LinkParameter id="sv3#page18#pwu18#ln69#par170" name="title_Titulo" source="data[].ent6#att32" target="sv3#page18#enu13#fld34_slot"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit id="sv3#page18#enu13" name="Crear album" gr:x="110" gr:y="130" entity="ent6" linkOrder="sv3#page18#enu13#ln70">
+      <Field id="sv3#page18#enu13#fld34" name="Titulo" type="string" modifiable="true" attribute="ent6#att32" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page18#enu13#fld34#mnd31" name="Mandatory23"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page18#enu13#fld35" name="Fecha lanzamiento" type="date" modifiable="true" attribute="ent6#att33" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page18#enu13#fld35#mnd32" name="Mandatory22"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page18#enu13#fld36" name="Cover" type="blob" modifiable="true" contentType="image" attribute="ent6#att34" preloaded="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page18#enu13#fld36#mnd33" name="Mandatory21"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv3#page18#enu13#sfld6" name="Artista" type="string" role="rel3#role6">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page18#enu13#sfld6#mnd34" name="Mandatory20"/>
+        </VRules>
+      </SelectionField>
+      <Link id="sv3#page18#enu13#ln70" name="OK" to="sv3#miu20" type="normal" validate="true">
+        <LinkParameter id="sv3#page18#enu13#ln70#par171" name="Artista_artist_param" source="sv3#page18#enu13#sfld6" target="sv3#miu20.mov1#opm20#icu20#icp47"/>
+        <LinkParameter id="sv3#page18#enu13#ln70#par172" name="Cover_cover_param" source="sv3#page18#enu13#fld36" target="sv3#miu20.mov1#opm20#icu20#icp46"/>
+        <LinkParameter id="sv3#page18#enu13#ln70#par173" name="Key [id]_id_param" source="key.ent6#att31" target="sv3#miu20.mov1#opm20#icu20#icp43"/>
+        <LinkParameter id="sv3#page18#enu13#ln70#par174" name="Fecha lanzamiento_releaseDate_param" source="sv3#page18#enu13#fld35" target="sv3#miu20.mov1#opm20#icu20#icp45"/>
+        <LinkParameter id="sv3#page18#enu13#ln70#par175" name="Titulo_title_param" source="sv3#page18#enu13#fld34" target="sv3#miu20.mov1#opm20#icu20#icp44"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="55" id="sv3#page18#seu2" name="Artistas" entity="ent4">
+      <Link id="sv3#page18#seu2#ln68" name="Flow68" to="sv3#page18#enu13" type="transport" validate="true">
+        <LinkParameter id="sv3#page18#seu2#ln68#par165" name="name_Artista [label]" source="ent4#att23Array" target="sv3#page18#enu13#sfld6_label"/>
+        <LinkParameter id="sv3#page18#seu2#ln68#par166" name="id_Artista [output]" source="ent4#att22Array" target="sv3#page18#enu13#sfld6_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page18#enu13">
+          <layout:Field field="sv3#page18#enu13#fld34"/>
+          <layout:Field field="sv3#page18#enu13#fld35"/>
+          <layout:Field field="sv3#page18#enu13#fld36"/>
+          <layout:Field field="sv3#page18#enu13#sfld6"/>
+          <layout:Link link="sv3#page18#enu13#ln70"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page18#pwu18">
+          <layout:Attribute attribute="ent6#att34" label="Cover"/>
+          <layout:Attribute attribute="ent6#att33" label="Fecha lanzamiento"/>
+          <layout:Attribute attribute="ent6#att32" label="Titulo"/>
+          <layout:Link link="sv3#page18#pwu18#ln62"/>
+          <layout:Link link="sv3#page18#pwu18#ln69"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

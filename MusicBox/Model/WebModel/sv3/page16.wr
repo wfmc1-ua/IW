@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="990" gr:y="170" id="sv3#page16" name="Artistas" layout:layoutManager="grid">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="935" gr:y="170" id="sv3#page16" name="Artistas" layout:layoutManager="grid">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#page16#pwu14" name="Artistas" linkOrder="sv3#page16#pwu14#ln53 sv3#page16#pwu14#ln54" gr:x="5" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att23 ent4#att24 ent4#att25">
+    <PowerIndexUnit id="sv3#page16#pwu14" name="Artistas" linkOrder="sv3#page16#pwu14#ln53 sv3#page16#pwu14#ln54" gr:x="125" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att23 ent4#att24 ent4#att25 rel9#role18.userName">
       <Link id="sv3#page16#pwu14#ln53" name="Borrar" to="sv3#miu5" type="normal" validate="true">
         <LinkParameter id="sv3#page16#pwu14#ln53#par137" name="id_id_param" source="data[].ent4#att22" target="sv3#miu5.mov1#opm18#icu18#icp34"/>
       </Link>
@@ -11,7 +11,7 @@
         <LinkParameter id="sv3#page16#pwu14#ln54#par141" name="country_Pais" source="data[].ent4#att24" target="sv3#page16#enu11#fld30_slot"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit id="sv3#page16#enu11" name="Crear artista" linkOrder="sv3#page16#enu11#ln55" gr:x="0" gr:y="130" entity="ent4">
+    <EntryUnit id="sv3#page16#enu11" name="Crear artista" linkOrder="sv3#page16#enu11#ln55" gr:x="120" gr:y="130" entity="ent4">
       <Field id="sv3#page16#enu11#fld29" name="Nombre" type="string" modifiable="true" attribute="ent4#att23" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="sv3#page16#enu11#fld29#mnd26" name="Mandatory18"/>
@@ -32,17 +32,26 @@
         <LinkParameter id="sv3#page16#enu11#ln55#par143" name="Pais_country_param" source="sv3#page16#enu11#fld30" target="sv3#miu19.mov1#opm17#icu17#icp41"/>
         <LinkParameter id="sv3#page16#enu11#ln55#par144" name="Key [id]_id_param" source="key.ent4#att22" target="sv3#miu19.mov1#opm17#icu17#icp39"/>
         <LinkParameter id="sv3#page16#enu11#ln55#par145" name="Nombre_name_param" source="sv3#page16#enu11#fld29" target="sv3#miu19.mov1#opm17#icu17#icp40"/>
+        <LinkParameter id="sv3#page16#enu11#ln55#par45" name="Usuario_user_param" source="sv3#page16#enu11#sfld2" target="sv3#miu19.mov1#opm17#icu17#icp57"/>
       </Link>
+      <SelectionField id="sv3#page16#enu11#sfld2" name="Usuario" type="string" role="rel9#role18"/>
     </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="75" id="sv3#page16#seu7" name="Usuarios" entity="User">
+      <Link id="sv3#page16#seu7#ln34" name="Flow34" to="sv3#page16#enu11" type="transport" validate="true">
+        <LinkParameter id="sv3#page16#seu7#ln34#par18" name="userName_Usuario [label]" source="userNameArray" target="sv3#page16#enu11#sfld2_label"/>
+        <LinkParameter id="sv3#page16#seu7#ln34#par19" name="id_Usuario [output]" source="userOIDArray" target="sv3#page16#enu11#sfld2_output"/>
+      </Link>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page16#enu11">
+          <layout:Link link="sv3#page16#enu11#ln55"/>
           <layout:Field field="sv3#page16#enu11#fld29"/>
           <layout:Field field="sv3#page16#enu11#fld30"/>
           <layout:Field field="sv3#page16#enu11#fld31"/>
-          <layout:Link link="sv3#page16#enu11#ln55"/>
+          <layout:Field field="sv3#page16#enu11#sfld2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -60,13 +69,28 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page16#pwu14">
+          <layout:Link link="sv3#page16#pwu14#ln53"/>
+          <layout:Link link="sv3#page16#pwu14#ln54"/>
           <layout:Attribute attribute="ent4#att23" label="Nombre"/>
           <layout:Attribute attribute="ent4#att24" label="Pais"/>
           <layout:Attribute attribute="ent4#att25" label="Biografia"/>
-          <layout:Link link="sv3#page16#pwu14#ln53"/>
-          <layout:Link link="sv3#page16#pwu14#ln54"/>
+          <layout:Attribute attribute="rel9#role18.userName" label="Usuario"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

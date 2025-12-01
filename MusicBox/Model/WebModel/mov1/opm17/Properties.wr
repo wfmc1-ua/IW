@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="785" gr:y="510" id="mov1#opm17" name="crear/editar artista">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm17#icu17" gr:x="50" gr:y="185" linkOrder="mov1#opm17#icu17#ln42 mov1#opm17#icu17#ln45">
+    <InputCollectorUnit id="mov1#opm17#icu17" gr:x="50" gr:y="185">
       <InputCollectorParameter id="mov1#opm17#icu17#icp39" name="id_param"/>
       <InputCollectorParameter id="mov1#opm17#icu17#icp40" name="name_param"/>
       <InputCollectorParameter id="mov1#opm17#icu17#icp41" name="country_param"/>
@@ -13,12 +13,15 @@
         <LinkParameter id="mov1#opm17#icu17#ln42#par116" name="country_param_country" source="mov1#opm17#icu17#icp41" target="mov1#opm17#mfu6.ent4#att24"/>
         <LinkParameter id="mov1#opm17#icu17#ln42#par117" name="id_param_KeyCondition20 [id]" source="mov1#opm17#icu17#icp39" target="mov1#opm17#mfu6#su20#kcond20.ent4#att22"/>
         <LinkParameter id="mov1#opm17#icu17#ln42#par118" name="name_param_name" source="mov1#opm17#icu17#icp40" target="mov1#opm17#mfu6.ent4#att23"/>
+        <LinkParameter id="mov1#opm17#icu17#ln42#par17" name="user_param_User.id(ArtistToUser)" source="mov1#opm17#icu17#icp57" target="mov1#opm17#mfu6.rel9#role18.userOID"/>
       </Link>
       <Link id="mov1#opm17#icu17#ln45" name="Flow45" to="mov1#opm17#cru6" type="transport" validate="true" gr:bendpoints="214,66,-216,1">
         <LinkParameter id="mov1#opm17#icu17#ln45#par119" name="bio_param_bio" source="mov1#opm17#icu17#icp42" target="mov1#opm17#cru6.ent4#att25"/>
         <LinkParameter id="mov1#opm17#icu17#ln45#par120" name="country_param_country" source="mov1#opm17#icu17#icp41" target="mov1#opm17#cru6.ent4#att24"/>
         <LinkParameter id="mov1#opm17#icu17#ln45#par121" name="name_param_name" source="mov1#opm17#icu17#icp40" target="mov1#opm17#cru6.ent4#att23"/>
+        <LinkParameter id="mov1#opm17#icu17#ln45#par16" name="user_param_User.id(ArtistToUser)" source="mov1#opm17#icu17#icp57" target="mov1#opm17#cru6.rel9#role18.userOID"/>
       </Link>
+      <InputCollectorParameter id="mov1#opm17#icu17#icp57" name="user_param"/>
     </InputCollectorUnit>
     <IsNotNullUnit gr:x="355" gr:y="210" id="mov1#opm17#inn4" name="existe artista">
       <OKLink id="mov1#opm17#inn4#oln40" name="OKFlow40" to="mov1#opm17#mfu6" automaticCoupling="true"/>

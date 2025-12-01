@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" homePage="sv3#page7" protected="true" landmarks="sv3#page11 sv3#page15">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" homePage="sv3#page7" protected="true" landmarks="sv3#page11 sv3#page15 sv3#page8">
   <OperationUnits>
     <ModuleInstanceUnit id="sv3#miu6" gr:x="345" gr:y="50" action="true" moduleId="mov1#opm5"/>
     <ModuleInstanceUnit id="sv3#miu14" gr:x="475" gr:y="205" action="true" moduleId="mov1#opm11"/>
@@ -6,12 +6,14 @@
     <ModuleInstanceUnit id="sv3#miu16" gr:x="495" gr:y="520" action="true" moduleId="mov1#opm10"/>
     <ModuleInstanceUnit id="sv3#miu17" gr:x="495" gr:y="415" action="true" moduleId="mov1#opm13"/>
     <ModuleInstanceUnit gr:x="1300" gr:y="755" id="sv3#miu4" action="true" moduleId="mov1#opm14"/>
-    <ModuleInstanceUnit gr:x="1150" gr:y="210" id="sv3#miu5" action="true" moduleId="mov1#opm18"/>
+    <ModuleInstanceUnit gr:x="1250" gr:y="210" id="sv3#miu5" action="true" moduleId="mov1#opm18"/>
     <ModuleInstanceUnit gr:x="1155" gr:y="-60" id="sv3#miu10" action="true" moduleId="mov1#opm16"/>
     <ModuleInstanceUnit gr:x="1270" gr:y="485" id="sv3#miu13" action="true" moduleId="mov1#opm15"/>
     <ModuleInstanceUnit gr:x="1155" gr:y="65" id="sv3#miu18" action="true" moduleId="mov1#opm16"/>
-    <ModuleInstanceUnit gr:x="1165" gr:y="310" id="sv3#miu19" action="true" moduleId="mov1#opm17"/>
+    <ModuleInstanceUnit gr:x="1245" gr:y="310" id="sv3#miu19" action="true" moduleId="mov1#opm17"/>
     <ModuleInstanceUnit gr:x="1280" gr:y="610" id="sv3#miu20" action="true" moduleId="mov1#opm20"/>
     <ModuleInstanceUnit gr:x="1310" gr:y="875" id="sv3#miu21" action="true" moduleId="mov1#opm21"/>
+    <ModuleInstanceUnit gr:x="370" gr:y="730" id="sv3#miu22" action="true" moduleId="mov1#opm22"/>
+    <ModuleInstanceUnit gr:x="360" gr:y="855" id="sv3#miu23" action="true" moduleId="mov1#opm1"/>
   </OperationUnits>
 </SiteView>

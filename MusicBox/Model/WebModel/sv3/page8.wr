@@ -1,0 +1,124 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="680" id="sv3#page8" name="Usuarios" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="115" gr:y="0" id="sv3#page8#pwu1" name="Usuarios" sortable="true" checkable="false" useCountQuery="false" entity="User" linkOrder="sv3#page8#pwu1#ln33 sv3#page8#pwu1#ln41" displayAttributes="userName User#att9 rel9#role17.ent4#att23 email User#att10 User#att11 User2Group.groupName">
+      <Link id="sv3#page8#pwu1#ln33" name="Borrar" to="sv3#miu22" type="normal" validate="true">
+        <LinkParameter id="sv3#page8#pwu1#ln33#par15" name="id_id_param" source="data[].userOID" target="sv3#miu22.mov1#opm22#icu22#icp52"/>
+      </Link>
+      <Link id="sv3#page8#pwu1#ln41" name="Editar" to="sv3#page8#enu4" type="normal" validate="true">
+        <LinkParameter id="sv3#page8#pwu1#ln41#par109" name="displayName_displayName" source="data[].User#att9" target="sv3#page8#enu4#fld11_slot"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par110" name="email_email" source="data[].email" target="sv3#page8#enu4#fld10_slot"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par111" name="id_Key Condition [id]" source="data[].userOID" target="sv3#page8#enu4.userOID"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par112" name="password_password" source="data[].password" target="sv3#page8#enu4#fld9_slot"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par113" name="status_status" source="data[].User#att11" target="sv3#page8#enu4#fld20_slot"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par122" name="userName_userName" source="data[].userName" target="sv3#page8#enu4#fld8_slot"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par123" name="defaultGroup.id_defaultGroup - Preselection" source="data[].User2DefaultGroup_groupOID" target="sv3#page8#enu4#sfld4_presel"/>
+        <LinkParameter id="sv3#page8#pwu1#ln41#par124" name="UserToArtist.id_UserToArtist - Preselection" source="data[].rel9#role17_ent4#att22" target="sv3#page8#enu4#sfld5_presel"/>
+      </Link>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="110" gr:y="135" id="sv3#page8#enu4" name="Crear usuario" entity="User" fieldOrder="sv3#page8#enu4#fld8 sv3#page8#enu4#fld9 sv3#page8#enu4#fld11 sv3#page8#enu4#sfld5 sv3#page8#enu4#fld10 sv3#page8#enu4#fld20 sv3#page8#enu4#sfld4" linkOrder="sv3#page8#enu4#ln46">
+      <Field id="sv3#page8#enu4#fld8" name="userName" type="string" modifiable="true" attribute="userName" preloaded="true"/>
+      <Field id="sv3#page8#enu4#fld9" name="password" type="password" modifiable="true" attribute="password" preloaded="true"/>
+      <Field id="sv3#page8#enu4#fld10" name="email" type="string" modifiable="true" attribute="email" preloaded="true"/>
+      <Field id="sv3#page8#enu4#fld11" name="displayName" type="string" modifiable="true" attribute="User#att9" preloaded="true"/>
+      <Field id="sv3#page8#enu4#fld12" name="createdAt" type="timestamp" modifiable="true" attribute="User#att10" hidden="true" preloaded="true"/>
+      <Field id="sv3#page8#enu4#fld20" name="status" type="string" modifiable="true" attribute="User#att11" preloaded="true"/>
+      <SelectionField id="sv3#page8#enu4#sfld4" name="defaultGroup" type="string" role="User2DefaultGroup"/>
+      <SelectionField id="sv3#page8#enu4#sfld5" name="UserToArtist" type="string" role="rel9#role17"/>
+      <Link id="sv3#page8#enu4#ln46" name="OK" to="sv3#miu23" type="normal" validate="true">
+        <LinkParameter id="sv3#page8#enu4#ln46#par125" name="UserToArtist_artist_param" source="sv3#page8#enu4#sfld5" target="sv3#miu23.mov1#opm1#icu2#icp58"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par126" name="createdAt_createdAt_param" source="sv3#page8#enu4#fld12" target="sv3#miu23.mov1#opm1#icu2#icp59"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par127" name="displayName_displayname_param" source="sv3#page8#enu4#fld11" target="sv3#miu23.mov1#opm1#icu2#icp6"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par128" name="email_email_param" source="sv3#page8#enu4#fld10" target="sv3#miu23.mov1#opm1#icu2#icp4"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par129" name="defaultGroup_groupId_param" source="sv3#page8#enu4#sfld4" target="sv3#miu23.mov1#opm1#icu2#icp7"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par130" name="Key [id]_id_param" source="key.userOID" target="sv3#miu23.mov1#opm1#icu2#icp1"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par131" name="password_password_param" source="sv3#page8#enu4#fld9" target="sv3#miu23.mov1#opm1#icu2#icp3"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par132" name="status_status_param" source="sv3#page8#enu4#fld20" target="sv3#miu23.mov1#opm1#icu2#icp5"/>
+        <LinkParameter id="sv3#page8#enu4#ln46#par133" name="userName_username_param" source="sv3#page8#enu4#fld8" target="sv3#miu23.mov1#opm1#icu2#icp2"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="25" id="sv3#page8#seu8" name="Grupos" entity="Group">
+      <Link id="sv3#page8#seu8#ln35" name="Flow35" to="sv3#page8#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#seu8#ln35#par95" name="groupName_defaultGroup [label]" source="groupNameArray" target="sv3#page8#enu4#sfld4_label"/>
+        <LinkParameter id="sv3#page8#seu8#ln35#par99" name="id_defaultGroup [output]" source="groupOIDArray" target="sv3#page8#enu4#sfld4_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="0" gr:y="130" id="sv3#page8#seu9" name="Artistas" entity="ent4">
+      <Link id="sv3#page8#seu9#ln37" name="Flow37" to="sv3#page8#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#seu9#ln37#par100" name="name_UserToArtist [label]" source="ent4#att23Array" target="sv3#page8#enu4#sfld5_label"/>
+        <LinkParameter id="sv3#page8#seu9#ln37#par101" name="id_UserToArtist [output]" source="ent4#att22Array" target="sv3#page8#enu4#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <TimeUnit gr:x="5" gr:y="245" id="sv3#page8#tmu2" name="Tiempo actual">
+      <Link id="sv3#page8#tmu2#ln40" name="Flow40" to="sv3#page8#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page8#tmu2#ln40#par108" name="Current/Input Time_createdAt" source="currentTimestamp" target="sv3#page8#enu4#fld12_slot"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#enu4">
+          <layout:Link link="sv3#page8#enu4#ln46"/>
+          <layout:Field field="sv3#page8#enu4#fld8" label="Nombre"/>
+          <layout:Field field="sv3#page8#enu4#fld9" label="Contrase&#241;a"/>
+          <layout:Field field="sv3#page8#enu4#fld11" label="Nombre mostrado"/>
+          <layout:Field field="sv3#page8#enu4#sfld5" label="Nombre artistico"/>
+          <layout:Field field="sv3#page8#enu4#fld10" label="Email"/>
+          <layout:Field field="sv3#page8#enu4#fld20" label="Estado"/>
+          <layout:Field field="sv3#page8#enu4#sfld4" label="Grupo"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#pwu1">
+          <layout:Attribute attribute="userName" label="Nombre"/>
+          <layout:Attribute attribute="User#att9" label="Nombre mostrado"/>
+          <layout:Attribute attribute="rel9#role17.ent4#att23" label="Nombre artistico"/>
+          <layout:Attribute attribute="email" label="Email"/>
+          <layout:Attribute attribute="User#att10" label="Creado el"/>
+          <layout:Attribute attribute="User#att11" label="Estado"/>
+          <layout:Attribute attribute="User2Group.groupName"/>
+          <layout:Link link="sv3#page8#pwu1#ln33"/>
+          <layout:Link link="sv3#page8#pwu1#ln41"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

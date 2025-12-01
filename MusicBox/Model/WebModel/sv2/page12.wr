@@ -1,9 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1790" gr:y="180" id="sv2#page12" name="Playlists p&#250;blicas" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1650" gr:y="125" id="sv2#page12" name="Playlists p&#250;blicas" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#page12#pwu1" name="Playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att18">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#page12#pwu1" name="Playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att18" linkOrder="sv2#page12#pwu1#ln56">
       <Selector id="sv2#page12#pwu1#su8" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#page12#pwu1#su8#acond1" name="IsPublic" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att17" value="True"/>
       </Selector>
+      <Link id="sv2#page12#pwu1#ln56" name="Ver canciones" to="sv2#page25#dau12" type="normal" validate="true">
+        <LinkParameter id="sv2#page12#pwu1#ln56#par93" name="id_KeyCondition8 [id]" source="data[].ent2#att14" target="sv2#page25#dau12#su35#kcond27.ent2#att14"/>
+      </Link>
     </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
@@ -13,6 +16,7 @@
           <layout:Attribute attribute="ent2#att15" label="T&#237;tulo"/>
           <layout:Attribute attribute="ent2#att16" label="Descripci&#243;n"/>
           <layout:Attribute attribute="ent2#att18" label="Fecha de creaci&#243;n"/>
+          <layout:Link link="sv2#page12#pwu1#ln56"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

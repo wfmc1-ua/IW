@@ -1,0 +1,104 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2#page25" name="Ver canciones playlist" gr:x="1905" gr:y="85">
+  <ContentUnits>
+    <PowerIndexUnit id="sv2#page25#pwu20" name="Canciones playlist" gr:x="0" gr:y="160" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att12">
+      <Selector id="sv2#page25#pwu20#su34" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#page25#pwu20#su34#acond9" name="AttCondition2" predicate="eq" booleanOperator="or" implied="false" attributes="rel1#role1.ent2#att14"/>
+      </Selector>
+    </PowerIndexUnit>
+    <DataUnit id="sv2#page25#dau12" name="Playlist" gr:x="25" gr:y="0" entity="ent2" displayAttributes="ent2#att15 ent2#att16 ent2#att18">
+      <Selector id="sv2#page25#dau12#su35" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#page25#dau12#su35#kcond27" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#page25#dau12#ln72" name="Flow29" to="sv2#page25#pwu20" type="transport" validate="true">
+        <LinkParameter id="sv2#page25#dau12#ln72#par92" name="id_AttCondition2" source="data.ent2#att14" target="sv2#page25#pwu20#su34#acond9"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="16">
+        <layout:Unit unitId="sv2#page25#dau12">
+          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att16"/>
+          <layout:Attribute attribute="ent2#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell rowspan="3" colspan="16">
+        <layout:Unit unitId="sv2#page25#pwu20">
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att3"/>
+          <layout:Attribute attribute="ent1#att12"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:LayoutParameter name="column-count" value="16" type="layoutManager"/>
+  </layout:Grid>
+</Page>

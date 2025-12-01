@@ -26,7 +26,7 @@ CREATE SEQUENCE IF NOT EXISTS hibernate_sequence START 1000;
 -- MÓDULOS
 INSERT INTO "module" ("id", "moduleid", "modulename") VALUES 
 (1, 'sv3', 'ADMIN'), 
-(2, 'sv1',  'USUARIOMINGUI');
+(2, 'sv1',  'USUARIO');
 
 -- GRUPOS
 INSERT INTO "group" ("id", "groupname", "module_id") VALUES 

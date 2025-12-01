@@ -150,7 +150,8 @@
       <db:JoinColumn attribute="ent4#att22" name="artist_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" password="cG9zdGdyZQ==" schema="public" cryptedPassword="true"/>
+  <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" password="RmFiaWFuMTgwMQ==" schema="public" cryptedPassword="true">
+  </db:Database>
   <Relationship id="rel9" name="User_Artist" sourceEntity="User" targetEntity="ent4" db:database="db1" db:table="artist">
     <RelationshipRole1 id="rel9#role17" name="UserToArtist" maxCard="1" cascadeDelete="true">
       <db:JoinColumn attribute="userOID" name="user_id"/>

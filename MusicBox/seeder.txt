@@ -23,7 +23,7 @@ CREATE SEQUENCE IF NOT EXISTS hibernate_sequence START 1000;
 -- 2. SEGURIDAD
 -- =============================================
 
--- MÃ“DULOS
+-- MÓDULOS
 INSERT INTO "module" ("id", "moduleid", "modulename") VALUES 
 (1, 'sv3', 'ADMIN'), 
 (2, 'sv1',  'USUARIO');
@@ -37,10 +37,10 @@ INSERT INTO "group" ("id", "groupname", "module_id") VALUES
 INSERT INTO "user" ("id", "username", "password", "email", "displayname", "status", "createdat", "group_id") VALUES 
 (1, 'admin', 'admin', 'admin@musicbox.com', 'Super Admin', 'active', NOW(), 1),
 (2, 'cliente', 'cliente', 'user@gmail.com', 'Juan Perez', 'active', NOW(), 2),
-(3, 'laura', 'laura123', 'laura@test.com', 'Laura GarcÃ­a', 'active', NOW(), 2),
+(3, 'laura', 'laura123', 'laura@test.com', 'Laura García', 'active', NOW(), 2),
 (4, 'carlos', 'carlos123', 'carlos@test.com', 'Carlos Rocker', 'active', NOW(), 2);
 
--- RELACIÃ“N USUARIO-GRUPO
+-- RELACIÓN USUARIO-GRUPO
 INSERT INTO "user_group" ("user_id", "group_id") VALUES 
 (1, 1),
 (2, 2),
@@ -48,65 +48,131 @@ INSERT INTO "user_group" ("user_id", "group_id") VALUES
 (4, 2);
 
 -- =============================================
--- 3. CATÃLOGO MUSICAL
+-- 3. CATÁLOGO MUSICAL
 -- =============================================
 
--- GÃ‰NEROS
+-- GÉNEROS
 INSERT INTO "genre" ("id", "name", "description") VALUES 
-(1, 'Rock', 'Rock clÃ¡sico y moderno'),
+(1, 'Rock', 'Rock clásico y moderno'),
 (2, 'Pop',  'Pop internacional'),
 (3, 'Indie', 'Indie Rock y Alternativo'),
 (4, 'Electronica', 'House, Dance y Techno'),
-(5, 'Urbano', 'FusiÃ³n flamenco y urbano');
+(5, 'Urbano', 'Fusión flamenco y urbano');
 
 -- ARTISTAS
 INSERT INTO "artist" ("id", "name", "country", "bio") VALUES 
 (1, 'Queen', 'UK', 'Leyenda del rock'),
 (2, 'Michael Jackson', 'USA', 'Rey del Pop'),
 (3, 'The Strokes', 'USA', 'Banda neoyorquina de indie rock'),
-(4, 'Daft Punk', 'Francia', 'DÃºo legendario de mÃºsica electrÃ³nica'),
-(5, 'RosalÃ­a', 'EspaÃ±a', 'Motomami internacional'),
+(4, 'Daft Punk', 'Francia', 'Dúo legendario de música electrónica'),
+(5, 'Rosalía', 'España', 'Motomami internacional'),
 (6, 'Arctic Monkeys', 'UK', 'Rock alternativo de Sheffield');
 
--- ÃLBUMES (Rutas de imagen actualizadas)
+-- ÁLBUMES
 INSERT INTO "album" ("id", "title", "releasedate", "cover", "artist_id") VALUES 
 (1, 'A Night at the Opera', '1975-11-21', 'WebContent/img/anightattheopera.jpg', 1),
-(2, 'Thriller',            '1982-11-30', 'WebContent/img/thriller.jpg', 2),
-(3, 'The New Abnormal',    '2020-04-10', 'WebContent/img/thenewabnormal.jpg', 3),
-(4, 'Discovery',           '2001-03-12', 'WebContent/img/discovery.jpg', 4),
-(5, 'El Mal Querer',       '2018-11-02', 'WebContent/img/elmalquerer.jpg', 5),
-(6, 'AM',                  '2013-09-09', 'WebContent/img/am.jpg', 6);
+(2, 'Thriller',             '1982-11-30', 'WebContent/img/thriller.jpg', 2),
+(3, 'The New Abnormal',     '2020-04-10', 'WebContent/img/thenewabnormal.jpg', 3),
+(4, 'Discovery',            '2001-03-12', 'WebContent/img/discovery.jpg', 4),
+(5, 'El Mal Querer',        '2018-11-02', 'WebContent/img/elmalquerer.jpg', 5),
+(6, 'AM',                   '2013-09-09', 'WebContent/img/am.jpg', 6);
 
--- CANCIONES (Eliminada columna cover)
+-- CANCIONES (Tracklists Completos)
 INSERT INTO "song" ("id", "title", "durationsec", "track_number", "releasedate", "album_id", "genre_id") VALUES 
--- Queen
-(1, 'Bohemian Rhapsody', 354, 1, '1975-10-31', 1, 1),
-(2, 'Love of My Life',   219, 9, '1975-11-21', 1, 1),
--- MJ
-(3, 'Billie Jean',       294, 1, '1983-01-02', 2, 2),
-(4, 'Beat It',           258, 5, '1983-02-14', 2, 2),
--- The Strokes
-(5, 'The Adults Are Talking', 309, 1, '2020-04-10', 3, 3),
-(6, 'Selfless',               222, 2, '2020-04-10', 3, 3),
-(7, 'Brooklyn Bridge to Chorus', 235, 3, '2020-04-10', 3, 3),
--- Daft Punk
-(8, 'One More Time',     320, 1, '2000-11-13', 4, 4),
-(9, 'Harder, Better, Faster', 224, 4, '2001-10-13', 4, 4),
--- RosalÃ­a
-(10, 'Malamente',        150, 1, '2018-05-30', 5, 5),
-(11, 'Pienso en tu mirÃ¡', 193, 3, '2018-07-24', 5, 5),
--- Arctic Monkeys
-(12, 'Do I Wanna Know?', 272, 1, '2013-06-19', 6, 3),
-(13, 'R U Mine?',        201, 2, '2012-02-27', 6, 3);
+-- 1. Queen - A Night at the Opera (Rock)
+(1, 'Death on Two Legs', 223, 1, '1975-11-21', 1, 1),
+(2, 'Lazing on a Sunday Afternoon', 67, 2, '1975-11-21', 1, 1),
+(3, 'Im in Love with My Car', 185, 3, '1975-11-21', 1, 1),
+(4, 'Youre My Best Friend', 172, 4, '1975-11-21', 1, 1),
+(5, '39', 211, 5, '1975-11-21', 1, 1),
+(6, 'Sweet Lady', 243, 6, '1975-11-21', 1, 1),
+(7, 'Seaside Rendezvous', 135, 7, '1975-11-21', 1, 1),
+(8, 'The Prophets Song', 501, 8, '1975-11-21', 1, 1),
+(9, 'Love of My Life', 219, 9, '1975-11-21', 1, 1),
+(10, 'Good Company', 203, 10, '1975-11-21', 1, 1),
+(11, 'Bohemian Rhapsody', 354, 11, '1975-10-31', 1, 1),
+(12, 'God Save the Queen', 75, 12, '1975-11-21', 1, 1),
 
--- RELACIÃ“N CANCIÃ“N-ARTISTA
+-- 2. Michael Jackson - Thriller (Pop)
+(13, 'Wanna Be Startin Somethin', 363, 1, '1982-11-30', 2, 2),
+(14, 'Baby Be Mine', 260, 2, '1982-11-30', 2, 2),
+(15, 'The Girl Is Mine', 222, 3, '1982-11-30', 2, 2),
+(16, 'Thriller', 357, 4, '1982-11-30', 2, 2),
+(17, 'Beat It', 258, 5, '1983-02-14', 2, 2),
+(18, 'Billie Jean', 294, 6, '1983-01-02', 2, 2),
+(19, 'Human Nature', 246, 7, '1982-11-30', 2, 2),
+(20, 'P.Y.T. (Pretty Young Thing)', 239, 8, '1982-11-30', 2, 2),
+(21, 'The Lady in My Life', 300, 9, '1982-11-30', 2, 2),
+
+-- 3. The Strokes - The New Abnormal (Indie)
+(22, 'The Adults Are Talking', 309, 1, '2020-04-10', 3, 3),
+(23, 'Selfless', 222, 2, '2020-04-10', 3, 3),
+(24, 'Brooklyn Bridge to Chorus', 235, 3, '2020-04-10', 3, 3),
+(25, 'Bad Decisions', 293, 4, '2020-04-10', 3, 3),
+(26, 'Eternal Summer', 375, 5, '2020-04-10', 3, 3),
+(27, 'At the Door', 310, 6, '2020-04-10', 3, 3),
+(28, 'Why Are Sundays So Depressing', 275, 7, '2020-04-10', 3, 3),
+(29, 'Not the Same Anymore', 337, 8, '2020-04-10', 3, 3),
+(30, 'Ode to the Mets', 351, 9, '2020-04-10', 3, 3),
+
+-- 4. Daft Punk - Discovery (Electronica)
+(31, 'One More Time', 320, 1, '2000-11-13', 4, 4),
+(32, 'Aerodynamic', 207, 2, '2001-03-12', 4, 4),
+(33, 'Digital Love', 298, 3, '2001-03-12', 4, 4),
+(34, 'Harder, Better, Faster, Stronger', 224, 4, '2001-10-13', 4, 4),
+(35, 'Crescendolls', 211, 5, '2001-03-12', 4, 4),
+(36, 'Nightvision', 104, 6, '2001-03-12', 4, 4),
+(37, 'Superheroes', 237, 7, '2001-03-12', 4, 4),
+(38, 'High Life', 202, 8, '2001-03-12', 4, 4),
+(39, 'Something About Us', 231, 9, '2001-03-12', 4, 4),
+(40, 'Voyager', 227, 10, '2001-03-12', 4, 4),
+(41, 'Veridis Quo', 344, 11, '2001-03-12', 4, 4),
+(42, 'Short Circuit', 206, 12, '2001-03-12', 4, 4),
+(43, 'Face to Face', 240, 13, '2001-03-12', 4, 4),
+(44, 'Too Long', 600, 14, '2001-03-12', 4, 4),
+
+-- 5. Rosalía - El Mal Querer (Urbano/Flamenco)
+(45, 'Malamente', 150, 1, '2018-05-30', 5, 5),
+(46, 'Que no salga la luna', 269, 2, '2018-11-02', 5, 5),
+(47, 'Pienso en tu mirá', 193, 3, '2018-07-24', 5, 5),
+(48, 'De aquí no sales', 144, 4, '2018-11-02', 5, 5),
+(49, 'Reniego', 208, 5, '2018-11-02', 5, 5),
+(50, 'Preso', 40, 6, '2018-11-02', 5, 5),
+(51, 'Bagdad', 182, 7, '2018-11-02', 5, 5),
+(52, 'Di mi nombre', 162, 8, '2018-10-30', 5, 5),
+(53, 'Nana', 197, 9, '2018-11-02', 5, 5),
+(54, 'Maldición', 166, 10, '2018-11-02', 5, 5),
+(55, 'A ningún hombre', 94, 11, '2018-11-02', 5, 5),
+
+-- 6. Arctic Monkeys - AM (Rock/Indie)
+(56, 'Do I Wanna Know?', 272, 1, '2013-06-19', 6, 3),
+(57, 'R U Mine?', 201, 2, '2012-02-27', 6, 3),
+(58, 'One for the Road', 206, 3, '2013-09-09', 6, 3),
+(59, 'Arabella', 207, 4, '2013-09-09', 6, 3),
+(60, 'I Want It All', 185, 5, '2013-09-09', 6, 3),
+(61, 'No. 1 Party Anthem', 243, 6, '2013-09-09', 6, 3),
+(62, 'Mad Sounds', 215, 7, '2013-09-09', 6, 3),
+(63, 'Fireside', 181, 8, '2013-09-09', 6, 3),
+(64, 'Whyd You Only Call Me When Youre High?', 161, 9, '2013-08-11', 6, 3),
+(65, 'Snap Out of It', 193, 10, '2013-09-09', 6, 3),
+(66, 'Knee Socks', 257, 11, '2013-09-09', 6, 3),
+(67, 'I Wanna Be Yours', 184, 12, '2013-09-09', 6, 3);
+
+
+-- RELACIÓN CANCIÓN-ARTISTA
 INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
-(1, 1), (2, 1),        -- Queen
-(3, 2), (4, 2),        -- MJ
-(5, 3), (6, 3), (7, 3),-- Strokes
-(8, 4), (9, 4),        -- Daft Punk
-(10, 5), (11, 5),      -- RosalÃ­a
-(12, 6), (13, 6);      -- Arctic Monkeys
+-- Queen (Album 1, Songs 1-12)
+(1,1),(2,1),(3,1),(4,1),(5,1),(6,1),(7,1),(8,1),(9,1),(10,1),(11,1),(12,1),
+-- MJ (Album 2, Songs 13-21)
+(13,2),(14,2),(15,2),(16,2),(17,2),(18,2),(19,2),(20,2),(21,2),
+-- Strokes (Album 3, Songs 22-30)
+(22,3),(23,3),(24,3),(25,3),(26,3),(27,3),(28,3),(29,3),(30,3),
+-- Daft Punk (Album 4, Songs 31-44)
+(31,4),(32,4),(33,4),(34,4),(35,4),(36,4),(37,4),(38,4),(39,4),(40,4),(41,4),(42,4),(43,4),(44,4),
+-- Rosalía (Album 5, Songs 45-55)
+(45,5),(46,5),(47,5),(48,5),(49,5),(50,5),(51,5),(52,5),(53,5),(54,5),(55,5),
+-- Arctic Monkeys (Album 6, Songs 56-67)
+(56,6),(57,6),(58,6),(59,6),(60,6),(61,6),(62,6),(63,6),(64,6),(65,6),(66,6),(67,6);
 
 -- =============================================
 -- 4. SOCIAL (Playlists y Reviews)
@@ -114,42 +180,56 @@ INSERT INTO "song_artist" ("song_id", "artist_id") VALUES
 
 -- PLAYLISTS
 INSERT INTO "playlist" ("id", "name", "description", "ispublic", "createdat") VALUES 
-(1, 'ClÃ¡sicos de siempre', 'Mi lista top antigua', true, NOW()),
+(1, 'Clásicos de siempre', 'Mi lista top antigua', true, NOW()),
 (2, 'Indie Vibes', 'Para trabajar relajado', true, NOW()),
-(3, 'Fiesta Fin de Finde', 'MÃºsica para animarse', false, NOW()),
+(3, 'Fiesta Fin de Finde', 'Música para animarse', false, NOW()),
 (4, 'Gym Motivation', 'A tope de power', true, NOW());
 
--- ASIGNACIÃ“N DE PLAYLISTS A USUARIOS
+-- ASIGNACIÓN DE PLAYLISTS A USUARIOS
 INSERT INTO "user_playlist" ("user_id", "playlist_id") VALUES 
-(2, 1), -- Juan tiene la lista 1 (ClÃ¡sicos)
-(4, 2), -- Carlos tiene la lista 2 (Indie)
-(3, 3), -- Laura tiene la lista 3 (Fiesta)
-(3, 4); -- Laura tiene la lista 4 (Gym)
+(2, 1), 
+(4, 2), 
+(3, 3), 
+(3, 4); 
 
--- CONTENIDO DE PLAYLISTS
+-- CONTENIDO DE PLAYLISTS (IDs Actualizados)
 INSERT INTO "song_playlist" ("playlist_id", "song_id") VALUES 
--- ClÃ¡sicos
-(1, 1), (1, 2), (1, 3), (1, 4),
--- Indie
-(2, 5), (2, 6), (2, 12), (2, 13),
--- Fiesta
-(3, 8), (3, 9), (3, 10), (3, 3),
--- Gym
-(4, 9), (4, 7), (4, 13);
+-- Clásicos (Queen y MJ)
+(1, 11), -- Bohemian Rhapsody
+(1, 9),  -- Love of My Life
+(1, 18), -- Billie Jean
+(1, 17), -- Beat It
+(1, 13), -- Wanna be startin somethin
+-- Indie (Strokes y Arctic Monkeys)
+(2, 22), -- The Adults Are Talking
+(2, 23), -- Selfless
+(2, 56), -- Do I Wanna Know
+(2, 57), -- R U Mine?
+(2, 30), -- Ode to the Mets
+-- Fiesta (Daft Punk y Rosalía)
+(3, 31), -- One More Time
+(3, 34), -- Harder, Better...
+(3, 45), -- Malamente
+(3, 52), -- Di mi nombre
+-- Gym (Mezcla potente)
+(4, 34), -- Harder Better...
+(4, 24), -- Brooklyn Bridge to Chorus
+(4, 57), -- R U Mine?
+(4, 16); -- Thriller
 
 -- REVIEWS
 INSERT INTO "review" ("id", "rating", "comment", "createdat", "user_id") VALUES 
-(1, 5, 'IncreÃ­ble tema, nunca muere', NOW(), 2),
+(1, 5, 'Increíble tema, nunca muere', NOW(), 2),
 (2, 4, 'Me gusta mucho el nuevo estilo', NOW(), 3),
 (3, 5, 'Obra maestra absoluta', NOW(), 4),
 (4, 2, 'No es lo mejor que han sacado', NOW(), 2);
 
--- RELACIÃ“N REVIEW-SONG
+-- RELACIÓN REVIEW-SONG (IDs Actualizados)
 INSERT INTO "review_song" ("review_id", "song_id") VALUES
-(1, 1),
-(2, 5),
-(3, 8),
-(4, 11);
+(1, 11), -- Review 1 -> Bohemian Rhapsody
+(2, 22), -- Review 2 -> The Adults Are Talking
+(3, 31), -- Review 3 -> One More Time
+(4, 48); -- Review 4 -> De aquí no sales
 
 -- =============================================
 -- 5. CIERRE

@@ -8,6 +8,9 @@ Bienvenido a MusicBox.
 Aqu&#237;, podr&#225;s gestionar tu propia biblioteca de m&#250;sica online. Consulta tus &#225;lbumes preferidos y a&#241;adelos a tus playlists.
 Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz para el usuario. </Message>
     </MultiMessageUnit>
+    <PowerIndexUnit id="sv1#page6#pwu11" name="Lista de &#193;lbumes" linkOrder="sv1#page6#pwu11#ln52" gr:x="25" gr:y="75" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att34">
+      <Link id="sv1#page6#pwu11#ln52" name="Detalles del album" to="sv1#page13#dau9" type="normal" automaticCoupling="true" validate="true"/>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -27,7 +30,13 @@ Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12" rowspan="3">
+        <layout:Unit unitId="sv1#page6#pwu11">
+          <layout:Attribute attribute="ent6#att32" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent6#att34" label="Cover"/>
+          <layout:Link link="sv1#page6#pwu11#ln52"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -41,7 +50,21 @@ Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -55,18 +78,4 @@ Obt&#233;n una experiencia personalizada con una sencilla y c&#243;moda interfaz
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Page gr:x="0" gr:y="70" id="sv1#page6#page10" name="&#193;lbumes">
-    <ContentUnits>
-      <PowerIndexUnit gr:x="0" gr:y="0" id="sv1#page6#page10#pwu5" name="Lista de &#193;lbumes" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att34" linkOrder="sv1#page6#page10#pwu5#ln15">
-        <Link id="sv1#page6#page10#pwu5#ln15" name="Detalles del album" to="sv1#page13#dau9" automaticCoupling="true" type="normal" validate="true"/>
-      </PowerIndexUnit>
-    </ContentUnits>
-  </Page>
-  <layout:CustomLocation name="User">
-    <layout:Grid containerType="cell">
-      <layout:Row>
-        <layout:Cell/>
-      </layout:Row>
-    </layout:Grid>
-  </layout:CustomLocation>
 </Page>

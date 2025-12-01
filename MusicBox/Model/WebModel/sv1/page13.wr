@@ -30,10 +30,10 @@
       <layout:Cell colspan="7" rowspan="5">
         <layout:Unit unitId="sv1#page13#pwu7">
           <layout:Link link="sv1#page13#pwu7#ln20"/>
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att3"/>
-          <layout:Attribute attribute="ent1#att5"/>
-          <layout:Attribute attribute="ent1#att12"/>
+          <layout:Attribute attribute="ent1#att2" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent1#att3" label="Duraci&#243;n (segundos)"/>
+          <layout:Attribute attribute="ent1#att5" label="N&#250;mero de pista"/>
+          <layout:Attribute attribute="ent1#att12" label="Fecha de salida"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -46,7 +46,7 @@
         <layout:Grid containerType="grid">
           <layout:Row>
             <layout:Cell colspan="12">
-              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att32"/>
+              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att32" label="T&#237;tulo"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -62,7 +62,7 @@
           </layout:Row>
           <layout:Row>
             <layout:Cell colspan="12">
-              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att33"/>
+              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att33" label="Fecha de salida"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -78,7 +78,7 @@
           </layout:Row>
           <layout:Row>
             <layout:Cell colspan="12" rowspan="2">
-              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att34"/>
+              <layout:Attribute unitId="sv1#page13#dau9" mode="value" attribute="ent6#att34" label="Cover"/>
             </layout:Cell>
             <layout:Cell/>
             <layout:Cell/>
@@ -151,8 +151,8 @@
       <layout:Cell/>
       <layout:Cell colspan="5" rowspan="2">
         <layout:Unit unitId="sv1#page13#dau10">
-          <layout:Attribute attribute="ent4#att23"/>
-          <layout:Attribute attribute="ent4#att24"/>
+          <layout:Attribute attribute="ent4#att23" label="Nombre"/>
+          <layout:Attribute attribute="ent4#att24" label="Pa&#237;s"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

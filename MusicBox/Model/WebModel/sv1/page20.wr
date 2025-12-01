@@ -8,8 +8,8 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page20#pwu13">
-          <layout:Attribute attribute="ent6#att32"/>
-          <layout:Attribute attribute="ent6#att34"/>
+          <layout:Attribute attribute="ent6#att32" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent6#att34" label="Cover"/>
           <layout:Link link="sv1#page20#pwu13#ln36"/>
         </layout:Unit>
       </layout:Cell>

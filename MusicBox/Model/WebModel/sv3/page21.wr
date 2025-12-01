@@ -18,7 +18,7 @@
           <layout:Link link="sv3#page21#pwu6#ln22"/>
           <layout:Attribute attribute="ent2#att15" label="Nombre"/>
           <layout:Attribute attribute="ent2#att16" label="Descripcion"/>
-          <layout:Attribute attribute="ent2#att17" label="Es puplica"/>
+          <layout:Attribute attribute="ent2#att17" label="Es publica"/>
           <layout:Attribute attribute="ent2#att18" label="Creada el"/>
         </layout:Unit>
       </layout:Cell>

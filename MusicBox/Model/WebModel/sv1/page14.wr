@@ -6,7 +6,7 @@
       </Link>
     </GetUnit>
     <ModuleInstanceUnit gr:x="75" gr:y="145" id="sv1#page14#miu7" action="true" moduleId="mov1#opm4"/>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#page14#dau11" name="Detalles canciones" entity="ent1" displayAttributes="ent1#att2">
+    <DataUnit gr:x="0" gr:y="0" id="sv1#page14#dau11" name="Detalles canci&#243;n" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12">
       <Selector id="sv1#page14#dau11#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#page14#dau11#su18#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
@@ -18,7 +18,7 @@
         <LinkParameter id="sv1#page14#dau11#ln30#par65" name="id_RoleCondition6 [id]" source="data.ent1#att1" target="sv1#page14#pwu8#su19#rcond6.ent1#att1"/>
       </Link>
     </DataUnit>
-    <PowerIndexUnit gr:x="175" gr:y="0" id="sv1#page14#pwu8" name="Mis playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" linkOrder="sv1#page14#pwu8#ln28" displayAttributes="ent2#att15">
+    <PowerIndexUnit gr:x="175" gr:y="0" id="sv1#page14#pwu8" name="Mis playlists" sortable="true" checkable="false" useCountQuery="false" entity="ent2" linkOrder="sv1#page14#pwu8#ln28" displayAttributes="ent2#att15 ent2#att16">
       <Selector id="sv1#page14#pwu8#su19" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#page14#pwu8#su19#acond7" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="rel7#role14.userOID"/>
         <RelationshipRoleCondition id="sv1#page14#pwu8#su19#rcond6" name="RoleCondition6" predicate="notIn" implied="false" role="rel1#role1"/>
@@ -33,7 +33,10 @@
     <layout:Row>
       <layout:Cell colspan="6" rowspan="3">
         <layout:Unit unitId="sv1#page14#dau11">
-          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att2" label="T&#237;tulo"/>
+          <layout:Attribute attribute="ent1#att3" label="Duraci&#243;n (segundos)"/>
+          <layout:Attribute attribute="ent1#att5" label="N&#250;mero de pista"/>
+          <layout:Attribute attribute="ent1#att12" label="Fecha de salida"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -44,7 +47,8 @@
       <layout:Cell colspan="6" rowspan="3">
         <layout:Unit unitId="sv1#page14#pwu8">
           <layout:Link link="sv1#page14#pwu8#ln28"/>
-          <layout:Attribute attribute="ent2#att15"/>
+          <layout:Attribute attribute="ent2#att15" label="Nombre"/>
+          <layout:Attribute attribute="ent2#att16" label="Descripci&#243;n"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

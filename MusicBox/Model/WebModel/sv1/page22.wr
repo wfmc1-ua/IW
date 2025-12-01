@@ -44,9 +44,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page22#enu1">
-          <layout:Field field="sv1#page22#enu1#fld14"/>
-          <layout:Field field="sv1#page22#enu1#fld15"/>
-          <layout:Field field="sv1#page22#enu1#fld16"/>
+          <layout:Field field="sv1#page22#enu1#fld14" label="Nombre"/>
+          <layout:Field field="sv1#page22#enu1#fld15" label="Descripci&#243;n"/>
+          <layout:Field field="sv1#page22#enu1#fld16" label="&#191;P&#250;blica?"/>
           <layout:Link link="sv1#page22#enu1#ln25"/>
         </layout:Unit>
       </layout:Cell>
@@ -81,9 +81,9 @@
     <layout:Row>
       <layout:Cell colspan="12" rowspan="5">
         <layout:Unit unitId="sv1#page22#pwu15">
-          <layout:Attribute attribute="ent2#att15"/>
-          <layout:Attribute attribute="ent2#att16"/>
-          <layout:Attribute attribute="ent2#att18"/>
+          <layout:Attribute attribute="ent2#att15" label="Nombre"/>
+          <layout:Attribute attribute="ent2#att16" label="Descripci&#243;n"/>
+          <layout:Attribute attribute="ent2#att18" label="Fecha creaci&#243;n"/>
           <layout:Link link="sv1#page22#pwu15#ln44"/>
           <layout:Link link="sv1#page22#pwu15#ln27"/>
         </layout:Unit>

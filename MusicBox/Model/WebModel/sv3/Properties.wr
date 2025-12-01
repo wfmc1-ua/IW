@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" homePage="sv3#page7" protected="true" landmarks="sv3#page11 sv3#page15 sv3#page8">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="admin" homePage="sv3#page7" protected="true" landmarks="sv3#page11 sv3#page15 sv3#page8 sv3#page21">
   <OperationUnits>
     <ModuleInstanceUnit id="sv3#miu6" gr:x="345" gr:y="50" action="true" moduleId="mov1#opm5"/>
     <ModuleInstanceUnit id="sv3#miu14" gr:x="475" gr:y="205" action="true" moduleId="mov1#opm11"/>
@@ -15,5 +15,7 @@
     <ModuleInstanceUnit gr:x="1310" gr:y="875" id="sv3#miu21" action="true" moduleId="mov1#opm21"/>
     <ModuleInstanceUnit gr:x="370" gr:y="730" id="sv3#miu22" action="true" moduleId="mov1#opm22"/>
     <ModuleInstanceUnit gr:x="360" gr:y="855" id="sv3#miu23" action="true" moduleId="mov1#opm1"/>
+    <ModuleInstanceUnit gr:x="740" gr:y="745" id="sv3#miu24" action="true" moduleId="mov1#opm8"/>
+    <ModuleInstanceUnit gr:x="765" gr:y="860" id="sv3#miu25" action="true" moduleId="mov1#opm23"/>
   </OperationUnits>
 </SiteView>

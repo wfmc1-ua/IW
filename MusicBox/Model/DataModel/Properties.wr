@@ -8,7 +8,7 @@
     <Attribute id="User#att10" name="createdAt" type="timestamp" db:column="createdat"/>
     <Attribute id="User#att9" name="displayName" type="string" db:column="displayname"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="255" gr:y="45" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="275" gr:y="15" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="id" id="groupOID" type="integer" key="true" db:column="id"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
@@ -37,7 +37,7 @@
     <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
       <db:JoinColumn attribute="groupOID" name="id"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="moduleOID" name="module_id"/>
     </RelationshipRole2>
   </Relationship>
@@ -49,14 +49,14 @@
       <db:JoinColumn attribute="moduleOID" name="module_id"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="150" gr:y="250" id="ent1" name="Song" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att12" db:database="db1" db:table="song">
+  <Entity gr:x="360" gr:y="250" id="ent1" name="Song" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att3 ent1#att5 ent1#att12" db:database="db1" db:table="song">
     <Attribute id="ent1#att1" key="true" name="id" type="integer" db:column="id"/>
     <Attribute id="ent1#att5" name="track_number" type="integer" key="false" db:column="track_number"/>
     <Attribute id="ent1#att3" name="durationSec" type="integer" key="false" db:column="durationsec"/>
     <Attribute id="ent1#att2" name="title" type="string" key="false" db:column="title"/>
     <Attribute id="ent1#att12" name="releaseDate" type="date" key="false" db:column="releasedate"/>
   </Entity>
-  <Entity gr:x="405" gr:y="200" id="ent2" name="Playlist" duration="persistent" attributeOrder="ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18" db:database="db1" db:table="playlist">
+  <Entity gr:x="135" gr:y="255" id="ent2" name="Playlist" duration="persistent" attributeOrder="ent2#att14 ent2#att15 ent2#att16 ent2#att17 ent2#att18" db:database="db1" db:table="playlist">
     <Attribute id="ent2#att14" key="true" name="id" type="integer" db:column="id"/>
     <Attribute id="ent2#att18" name="createdAt" type="timestamp" db:column="createdat"/>
     <Attribute id="ent2#att17" name="isPublic" type="boolean" db:column="ispublic"/>
@@ -68,7 +68,7 @@
     <Attribute id="ent3#att21" name="description" type="text" db:column="description"/>
     <Attribute id="ent3#att20" name="name" type="string" db:column="name"/>
   </Entity>
-  <Entity gr:x="625" gr:y="395" id="ent4" name="Artist" duration="persistent" attributeOrder="ent4#att22 ent4#att23 ent4#att24 ent4#att25" db:database="db1" db:table="artist">
+  <Entity gr:x="585" gr:y="195" id="ent4" name="Artist" duration="persistent" attributeOrder="ent4#att22 ent4#att23 ent4#att24 ent4#att25" db:database="db1" db:table="artist">
     <Attribute id="ent4#att22" key="true" name="id" type="integer" db:column="id"/>
     <Attribute id="ent4#att25" name="bio" type="text" db:column="bio"/>
     <Attribute id="ent4#att24" name="country" type="string" db:column="country"/>
@@ -127,7 +127,7 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel6" name="User_Review" sourceEntity="User" targetEntity="ent5" db:database="db1" db:table="review">
-    <RelationshipRole1 id="rel6#role11" name="UserToReview" maxCard="N">
+    <RelationshipRole1 id="rel6#role11" name="UserToReview" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="userOID" name="user_id"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel6#role12" name="ReviewToUser" maxCard="1">
@@ -135,7 +135,7 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel7" name="User_Playlist" sourceEntity="User" targetEntity="ent2" db:database="db1" db:table="user_playlist">
-    <RelationshipRole1 id="rel7#role13" name="UserToPlaylist" maxCard="N">
+    <RelationshipRole1 id="rel7#role13" name="UserToPlaylist" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="userOID" name="user_id"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel7#role14" name="PlaylistToUser" maxCard="N">
@@ -152,4 +152,12 @@
   </Relationship>
   <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" password="RmFiaWFuMTgwMQ==" schema="public" cryptedPassword="true">
   </db:Database>
+  <Relationship id="rel9" name="User_Artist" sourceEntity="User" targetEntity="ent4" db:database="db1" db:table="artist">
+    <RelationshipRole1 id="rel9#role17" name="UserToArtist" maxCard="1" cascadeDelete="true">
+      <db:JoinColumn attribute="userOID" name="user_id"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel9#role18" name="ArtistToUser" maxCard="1" cascadeDelete="true">
+      <db:JoinColumn attribute="ent4#att22" name="id"/>
+    </RelationshipRole2>
+  </Relationship>
 </DataModel>

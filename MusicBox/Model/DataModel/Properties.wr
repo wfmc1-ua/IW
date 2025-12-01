@@ -103,7 +103,7 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel3" name="Artist_Album" sourceEntity="ent4" targetEntity="ent6" db:database="db1" db:table="album">
-    <RelationshipRole1 id="rel3#role5" name="ArtistToAlbum" maxCard="N">
+    <RelationshipRole1 id="rel3#role5" name="ArtistToAlbum" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="ent4#att22" name="artist_id"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel3#role6" name="AlbumToArtist" maxCard="1">
@@ -111,7 +111,7 @@
     </RelationshipRole2>
   </Relationship>
   <Relationship id="rel4" name="Album_Song" sourceEntity="ent6" targetEntity="ent1" db:database="db1" db:table="song">
-    <RelationshipRole1 id="rel4#role7" name="AlbumToSong" maxCard="N">
+    <RelationshipRole1 id="rel4#role7" name="AlbumToSong" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="ent6#att31" name="album_id"/>
     </RelationshipRole1>
     <RelationshipRole2 id="rel4#role8" name="SongToAlbum" maxCard="1">
@@ -122,7 +122,7 @@
     <RelationshipRole1 id="rel5#role9" name="ReviewToSong" maxCard="N">
       <db:JoinColumn attribute="ent5#att26" name="review_id"/>
     </RelationshipRole1>
-    <RelationshipRole2 id="rel5#role10" name="SongToReview" maxCard="N">
+    <RelationshipRole2 id="rel5#role10" name="SongToReview" maxCard="N" cascadeDelete="true">
       <db:JoinColumn attribute="ent1#att1" name="song_id"/>
     </RelationshipRole2>
   </Relationship>
@@ -150,7 +150,7 @@
       <db:JoinColumn attribute="ent4#att22" name="artist_id"/>
     </RelationshipRole2>
   </Relationship>
-  <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" password="cG9zdGdyZQ==" schema="public" cryptedPassword="true"/>
+  <db:Database id="db1" name="MusicBoxDB" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/MusicBoxDB" username="postgres" password="RmFiaWFuMTgwMQ==" schema="public" cryptedPassword="true"/>
   <Relationship id="rel9" name="User_Artist" sourceEntity="User" targetEntity="ent4" db:database="db1" db:table="artist">
     <RelationshipRole1 id="rel9#role17" name="UserToArtist" maxCard="1" cascadeDelete="true">
       <db:JoinColumn attribute="userOID" name="user_id"/>

@@ -16,9 +16,9 @@
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#page1#enu5">
-          <layout:Field field="sv1#page1#enu5#fld4"/>
-          <layout:Field field="sv1#page1#enu5#fld18"/>
-          <layout:Field field="sv1#page1#enu5#fld19"/>
+          <layout:Field field="sv1#page1#enu5#fld4" label="Nombre"/>
+          <layout:Field field="sv1#page1#enu5#fld18" label="Descripci&#243;n"/>
+          <layout:Field field="sv1#page1#enu5#fld19" label="&#191;P&#250;blica?"/>
           <layout:Link link="sv1#page1#enu5#ln10"/>
         </layout:Unit>
       </layout:Cell>

@@ -6,7 +6,7 @@
       </Selector>
       <Link id="sv4#mpage3#dau14#ln108" name="Log out" to="sv4#miu30" automaticCoupling="true" type="normal" validate="true"/>
     </DataUnit>
-    <GetUnit gr:x="0" gr:y="15" id="sv4#mpage3#gtu9" name="Get usuario">
+    <GetUnit gr:x="0" gr:y="15" id="sv4#mpage3#gtu9" name="Get usuario" contextParameters="UserCtxParam">
       <Link id="sv4#mpage3#gtu9#ln107" name="Flow107" to="sv4#mpage3#dau14" automaticCoupling="true" type="transport" validate="true"/>
     </GetUnit>
   </ContentUnits>

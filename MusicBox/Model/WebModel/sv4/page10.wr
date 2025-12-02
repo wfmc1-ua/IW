@@ -5,12 +5,12 @@
         <LinkParameter id="sv4#page10#seu10#ln81#par229" name="id_RoleCondition4 [id]" source="ent4#att22Array" target="sv4#page10#pwu5#su33#rcond4.ent6#att31"/>
       </Link>
       <Selector id="sv4#page10#seu10#su32" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#page10#seu10#su32#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel9#role17"/>
+        <AttributesCondition id="sv4#page10#seu10#su32#acond5" name="AttCondition5" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role18.userOID"/>
       </Selector>
     </SelectorUnit>
     <GetUnit gr:x="0" gr:y="10" id="sv4#page10#gtu5" name="Get usuario" contextParameters="UserCtxParam">
       <Link id="sv4#page10#gtu5#ln80" name="Flow80" to="sv4#page10#seu10" type="transport" validate="true">
-        <LinkParameter id="sv4#page10#gtu5#ln80#par91" name="UserCtxParam.id_RoleCondition1 [id]" source="sv4#page10#gtu5.UserCtxParam" target="sv4#page10#seu10#su32#rcond1.userOID"/>
+        <LinkParameter id="sv4#page10#gtu5#ln80#par89" name="UserCtxParam.id_AttCondition5" source="sv4#page10#gtu5.UserCtxParam" target="sv4#page10#seu10#su32#acond5"/>
       </Link>
     </GetUnit>
     <PowerIndexUnit gr:x="345" gr:y="0" id="sv4#page10#pwu5" name="Lista de albums" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att33 ent6#att34" linkOrder="sv4#page10#pwu5#ln89 sv4#page10#pwu5#ln98 sv4#page10#pwu5#ln103">

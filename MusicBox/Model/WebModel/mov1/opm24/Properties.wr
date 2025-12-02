@@ -1,0 +1,10 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="195" gr:y="470" id="mov1#opm24" name="LoadArtistData">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm24#icu24" name="Input Collector" gr:x="30" gr:y="60"/>
+    <SelectorUnit gr:x="320" gr:y="40" id="mov1#opm24#seu12" name="FindArtistByUser" entity="ent4">
+      <Selector id="mov1#opm24#seu12#su36" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov1#opm24#seu12#su36#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel9#role18.rel9#role17"/>
+      </Selector>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

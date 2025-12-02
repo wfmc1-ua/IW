@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="555" gr:y="125" id="sv4#area2#page30" name="Editar perfil">
+  <ContentUnits>
+    <EntryUnit id="sv4#area2#page30#enu15" name="Editar datos" gr:x="15" gr:y="0" linkOrder="sv4#area2#page30#enu15#ln94">
+      <Field id="sv4#area2#page30#enu15#fld53" name="Nombre" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area2#page30#enu15#fld53#mnd4" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area2#page30#enu15#fld54" name="Biografia" type="string" modifiable="true"/>
+      <Field id="sv4#area2#page30#enu15#fld55" name="Pais" type="string" modifiable="true"/>
+      <Link id="sv4#area2#page30#enu15#ln94" name="Editar" to="sv4#miu31" type="normal" validate="true">
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par232" name="Biografia_bio_param" source="sv4#area2#page30#enu15#fld54" target="sv4#miu31.mov1#opm17#icu17#icp42"/>
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par233" name="Pais_country_param" source="sv4#area2#page30#enu15#fld55" target="sv4#miu31.mov1#opm17#icu17#icp41"/>
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par235" name="Nombre_name_param" source="sv4#area2#page30#enu15#fld53" target="sv4#miu31.mov1#opm17#icu17#icp40"/>
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par237" name="id_user_user_param" source="sv4#area2#page30#enu15#fld56" target="sv4#miu31.mov1#opm17#icu17#icp57"/>
+      </Link>
+      <Field id="sv4#area2#page30#enu15#fld56" name="id_user" type="integer" modifiable="true" preloaded="true" hidden="true"/>
+      <Field id="sv4#area2#page30#enu15#fld57" name="id" type="integer" modifiable="true" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <GetUnit id="sv4#area2#page30#gtu10" name="Get5" gr:x="0" gr:y="155" contextParameters="UserCtxParam">
+      <Link id="sv4#area2#page30#gtu10#ln99" name="Flow82" to="sv4#area2#page30#seu17" type="transport" automaticCoupling="true" validate="true"/>
+    </GetUnit>
+    <SelectorUnit id="sv4#area2#page30#seu17" name="Selector10" gr:x="130" gr:y="155" entity="ent4">
+      <Selector id="sv4#area2#page30#seu17#su45" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area2#page30#seu17#su45#rcond10" name="RoleCondition1" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+      <Link id="sv4#area2#page30#seu17#ln100" name="Flow100" to="sv4#area2#page30#enu15" type="transport" validate="true">
+        <LinkParameter id="sv4#area2#page30#seu17#ln100#par236" name="ArtistToUser.id_id_user" source="rel9#role18_userOIDArray" target="sv4#area2#page30#enu15#fld56_slot"/>
+        <LinkParameter id="sv4#area2#page30#seu17#ln100#par239" name="id_id" source="ent4#att22Array" target="sv4#area2#page30#enu15#fld57_slot"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area2#page30#enu15">
+          <layout:Link link="sv4#area2#page30#enu15#ln94"/>
+          <layout:Field field="sv4#area2#page30#enu15#fld53"/>
+          <layout:Field field="sv4#area2#page30#enu15#fld54"/>
+          <layout:Field field="sv4#area2#page30#enu15#fld55"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

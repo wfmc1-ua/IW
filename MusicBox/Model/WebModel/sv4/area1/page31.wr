@@ -1,0 +1,69 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area1#page31" name="Crear Album" landmark="true" gr:x="315" gr:y="15">
+  <ContentUnits>
+    <EntryUnit id="sv4#area1#page31#enu16" name="Datos del album" linkOrder="sv4#area1#page31#enu16#ln91" gr:x="295" gr:y="25">
+      <Field id="sv4#area1#page31#enu16#fld27" name="Titulo" type="string" modifiable="true"/>
+      <Field id="sv4#area1#page31#enu16#fld28" name="Fecha" type="date" modifiable="true"/>
+      <Field id="sv4#area1#page31#enu16#fld41" name="portada" type="blob" modifiable="true"/>
+      <Field id="sv4#area1#page31#enu16#fld42" name="artista_oculto" type="integer" modifiable="true" hidden="true" preloaded="true">
+        <Slot id="sv4#area1#page31#enu16#fld42#slot1" name="Slot3" label="true" output="true"/>
+      </Field>
+      <Link id="sv4#area1#page31#enu16#ln91" name="Crear" to="sv4#miu28" type="normal" validate="true">
+        <LinkParameter id="sv4#area1#page31#enu16#ln91#par90" name="portada_cover_param" source="sv4#area1#page31#enu16#fld41" target="sv4#miu28.mov1#opm20#icu20#icp46"/>
+        <LinkParameter id="sv4#area1#page31#enu16#ln91#par94" name="Fecha_releaseDate_param" source="sv4#area1#page31#enu16#fld28" target="sv4#miu28.mov1#opm20#icu20#icp45"/>
+        <LinkParameter id="sv4#area1#page31#enu16#ln91#par227" name="Titulo_title_param" source="sv4#area1#page31#enu16#fld27" target="sv4#miu28.mov1#opm20#icu20#icp44"/>
+        <LinkParameter id="sv4#area1#page31#enu16#ln91#par228" name="artista_oculto_artist_param" source="sv4#area1#page31#enu16#fld42" target="sv4#miu28.mov1#opm20#icu20#icp47"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit id="sv4#area1#page31#gtu8" name="Get5" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="sv4#area1#page31#gtu8#ln92" name="Flow80" to="sv4#area1#page31#seu16" type="transport" validate="true">
+        <LinkParameter id="sv4#area1#page31#gtu8#ln92#par230" name="UserCtxParam.id_RoleCondition1 [id]" source="sv4#area1#page31#gtu8.UserCtxParam" target="sv4#area1#page31#seu16#su44#rcond9.userOID"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="sv4#area1#page31#seu16" name="Selector10" gr:x="145" gr:y="0" entity="ent4">
+      <Selector id="sv4#area1#page31#seu16#su44" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#area1#page31#seu16#su44#rcond9" name="RoleCondition1" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+      <Link id="sv4#area1#page31#seu16#ln93" name="Flow88" to="sv4#area1#page31#enu16" type="transport" validate="true">
+        <LinkParameter id="sv4#area1#page31#seu16#ln93#par231" name="id_artista_oculto" source="ent4#att22Array" target="sv4#area1#page31#enu16#fld42#slot1"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area1#page31#enu16">
+          <layout:Link link="sv4#area1#page31#enu16#ln91"/>
+          <layout:Field field="sv4#area1#page31#enu16#fld27"/>
+          <layout:Field field="sv4#area1#page31#enu16#fld28"/>
+          <layout:Field field="sv4#area1#page31#enu16#fld41"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv4#area1#page31#var2" name="id_artista_recibido" type="integer"/>
+</Page>

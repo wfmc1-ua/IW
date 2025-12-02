@@ -1,0 +1,97 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area1#page28" name="A&#241;adir cancion al album" gr:x="0" gr:y="0" landmark="true">
+  <ContentUnits>
+    <EntryUnit id="sv4#area1#page28#enu9" name="A&#241;adir Cancion" linkOrder="sv4#area1#page28#enu9#ln96" gr:x="0" gr:y="15">
+      <Field id="sv4#area1#page28#enu9#fld43" name="track_number" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area1#page28#enu9#fld43#mnd12" name="Mandatory11"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area1#page28#enu9#fld44" name="Duraci&#243;n (Segundos)" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area1#page28#enu9#fld44#mnd13" name="Mandatory4"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area1#page28#enu9#fld45" name="Titulo" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area1#page28#enu9#fld45#mnd14" name="Mandatory10"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#area1#page28#enu9#fld46" name="Fecha de lanzamiento" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv4#area1#page28#enu9#fld46#mnd15" name="Mandatory5"/>
+        </VRules>
+      </Field>
+      <SelectionField id="sv4#area1#page28#enu9#sfld10" name="Genero" type="string"/>
+      <Link id="sv4#area1#page28#enu9#ln96" name="A&#241;adir" to="sv4#miu27" type="normal" validate="true">
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par252" name="Duraci&#243;n (Segundos)_durationSec_param" source="sv4#area1#page28#enu9#fld44" target="sv4#miu27.mov1#opm21#icu21#icp50"/>
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par253" name="Genero_genreId_param" source="sv4#area1#page28#enu9#sfld10" target="sv4#miu27.mov1#opm21#icu21#icp54"/>
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par254" name="Fecha de lanzamiento_releaseDate_param" source="sv4#area1#page28#enu9#fld46" target="sv4#miu27.mov1#opm21#icu21#icp51"/>
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par255" name="Titulo_title_param" source="sv4#area1#page28#enu9#fld45" target="sv4#miu27.mov1#opm21#icu21#icp49"/>
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par256" name="track_number_trackNum_param" source="sv4#area1#page28#enu9#fld43" target="sv4#miu27.mov1#opm21#icu21#icp53"/>
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par257" name="album_albumId_param" source="sv4#area1#page28#enu9#fld47" target="sv4#miu27.mov1#opm21#icu21#icp55"/>
+        <LinkParameter id="sv4#area1#page28#enu9#ln96#par258" name="artista_artists_param" source="sv4#area1#page28#enu9#fld48" target="sv4#miu27.mov1#opm21#icu21#icp56"/>
+      </Link>
+      <Field id="sv4#area1#page28#enu9#fld47" name="album" type="string" modifiable="true" preloaded="true" hidden="true"/>
+      <Field id="sv4#area1#page28#enu9#fld48" name="artista" type="string" modifiable="true" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <SelectorUnit id="sv4#area1#page28#seu14" name="Genero" gr:x="185" gr:y="0" entity="ent3">
+      <Link id="sv4#area1#page28#seu14#ln97" name="Flow93" to="sv4#area1#page28#enu9" type="transport" validate="true">
+        <LinkParameter id="sv4#area1#page28#seu14#ln97#par259" name="id_Genero - Preselection" source="ent3#att19Array" target="sv4#area1#page28#enu9#sfld10_presel"/>
+        <LinkParameter id="sv4#area1#page28#seu14#ln97#par260" name="name_Genero [label]" source="ent3#att20Array" target="sv4#area1#page28#enu9#sfld10_label"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#area1#page28#enu9">
+          <layout:Link link="sv4#area1#page28#enu9#ln96"/>
+          <layout:Field field="sv4#area1#page28#enu9#fld43"/>
+          <layout:Field field="sv4#area1#page28#enu9#fld44"/>
+          <layout:Field field="sv4#area1#page28#enu9#fld45"/>
+          <layout:Field field="sv4#area1#page28#enu9#fld46"/>
+          <layout:Field field="sv4#area1#page28#enu9#sfld10"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

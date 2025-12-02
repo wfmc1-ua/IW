@@ -11,7 +11,7 @@
         <LinkParameter id="sv3#page18#pwu18#ln69#par170" name="title_Titulo" source="data[].ent6#att32" target="sv3#page18#enu13#fld34_slot"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit id="sv3#page18#enu13" name="Crear album" gr:x="110" gr:y="130" entity="ent6" linkOrder="sv3#page18#enu13#ln70">
+    <EntryUnit id="sv3#page18#enu13" name="Crear album" gr:x="110" gr:y="150" entity="ent6" linkOrder="sv3#page18#enu13#ln70">
       <Field id="sv3#page18#enu13#fld34" name="Titulo" type="string" modifiable="true" attribute="ent6#att32" preloaded="true">
         <VRules>
           <MandatoryValidationRule id="sv3#page18#enu13#fld34#mnd31" name="Mandatory23"/>

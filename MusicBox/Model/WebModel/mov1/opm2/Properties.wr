@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="210" gr:y="160" id="mov1#opm2" name="Crear usuario">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm2#icu3" gr:x="45" gr:y="420">
+    <InputCollectorUnit id="mov1#opm2#icu3" gr:x="45" gr:y="420" linkOrder="mov1#opm2#icu3#ln105">
       <OKLink id="mov1#opm2#icu3#oln4" name="OKFlow4" to="mov1#opm2#cru4">
         <LinkParameter id="mov1#opm2#icu3#oln4#par27" name="displayName" source="mov1#opm2#icu3#icp8" target="mov1#opm2#cru4.User#att9"/>
         <LinkParameter id="mov1#opm2#icu3#oln4#par28" name="email" source="mov1#opm2#icu3#icp9" target="mov1#opm2#cru4.email"/>
@@ -13,12 +13,40 @@
       <InputCollectorParameter id="mov1#opm2#icu3#icp10" name="password"/>
       <InputCollectorParameter id="mov1#opm2#icu3#icp11" name="userName"/>
       <InputCollectorParameter id="mov1#opm2#icu3#icp14" name="Group.id(groups)"/>
+      <InputCollectorParameter id="mov1#opm2#icu3#icp31" name="bio"/>
+      <Link id="mov1#opm2#icu3#ln105" name="Flow105" to="mov1#opm2#switch3" type="transport" validate="true" gr:bendpoints="93,-135,-437,-40">
+        <LinkParameter id="mov1#opm2#icu3#ln105#par265" name="Group.id(groups)_Switch" source="mov1#opm2#icu3#icp14" target="mov1#opm2#switch3.switch"/>
+      </Link>
     </InputCollectorUnit>
-    <CreateUnit gr:x="470" gr:y="450" id="mov1#opm2#cru4" name="Registrar usuario" entity="User">
-      <OKLink id="mov1#opm2#cru4#oln5" name="OKFlow5" to="mov1#opm2#okcu2" automaticCoupling="true"/>
-      <KOLink id="mov1#opm2#cru4#kln4" name="KOFlow4" to="mov1#opm2#kocu2" automaticCoupling="true"/>
+    <CreateUnit gr:x="480" gr:y="440" id="mov1#opm2#cru4" name="Registrar usuario" entity="User" linkOrder="mov1#opm2#cru4#ln106">
+      <KOLink id="mov1#opm2#cru4#kln4" name="KOFlow4" to="mov1#opm2#kocu2" automaticCoupling="true" gr:bendpoints="0,154,-590,34;224,151,-366,31"/>
+      <OKLink id="mov1#opm2#cru4#oln26" name="OKFlow26" to="mov1#opm2#switch3" gr:bendpoints="2,-181,-138,-16">
+        <LinkParameter id="mov1#opm2#cru4#oln26#par266" name="createdAt_PASSING" source="User#att10Array" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru4#oln26#par267" name="displayName_PASSING" source="User#att9Array" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru4#oln26#par268" name="email_PASSING" source="emailArray" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru4#oln26#par269" name="id_PASSING" source="userOIDArray" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru4#oln26#par270" name="password_PASSING" source="passwordArray" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru4#oln26#par271" name="status_PASSING" source="User#att11Array" passing="true"/>
+        <LinkParameter id="mov1#opm2#cru4#oln26#par272" name="userName_PASSING" source="userNameArray" passing="true"/>
+      </OKLink>
+      <Link id="mov1#opm2#cru4#ln106" name="Flow106" to="mov1#opm2#cru10" type="transport" validate="true">
+        <LinkParameter id="mov1#opm2#cru4#ln106#par273" name="displayName_name" source="User#att9Array" target="mov1#opm2#cru10.ent4#att23"/>
+        <LinkParameter id="mov1#opm2#cru4#ln106#par274" name="id_User.id(ArtistToUser)" source="userOIDArray" target="mov1#opm2#cru10.rel9#role18.userOID"/>
+      </Link>
     </CreateUnit>
-    <OKCollectorUnit gr:x="755" gr:y="360" id="mov1#opm2#okcu2" name="OK Port2"/>
-    <KOCollectorUnit gr:x="755" gr:y="560" id="mov1#opm2#kocu2" name="KO Port2"/>
+    <OKCollectorUnit gr:x="1015" gr:y="275" id="mov1#opm2#okcu2" name="OK Port2"/>
+    <KOCollectorUnit gr:x="1015" gr:y="560" id="mov1#opm2#kocu2" name="KO Port2"/>
+    <OKCollectorUnit gr:x="1015" gr:y="425" id="mov1#opm2#okcu22" name="OK artist"/>
+    <SwitchUnit gr:x="640" gr:y="285" id="mov1#opm2#switch3" name="Switch3">
+      <OKLink id="mov1#opm2#switch3#oln55" name="OKFlow55" to="mov1#opm2#okcu2" automaticCoupling="true"/>
+      <OKLink id="mov1#opm2#switch3#oln56" name="OKFlow56" to="mov1#opm2#cru10" code="3" gr:bendpoints="11,95,-139,-45">
+        <LinkParameter id="mov1#opm2#switch3#oln56#par275" name="id_PASSING_User.id(ArtistToUser)" sourceLinkParameter="mov1#opm2#cru4#oln26#par269" target="mov1#opm2#cru10.rel9#role18.userOID"/>
+      </OKLink>
+      <Case value="3"/>
+    </SwitchUnit>
+    <CreateUnit gr:x="790" gr:y="440" id="mov1#opm2#cru10" name="Create10" entity="ent4">
+      <OKLink id="mov1#opm2#cru10#oln57" name="OKFlow57" to="mov1#opm2#okcu22" automaticCoupling="true"/>
+      <KOLink id="mov1#opm2#cru10#kln15" name="KOFlow15" to="mov1#opm2#kocu2" automaticCoupling="true" gr:bendpoints="-7,107,-307,-13"/>
+    </CreateUnit>
   </OperationUnits>
 </OperationModule>

@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-5" gr:y="105" id="sv4#page10" name="Panel de artista" landmark="true" linkVisibilityPolicy="hide">
+  <ContentUnits>
+    <SelectorUnit gr:x="185" gr:y="5" id="sv4#page10#seu10" name="Selector10" entity="ent4">
+      <Link id="sv4#page10#seu10#ln81" name="Flow81" to="sv4#page10#pwu5" type="transport" validate="true">
+        <LinkParameter id="sv4#page10#seu10#ln81#par229" name="id_RoleCondition4 [id]" source="ent4#att22Array" target="sv4#page10#pwu5#su33#rcond4.ent6#att31"/>
+      </Link>
+      <Selector id="sv4#page10#seu10#su32" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page10#seu10#su32#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel9#role17"/>
+      </Selector>
+    </SelectorUnit>
+    <GetUnit gr:x="0" gr:y="10" id="sv4#page10#gtu5" name="Get usuario" contextParameters="UserCtxParam">
+      <Link id="sv4#page10#gtu5#ln80" name="Flow80" to="sv4#page10#seu10" type="transport" validate="true">
+        <LinkParameter id="sv4#page10#gtu5#ln80#par91" name="UserCtxParam.id_RoleCondition1 [id]" source="sv4#page10#gtu5.UserCtxParam" target="sv4#page10#seu10#su32#rcond1.userOID"/>
+      </Link>
+    </GetUnit>
+    <PowerIndexUnit gr:x="345" gr:y="0" id="sv4#page10#pwu5" name="Lista de albums" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att33 ent6#att34" linkOrder="sv4#page10#pwu5#ln89 sv4#page10#pwu5#ln98 sv4#page10#pwu5#ln103">
+      <Selector id="sv4#page10#pwu5#su33" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv4#page10#pwu5#su33#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel3#role6.rel3#role5"/>
+      </Selector>
+      <Link id="sv4#page10#pwu5#ln89" name="Borrar Album" to="sv4#miu26" type="normal" validate="true">
+        <LinkParameter id="sv4#page10#pwu5#ln89#par238" name="id_id_param" source="data[].ent6#att31" target="sv4#miu26.mov1#opm15#icu15#icp33"/>
+      </Link>
+      <Link id="sv4#page10#pwu5#ln98" name="A&#241;adir Cancion" to="sv4#area1#page28#enu9" type="normal" validate="true">
+        <LinkParameter id="sv4#page10#pwu5#ln98#par261" name="id_album" source="data[].ent6#att31" target="sv4#area1#page28#enu9#fld47_slot"/>
+        <LinkParameter id="sv4#page10#pwu5#ln98#par262" name="AlbumToArtist.id_artista" source="data[].rel3#role6_ent4#att22" target="sv4#area1#page28#enu9#fld48_slot"/>
+      </Link>
+      <Link id="sv4#page10#pwu5#ln103" name="Ver Canciones" to="sv4#area1#page27#pwu22" type="normal" validate="true">
+        <LinkParameter id="sv4#page10#pwu5#ln103#par264" name="id_RoleCondition8 [id]" source="data[].ent6#att31" target="sv4#area1#page27#pwu22#su41#rcond8.ent1#att1"/>
+      </Link>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page10#pwu5">
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att33"/>
+          <layout:Attribute attribute="ent6#att34"/>
+          <layout:Link link="sv4#page10#pwu5#ln89"/>
+          <layout:Link link="sv4#page10#pwu5#ln98"/>
+          <layout:Link link="sv4#page10#pwu5#ln103"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

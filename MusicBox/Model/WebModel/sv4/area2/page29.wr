@@ -7,11 +7,13 @@
       <Link id="sv4#area2#page29#dau15#ln87" name="Editar informacion" to="sv4#area2#page30#enu15" automaticCoupling="true" type="normal" validate="true"/>
     </DataUnit>
     <GetUnit id="sv4#area2#page29#gtu7" name="Get5" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
-      <Link id="sv4#area2#page29#gtu7#ln84" name="Flow82" to="sv4#area2#page29#seu15" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="sv4#area2#page29#gtu7#ln84" name="Flow82" to="sv4#area2#page29#seu15" type="transport" validate="true">
+        <LinkParameter id="sv4#area2#page29#gtu7#ln84#par230" name="UserCtxParam.id_AttCondition13" source="sv4#area2#page29#gtu7.UserCtxParam" target="sv4#area2#page29#seu15#su43#acond13"/>
+      </Link>
     </GetUnit>
     <SelectorUnit id="sv4#area2#page29#seu15" name="Selector10" gr:x="160" gr:y="0" entity="ent4">
       <Selector id="sv4#area2#page29#seu15#su43" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#area2#page29#seu15#su43#rcond7" name="RoleCondition1" predicate="in" implied="false" role="rel9#role17"/>
+        <AttributesCondition id="sv4#area2#page29#seu15#su43#acond13" name="AttCondition13" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role18.userOID"/>
       </Selector>
       <Link id="sv4#area2#page29#seu15#ln90" name="Flow90" to="sv4#area2#page29#dau15" automaticCoupling="true" type="transport" validate="true"/>
     </SelectorUnit>

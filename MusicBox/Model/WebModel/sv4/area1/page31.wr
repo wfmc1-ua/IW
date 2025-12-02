@@ -16,12 +16,12 @@
     </EntryUnit>
     <GetUnit id="sv4#area1#page31#gtu8" name="Get5" gr:x="0" gr:y="5" contextParameters="UserCtxParam">
       <Link id="sv4#area1#page31#gtu8#ln92" name="Flow80" to="sv4#area1#page31#seu16" type="transport" validate="true">
-        <LinkParameter id="sv4#area1#page31#gtu8#ln92#par230" name="UserCtxParam.id_RoleCondition1 [id]" source="sv4#area1#page31#gtu8.UserCtxParam" target="sv4#area1#page31#seu16#su44#rcond9.userOID"/>
+        <LinkParameter id="sv4#area1#page31#gtu8#ln92#par91" name="UserCtxParam.id_AttCondition12" source="sv4#area1#page31#gtu8.UserCtxParam" target="sv4#area1#page31#seu16#su44#acond12"/>
       </Link>
     </GetUnit>
     <SelectorUnit id="sv4#area1#page31#seu16" name="Selector10" gr:x="145" gr:y="0" entity="ent4">
       <Selector id="sv4#area1#page31#seu16#su44" defaultPolicy="fill" booleanOperator="and">
-        <RelationshipRoleCondition id="sv4#area1#page31#seu16#su44#rcond9" name="RoleCondition1" predicate="in" implied="false" role="rel9#role17"/>
+        <AttributesCondition id="sv4#area1#page31#seu16#su44#acond12" name="AttCondition12" predicate="eq" booleanOperator="or" implied="false" attributes="rel9#role18.userOID"/>
       </Selector>
       <Link id="sv4#area1#page31#seu16#ln93" name="Flow88" to="sv4#area1#page31#enu16" type="transport" validate="true">
         <LinkParameter id="sv4#area1#page31#seu16#ln93#par231" name="id_artista_oculto" source="ent4#att22Array" target="sv4#area1#page31#enu16#fld42#slot1"/>

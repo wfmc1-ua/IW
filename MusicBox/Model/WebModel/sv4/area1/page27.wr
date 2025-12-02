@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="810" gr:y="25" id="sv4#area1#page27" name="Canciones del album">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#area1#page27#pwu22" name="List22" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12" linkOrder="sv4#area1#page27#pwu22#ln104">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#area1#page27#pwu22" name="Lista canciones" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2 ent1#att3 ent1#att5 ent1#att12" linkOrder="sv4#area1#page27#pwu22#ln104">
       <Selector id="sv4#area1#page27#pwu22#su41" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#area1#page27#pwu22#su41#rcond8" name="RoleCondition8" predicate="in" implied="false" role="rel4#role8.rel4#role7"/>
       </Selector>

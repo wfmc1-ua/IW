@@ -9,10 +9,9 @@
       <Field id="sv4#area2#page30#enu15#fld54" name="Biografia" type="string" modifiable="true"/>
       <Field id="sv4#area2#page30#enu15#fld55" name="Pais" type="string" modifiable="true"/>
       <Link id="sv4#area2#page30#enu15#ln94" name="Editar" to="sv4#miu31" type="normal" validate="true">
-        <LinkParameter id="sv4#area2#page30#enu15#ln94#par232" name="Biografia_bio_param" source="sv4#area2#page30#enu15#fld54" target="sv4#miu31.mov1#opm17#icu17#icp42"/>
-        <LinkParameter id="sv4#area2#page30#enu15#ln94#par233" name="Pais_country_param" source="sv4#area2#page30#enu15#fld55" target="sv4#miu31.mov1#opm17#icu17#icp41"/>
-        <LinkParameter id="sv4#area2#page30#enu15#ln94#par235" name="Nombre_name_param" source="sv4#area2#page30#enu15#fld53" target="sv4#miu31.mov1#opm17#icu17#icp40"/>
-        <LinkParameter id="sv4#area2#page30#enu15#ln94#par237" name="id_user_user_param" source="sv4#area2#page30#enu15#fld56" target="sv4#miu31.mov1#opm17#icu17#icp57"/>
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par247" name="Biografia_bio" source="sv4#area2#page30#enu15#fld54" target="sv4#miu31.mov1#opm25#icu25#icp61"/>
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par248" name="Pais_country " source="sv4#area2#page30#enu15#fld55" target="sv4#miu31.mov1#opm25#icu25#icp62"/>
+        <LinkParameter id="sv4#area2#page30#enu15#ln94#par250" name="Nombre_name" source="sv4#area2#page30#enu15#fld53" target="sv4#miu31.mov1#opm25#icu25#icp63"/>
       </Link>
       <Field id="sv4#area2#page30#enu15#fld56" name="id_user" type="integer" modifiable="true" preloaded="true" hidden="true"/>
       <Field id="sv4#area2#page30#enu15#fld57" name="id" type="integer" modifiable="true" preloaded="true" hidden="true"/>
@@ -29,6 +28,9 @@
       <Link id="sv4#area2#page30#seu17#ln100" name="Flow100" to="sv4#area2#page30#enu15" type="transport" validate="true">
         <LinkParameter id="sv4#area2#page30#seu17#ln100#par236" name="ArtistToUser.id_id_user" source="rel9#role18_userOIDArray" target="sv4#area2#page30#enu15#fld56_slot"/>
         <LinkParameter id="sv4#area2#page30#seu17#ln100#par239" name="id_id" source="ent4#att22Array" target="sv4#area2#page30#enu15#fld57_slot"/>
+      </Link>
+      <Link id="sv4#area2#page30#seu17#ln83" name="Flow83" to="sv4#miu31" type="transport" validate="true">
+        <LinkParameter id="sv4#area2#page30#seu17#ln83#par251" name="id_id_artist" source="ent4#att22Array" target="sv4#miu31.mov1#opm25#icu25#icp60"/>
       </Link>
     </SelectorUnit>
   </ContentUnits>

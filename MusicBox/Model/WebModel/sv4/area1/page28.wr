@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area1#page28" name="A&#241;adir cancion al album" gr:x="0" gr:y="0" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#area1#page28" name="A&#241;adir cancion al album" gr:x="0" gr:y="0" landmark="false">
   <ContentUnits>
     <EntryUnit id="sv4#area1#page28#enu9" name="A&#241;adir Cancion" linkOrder="sv4#area1#page28#enu9#ln96" gr:x="0" gr:y="15">
       <Field id="sv4#area1#page28#enu9#fld43" name="track_number" type="integer" modifiable="true">
@@ -31,7 +31,7 @@
         <LinkParameter id="sv4#area1#page28#enu9#ln96#par257" name="album_albumId_param" source="sv4#area1#page28#enu9#fld47" target="sv4#miu27.mov1#opm21#icu21#icp55"/>
         <LinkParameter id="sv4#area1#page28#enu9#ln96#par258" name="artista_artists_param" source="sv4#area1#page28#enu9#fld48" target="sv4#miu27.mov1#opm21#icu21#icp56"/>
       </Link>
-      <Field id="sv4#area1#page28#enu9#fld47" name="album" type="string" modifiable="true" preloaded="true" hidden="true"/>
+      <Field id="sv4#area1#page28#enu9#fld47" name="album" type="integer" modifiable="true" preloaded="true" hidden="true"/>
       <Field id="sv4#area1#page28#enu9#fld48" name="artista" type="string" modifiable="true" preloaded="true" hidden="true"/>
     </EntryUnit>
     <SelectorUnit id="sv4#area1#page28#seu14" name="Genero" gr:x="185" gr:y="0" entity="ent3">

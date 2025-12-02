@@ -13,7 +13,7 @@
         <LinkParameter id="sv4#page10#gtu5#ln80#par89" name="UserCtxParam.id_AttCondition5" source="sv4#page10#gtu5.UserCtxParam" target="sv4#page10#seu10#su32#acond5"/>
       </Link>
     </GetUnit>
-    <PowerIndexUnit gr:x="420" gr:y="5" id="sv4#page10#pwu5" name="Lista de albums" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att33 ent6#att34" linkOrder="sv4#page10#pwu5#ln89 sv4#page10#pwu5#ln103">
+    <PowerIndexUnit gr:x="420" gr:y="5" id="sv4#page10#pwu5" name="Lista de albums" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att32 ent6#att33 ent6#att34" linkOrder="sv4#page10#pwu5#ln89 sv4#page10#pwu5#ln103 sv4#page10#pwu5#ln79">
       <Selector id="sv4#page10#pwu5#su33" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv4#page10#pwu5#su33#rcond4" name="RoleCondition4" predicate="in" implied="false" role="rel3#role6.rel3#role5"/>
       </Selector>
@@ -22,6 +22,9 @@
       </Link>
       <Link id="sv4#page10#pwu5#ln103" name="Ver Canciones" to="sv4#area1#page27#pwu22" type="normal" validate="true">
         <LinkParameter id="sv4#page10#pwu5#ln103#par264" name="id_RoleCondition8 [id]" source="data[].ent6#att31" target="sv4#area1#page27#pwu22#su41#rcond8.ent1#att1"/>
+      </Link>
+      <Link id="sv4#page10#pwu5#ln79" name="Flow79" to="sv4#area1#page28#enu9" type="normal" validate="true">
+        <LinkParameter id="sv4#page10#pwu5#ln79#par240" name="id_album" source="data[].ent6#att31" target="sv4#area1#page28#enu9#fld47_slot"/>
       </Link>
     </PowerIndexUnit>
   </ContentUnits>
@@ -34,6 +37,7 @@
           <layout:Attribute attribute="ent6#att34"/>
           <layout:Link link="sv4#page10#pwu5#ln89"/>
           <layout:Link link="sv4#page10#pwu5#ln103"/>
+          <layout:Link link="sv4#page10#pwu5#ln79"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

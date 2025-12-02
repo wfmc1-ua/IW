@@ -1,0 +1,32 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="150" gr:y="370" id="mov1#opm25" name="Editar artista">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm25#icu25" gr:x="0" gr:y="125">
+      <InputCollectorParameter id="mov1#opm25#icu25#icp60" name="id_artist"/>
+      <InputCollectorParameter id="mov1#opm25#icu25#icp61" name="bio"/>
+      <InputCollectorParameter id="mov1#opm25#icu25#icp62" name="country "/>
+      <Link id="mov1#opm25#icu25#ln82" name="Flow82" to="mov1#opm25#mfu3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm25#icu25#ln82#par243" name="bio_bio" source="mov1#opm25#icu25#icp61" target="mov1#opm25#mfu3.ent4#att25"/>
+        <LinkParameter id="mov1#opm25#icu25#ln82#par244" name="country _country" source="mov1#opm25#icu25#icp62" target="mov1#opm25#mfu3.ent4#att24"/>
+        <LinkParameter id="mov1#opm25#icu25#ln82#par245" name="id_artist_KeyCondition25 [id]" source="mov1#opm25#icu25#icp60" target="mov1#opm25#mfu3#su37#kcond25.ent4#att22"/>
+        <LinkParameter id="mov1#opm25#icu25#ln82#par246" name="name_name" source="mov1#opm25#icu25#icp63" target="mov1#opm25#mfu3.ent4#att23"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm25#icu25#icp63" name="name"/>
+      <OKLink id="mov1#opm25#icu25#oln60" name="OKFlow60" to="mov1#opm25#inn2">
+        <LinkParameter id="mov1#opm25#icu25#oln60#par261" name="id_artist_Input" source="mov1#opm25#icu25#icp60" target="mov1#opm25#inn2.isnotnull"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="410" gr:y="95" id="mov1#opm25#mfu3" name="Update artista" entity="ent4">
+      <Selector id="mov1#opm25#mfu3#su37" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm25#mfu3#su37#kcond25" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <KOLink id="mov1#opm25#mfu3#kln16" name="KOFlow16" to="mov1#opm25#kocu21" automaticCoupling="true"/>
+      <OKLink id="mov1#opm25#mfu3#oln59" name="OKFlow59" to="mov1#opm25#okcu21" automaticCoupling="true"/>
+    </ModifyUnit>
+    <OKCollectorUnit gr:x="555" gr:y="60" id="mov1#opm25#okcu21" name="OK Port21"/>
+    <KOCollectorUnit gr:x="555" gr:y="190" id="mov1#opm25#kocu21" name="KO Port21"/>
+    <IsNotNullUnit gr:x="280" gr:y="210" id="mov1#opm25#inn2" name="Is Not Null2">
+      <KOLink id="mov1#opm25#inn2#kln17" name="KOFlow17" to="mov1#opm25#kocu21" automaticCoupling="true"/>
+      <OKLink id="mov1#opm25#inn2#oln61" name="OKFlow61" to="mov1#opm25#mfu3" automaticCoupling="true"/>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>
